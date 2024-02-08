@@ -3247,3 +3247,19 @@ export const KANARIA_CATALOG_PARTS = [
     },
   },
 ];
+
+
+export const mapSlotToEquippableGroupId = {
+  background: 1,
+  backpack: 2,
+  necklace: 3,
+  headwear: 4,
+  objectleft: 5,
+  objectright: 6,
+  foreground: 7,
+  gem_empty1: 8,
+  gem_empty2: 9,
+  gem_empty3: 10,
+  gem_empty4: 11,
+  gem_empty5: 12,
+} as const;

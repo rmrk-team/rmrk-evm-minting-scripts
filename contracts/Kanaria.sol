@@ -4,6 +4,7 @@ pragma solidity ^0.8.21;
 import "@rmrk-team/evm-contracts/contracts/implementations/abstract/RMRKAbstractEquippable.sol";
 
 error LengthMismatch();
+error RMRKMintOverMax();
 
 contract Kanaria is RMRKAbstractEquippable {
     mapping(address => bool) private _autoAcceptCollection;
@@ -91,10 +92,6 @@ contract Kanaria is RMRKAbstractEquippable {
                 ++i;
             }
         }
-    }
-
-    function contractURI() public view returns (string memory) {
-        return collectionMetadata();
     }
 
     function tokenURI(uint256 tokenId) public view returns (string memory) {

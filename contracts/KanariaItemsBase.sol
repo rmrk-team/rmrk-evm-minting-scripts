@@ -25,10 +25,6 @@ abstract contract KanariaItemsBase is RMRKAbstractEquippable {
         )
     {}
 
-    function contractURI() public view returns (string memory) {
-        return collectionMetadata();
-    }
-
     function batchAddEquippableAssetEntries(
         uint64 equippableGroupId,
         string[] memory metadataURI
