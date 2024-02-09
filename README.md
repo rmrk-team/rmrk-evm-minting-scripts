@@ -81,7 +81,7 @@ for (const batchMintWithAssetsIdsInputData of batchMintWithAssetsIdsInputDataArr
 
 See [scripts/batch-mint-with-assets-ids.ts](scripts/batch-mint-with-assets-ids.ts) for a full example.
 
-While this can feel like a lot of repetition for each script, this can save you a lot of time and headache when you need resume the script after it fails in the middle of the loop.
+While this can feel like a lot of repetition for each script, this can save you a lot of time and headache when you need to resume the script after it fails in the middle of the loop and avoid having to start over again from the beginning.
 
 *The code to save transacton logs, and code that gets fields from event logs of transaction receipt should ideally be abstracted into a re-usable functions. If you wish to contribute to this project, then this is a good candidate for contribution*
 
@@ -90,8 +90,8 @@ While this can feel like a lot of repetition for each script, this can save you 
 See [scripts/mint-kanaria-base-network-campaign-rewards-entry.ts](scripts/mint-kanaria-base-network-campaign-rewards-entry.ts) For a complete example of scripts to mint new equippable Kanaria NFTs. It consists of 4 separate scripts.
 1. pin metadata to ipfs using filebase sdk
 2. add equippable asset entries for each new equippable asset to "Kanaria Champions" kanaria items contract
-3. batch nest mint with existing asset ids using `ItemsBatchMinter` contract. `ItemsBatchMinter` is a utility contract with contributor role allowing him to mint nfts in Kanaria item contracts. We use `batchNestMintTokensWithExistingAsset` method to mint multiple NFTs in a single transaction with same assetId but different destination NFT ids, allowing NFT to be minted directly on Kanaria with new asset already added and accepted to NFTs. Please bear in mind that you won't be able to run the same scripts on Kanaria, as your private key will not have appropriate contributor role to interact with Kanaria contracts.
-4. batch mint more NFTs directly to an account (as opposed to nest minting directly to Kanaria NFT like in step 3). KanariaItems contracts have a custom method `batchMintWithAssets` that allows you to mint multiple NFTs each with a different (or the same) asset to a single account in a single transaction.
+3. batch nest mint with asset ids from step 2 using `ItemsBatchMinter` contract. `ItemsBatchMinter` is a utility contract with contributor role allowing him to mint nfts in Kanaria item contracts. We use `batchNestMintTokensWithExistingAsset` method to mint multiple NFTs in a single transaction with same assetId but different destination NFT ids, allowing NFT to be minted directly on Kanaria with new asset already added and accepted to NFTs. Please bear in mind that you won't be able to run the same scripts on Kanaria, as your private key will not have appropriate contributor role to interact with Kanaria contracts.
+4. batch mint more NFTs directly to an account (as opposed to nest minting directly to Kanaria NFT like in step 3). Each `KanariaItems` contracts have a custom method `batchMintWithAssets` that allows you to mint multiple NFTs each with a different (or the same) asset to a single account in a single transaction.
 
 The entry point script `scripts/mint-migration-reward-nfts-entry.ts` has multiple scripts, and you can comment required step at the bottom of the file, then comment it back and uncomment the next one, once the previous script has finished running.
 
@@ -99,7 +99,14 @@ The entry point script `scripts/mint-migration-reward-nfts-entry.ts` has multipl
 pnpm script scripts/mint-migration-reward-nfts-entry.ts --network base
 ```
 
-## TODO
+## TODOs
 
 This repository is a work in progress. We will be adding more examples and real-world scripts as we go. Feel free to contribute with a PR. This projects structure is also coming to [@rmrk-team/evm-template](https://github.com/rmrk-team/evm-template) soon for an easy one click starter project.
+
+- [ ] Add script to generate abis from extenral contracts using etherscan/block explorer api. [See wagmi/cli for good examples of doing that](https://github.com/wevm/wagmi/blob/main/packages/cli/src/plugins/blockExplorer.ts)
+- [ ] Add deploy script examples
+- [ ] Add examples of scripts for deploying and configuring RMRKCatalog contract
+- [ ] Add examples of scripts for minting parent NFT with assets that reference catalog and catalog parts
+- [ ] Integrate this project into upcoming `create-rmrk-evm` cli tool
+- [ ] Make `mint-migration-reward-nfts.ts` more generic rather than reward nft specific
 
