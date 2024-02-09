@@ -57,10 +57,10 @@ export const pinMetadataFromFiles = async (
     const imageCid = await pinToFilebase(imageFile, name, bucket);
     const thumbnailCid = await pinToFilebase(fs.createReadStream(thumbnailFilePath), name, bucket);
     const mediaUriCid = await pinToFilebase(fs.createReadStream(mediaUriFilePath), name, bucket);
-    const metadata = {
+    const metadata: Metadata = {
       ...metadataFields,
       image: `ipfs://${imageCid}`,
-      thumbnail: `ipfs://${thumbnailCid}`,
+      thumbnailUri: `ipfs://${thumbnailCid}`,
       mediaUri: `ipfs://${mediaUriCid}`,
     };
 

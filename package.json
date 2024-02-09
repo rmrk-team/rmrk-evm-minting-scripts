@@ -26,6 +26,7 @@
     "@types/chai-as-promised": "^7.1.6",
     "@types/mocha": ">=9.1.0",
     "@types/node": ">=16.0.0",
+    "abitype": "^1.0.0",
     "chai": "^4.2.0",
     "dotenv": "^16.4.1",
     "hardhat": "^2.19.5",

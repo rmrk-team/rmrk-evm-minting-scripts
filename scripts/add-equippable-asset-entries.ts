@@ -93,6 +93,8 @@ export const addEquippableAssetEntries = async (
 
     invariant(assetId, 'Asset ID is not present on event log');
 
+    console.log('Added asset entry with id', assetId.toString());
+
     const logEntry: LogEntry = {
       [uniqueLogIdentifier]: {
         inputData: addEquippableAssetEntriesInputData,

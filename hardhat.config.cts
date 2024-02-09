@@ -2,7 +2,7 @@ import 'dotenv/config';
 import { HardhatUserConfig, subtask } from 'hardhat/config';
 import '@nomicfoundation/hardhat-toolbox-viem';
 import {
-  astar,
+  astar, base,
   baseSepolia,
   mainnet,
   moonbeam,
@@ -31,6 +31,11 @@ subtask(TASK_COMPILE_SOLIDITY).setAction(async (_, { config }, runSuper) => {
 const config: HardhatUserConfig = {
   solidity: '0.8.21',
   networks: {
+    base: {
+      url: process.env.BASE || 'https://mainnet.base.org',
+      chainId: base.id,
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
+    },
     baseSepolia: {
       chainId: baseSepolia.id,
       url: process.env.BASE_GOERLI_URL || 'https://sepolia.base.org',
@@ -80,6 +85,7 @@ const config: HardhatUserConfig = {
   },
   etherscan: {
     apiKey: {
+      base: process.env.BASESCAN_API_KEY || '', // Base Etherscan API Key
       baseSepolia: process.env.BASESCAN_API_KEY || '', // Base Goerli Etherscan API Key
       sepolia: process.env.ETHERSCAN_API_KEY || '', // Sepolia Etherscan API Key
       mumbai: process.env.POLYGONSCAN_API_KEY || '', // Polygon Mumbai Etherscan API Key
@@ -98,10 +104,18 @@ const config: HardhatUserConfig = {
       },
       {
         network: 'astar',
-        chainId: 592,
+        chainId: astar.id,
         urls: {
           apiURL: 'https://blockscout.com/astar/api',
           browserURL: 'https://blockscout.com/astar',
+        },
+      },
+      {
+        network: 'base',
+        chainId: base.id,
+        urls: {
+          apiURL: 'https://api.basescan.org/api',
+          browserURL: 'https://basescan.org',
         },
       },
     ],

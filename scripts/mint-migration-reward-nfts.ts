@@ -62,6 +62,8 @@ export const mintMigrationRewardNfts = async (
       destinationTokenIds,
     } = nestMintWithAssetInputData;
 
+    console.log('Total destination token ids', destinationTokenIds.length);
+
     const chunks = chunkArray(destinationTokenIds, 10);
 
     for (const [chunkIndex, destinationTokenIdsChunk] of chunks.entries()) {
@@ -81,7 +83,12 @@ export const mintMigrationRewardNfts = async (
       }
 
       console.log('Batch Nest minting NFTs with asset', {
-        nestMintWithAssetInputData,
+        nestMintWithAssetInputData: {
+          assetId,
+          collectionAddress,
+          destinationCollectionAddress,
+          destinationTokenIds: destinationTokenIdsChunk,
+        },
       });
 
       const { request } = await publicClient.simulateContract({
