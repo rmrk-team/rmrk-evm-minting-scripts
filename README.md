@@ -26,8 +26,8 @@ Copy `.env.example` to `.env` and set your environment variables as needed.
 ## Usage
 
 Because ESM is
-an [experimental feature in hardhat]([This experimental workaround](https://github.com/NomicFoundation/hardhat/issues/3385#issuecomment-1841380253))
-for now, running hardhat scripts requires a longer command with extra arguments, therefore it is abstracted into a
+an experimental feature in hardhat, we use [this experimental workaround](https://github.com/NomicFoundation/hardhat/issues/3385#issuecomment-1841380253)
+for now to make it work, until hardhat adds a full ESM support or switches to `tsx` instead of `ts-node`. This also means that running hardhat scripts requires a longer command with extra arguments, therefore it is abstracted into a
 script in package.json. So instead of the usual `pnpm hardhat run ...` you need to run hardhat scripts
 using `pnpm script ...`
 
