@@ -1,9 +1,10 @@
 import 'dotenv/config';
 import { File, FilebaseClient } from '@filebase/client';
-import { Readable } from 'stream';
 import streamToBlob from './stream-to-blob.js';
-import { getMimeType } from 'stream-mime-type';
+import mime from 'mime-types';
 import { Metadata } from '@rmrk-team/types';
+import fs from 'fs';
+import invariant from 'tiny-invariant';
 
 const FILEBASE_CONFIG = {
   key: process.env.FILEBASE_KEY,
@@ -18,12 +19,14 @@ const getFilebaseToken = (bucket = FILEBASE_CONFIG.bucket) => {
 };
 
 export const pinToFilebase = async (
-  stream: Readable,
+  filePath: string,
   name?: string,
   bucket?: string,
 ): Promise<string> => {
-  const { mime, stream: processedStream } = await getMimeType(stream);
-  const blob = await streamToBlob(processedStream, mime);
+  const fileStream = fs.createReadStream(filePath);
+  const mimeType = mime.lookup(filePath) || undefined;
+  invariant(mimeType);
+  const blob = await streamToBlob(fileStream, mimeType);
   return await FilebaseClient.storeBlob(
     {
       endpoint: 'https://s3.filebase.com',

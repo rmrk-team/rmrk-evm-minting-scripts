@@ -1,12 +1,12 @@
 import { Metadata } from '@rmrk-team/types';
 import * as fs from 'fs';
 import { pinMetadata, pinToFilebase } from './utils/utils-filebase.js';
-import { getMimeType } from 'stream-mime-type';
 import {
   mapMimeToContentType,
   MEDIA_TYPES,
 } from './utils/map-mime-type-to-content-type.js';
 import invariant from 'tiny-invariant';
+import mime from 'mime-types';
 
 export type InputData = {
   metadataFields: Metadata;
@@ -41,22 +41,23 @@ export const pinMetadataFromFiles = async (
     }
 
     invariant(name, 'Name is required');
+    const mediaFileName = mediaUriFilePath.split('/').pop();
+    invariant(mediaFileName);
+    const mimeType = mime.lookup(mediaFileName) || undefined;
 
-    const mediaFile = fs.createReadStream(mediaUriFilePath);
-    const { mime, stream: processedStream } = await getMimeType(mediaFile);
-
-    const mediaFileMediaType = mapMimeToContentType(mime);
+    const mediaFileMediaType = mapMimeToContentType(mimeType);
     const mediaFileIsImage =
       mediaFileMediaType === MEDIA_TYPES.image ||
       mediaFileMediaType === MEDIA_TYPES.gif;
 
-
-    const imageFile = fs.createReadStream(
-        imageFilePath || mediaFileIsImage ? mediaUriFilePath : thumbnailFilePath,
+    const imageCid = await pinToFilebase(
+      imageFilePath || mediaFileIsImage ? mediaUriFilePath : thumbnailFilePath,
+      name,
+      bucket,
     );
-    const imageCid = await pinToFilebase(imageFile, name, bucket);
-    const thumbnailCid = await pinToFilebase(fs.createReadStream(thumbnailFilePath), name, bucket);
-    const mediaUriCid = await pinToFilebase(fs.createReadStream(mediaUriFilePath), name, bucket);
+    const thumbnailCid = await pinToFilebase(thumbnailFilePath, name, bucket);
+
+    const mediaUriCid = await pinToFilebase(mediaUriFilePath, name, bucket);
     const metadata: Metadata = {
       ...metadataFields,
       image: `ipfs://${imageCid}`,
