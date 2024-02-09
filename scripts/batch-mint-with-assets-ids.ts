@@ -36,9 +36,9 @@ export const batchMintWithAssetsIds = async (
   for (const batchMintWithAssetsIdsInputData of batchMintWithAssetsIdsInputDataArray) {
     const { contractAddress, to, assetIds } = batchMintWithAssetsIdsInputData;
 
-    const assetIdsChunks = chunkArray(assetIds, 25);
+    const assetIdsChunks = chunkArray(assetIds, 30);
 
-    console.log('Total chunks split by 50', {
+    console.log('Total chunks split', {
       assetIdsChunksLength: assetIdsChunks.length,
     });
 

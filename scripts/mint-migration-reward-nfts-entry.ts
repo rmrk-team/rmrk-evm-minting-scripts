@@ -171,10 +171,10 @@ const batchMintAllYourBaseNFTsWithAssetToAccount = async () => {
 //   process.exitCode = 1;
 // });
 
-mintMigrationRewardNFTsEntry().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+// mintMigrationRewardNFTsEntry().catch((error) => {
+//   console.error(error);
+//   process.exitCode = 1;
+// });
 
 // pinMetadatas().catch((error) => {
 //   console.error(error);
