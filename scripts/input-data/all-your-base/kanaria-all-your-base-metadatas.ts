@@ -24,9 +24,12 @@ export const kanariaAllYourBaseMetadatas: InputData[] = [
       ],
       preferThumb: true,
     },
-    mediaUriFilePath: 'scripts/input-data/all-your-base/assets/bg_allyourbase.svg',
-    thumbnailFilePath: 'scripts/input-data/all-your-base/assets/bg_allyourbase_thumb.jpg',
-    imageFilePath: 'scripts/input-data/all-your-base/assets/bg_allyourbase_thumb.jpg',
+    mediaUriFilePath:
+      'scripts/input-data/all-your-base/assets/bg_allyourbase.svg',
+    thumbnailFilePath:
+      'scripts/input-data/all-your-base/assets/bg_allyourbase_thumb.jpg',
+    imageFilePath:
+      'scripts/input-data/all-your-base/assets/bg_allyourbase_thumb.jpg',
   },
   {
     metadataFields: {
@@ -51,9 +54,12 @@ export const kanariaAllYourBaseMetadatas: InputData[] = [
       ],
       preferThumb: true,
     },
-    mediaUriFilePath: 'scripts/input-data/all-your-base/assets/fg_allyourbase.svg',
-    thumbnailFilePath: 'scripts/input-data/all-your-base/assets/fg_allyourbase_thumb.jpg',
-    imageFilePath: 'scripts/input-data/all-your-base/assets/fg_allyourbase_thumb.jpg',
+    mediaUriFilePath:
+      'scripts/input-data/all-your-base/assets/fg_allyourbase.svg',
+    thumbnailFilePath:
+      'scripts/input-data/all-your-base/assets/fg_allyourbase_thumb.jpg',
+    imageFilePath:
+      'scripts/input-data/all-your-base/assets/fg_allyourbase_thumb.jpg',
   },
   {
     metadataFields: {
@@ -78,8 +84,11 @@ export const kanariaAllYourBaseMetadatas: InputData[] = [
       ],
       preferThumb: true,
     },
-    mediaUriFilePath: 'scripts/input-data/all-your-base/assets/headwear_allyourbase.svg',
-    thumbnailFilePath: 'scripts/input-data/all-your-base/assets/headwear_allyourbase_thumb.jpg',
-    imageFilePath: 'scripts/input-data/all-your-base/assets/headwear_allyourbase_thumb.jpg',
+    mediaUriFilePath:
+      'scripts/input-data/all-your-base/assets/headwear_allyourbase.svg',
+    thumbnailFilePath:
+      'scripts/input-data/all-your-base/assets/headwear_allyourbase_thumb.jpg',
+    imageFilePath:
+      'scripts/input-data/all-your-base/assets/headwear_allyourbase_thumb.jpg',
   },
 ];

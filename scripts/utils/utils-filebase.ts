@@ -1,10 +1,10 @@
-import 'dotenv/config';
-import { File, FilebaseClient } from '@filebase/client';
-import streamToBlob from './stream-to-blob.js';
-import mime from 'mime-types';
-import { Metadata } from '@rmrk-team/types';
 import fs from 'fs';
+import { File, FilebaseClient } from '@filebase/client';
+import { Metadata } from '@rmrk-team/types';
+import 'dotenv/config';
+import mime from 'mime-types';
 import invariant from 'tiny-invariant';
+import streamToBlob from './stream-to-blob.js';
 
 const FILEBASE_CONFIG = {
   key: process.env.FILEBASE_KEY,

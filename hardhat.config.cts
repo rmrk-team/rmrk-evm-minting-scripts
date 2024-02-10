@@ -1,17 +1,18 @@
-import 'dotenv/config';
-import { HardhatUserConfig, subtask } from 'hardhat/config';
+import { writeFile } from 'node:fs/promises';
+import { join } from 'path';
 import '@nomicfoundation/hardhat-toolbox-viem';
+import 'dotenv/config';
+import { TASK_COMPILE_SOLIDITY } from 'hardhat/builtin-tasks/task-names.js';
+import { HardhatUserConfig, subtask } from 'hardhat/config';
 import {
-  astar, base,
+  astar,
+  base,
   baseSepolia,
   mainnet,
   moonbeam,
   polygonMumbai,
   sepolia,
 } from 'viem/chains';
-import { TASK_COMPILE_SOLIDITY } from 'hardhat/builtin-tasks/task-names.js';
-import { writeFile } from 'node:fs/promises';
-import { join } from 'path';
 
 subtask(TASK_COMPILE_SOLIDITY).setAction(async (_, { config }, runSuper) => {
   const superRes = await runSuper();
@@ -34,7 +35,8 @@ const config: HardhatUserConfig = {
     base: {
       url: process.env.BASE || 'https://mainnet.base.org',
       chainId: base.id,
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
     baseSepolia: {
       chainId: baseSepolia.id,

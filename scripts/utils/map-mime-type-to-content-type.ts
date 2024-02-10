@@ -1,4 +1,8 @@
-import { audioMimeTypes, media3dMimeTypes, videoMimeTypes } from './constants.js';
+import {
+  audioMimeTypes,
+  media3dMimeTypes,
+  videoMimeTypes,
+} from './constants.js';
 
 export const MEDIA_TYPES = {
   image: 'image',

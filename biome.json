@@ -1,5 +1,9 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
+  "files": {
+    "ignoreUnknown": true,
+    "ignore": ["contracts", "artifacts"]
+  },
   "organizeImports": {
     "enabled": true
   },

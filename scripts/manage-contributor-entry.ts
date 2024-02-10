@@ -1,8 +1,8 @@
 import hre from 'hardhat';
-import { KANARIA_ITEMS_CONTRACTS } from './consts/kanaria-contracts.js';
 import invariant from 'tiny-invariant';
-import { manageContributor } from './manage-contributor.js';
+import { KANARIA_ITEMS_CONTRACTS } from './consts/kanaria-contracts.js';
 import { ITEM_BATCH_MINTER_ADDRESS } from './consts/rmrk-contracts.js';
+import { manageContributor } from './manage-contributor.js';
 
 export const manageContributorEntry = async () => {
   const chainId = hre.network.config.chainId;

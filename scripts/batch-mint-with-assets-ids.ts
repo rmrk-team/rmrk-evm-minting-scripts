@@ -1,11 +1,11 @@
-import hre from 'hardhat';
-import { Address, decodeEventLog } from 'viem';
-import { getOrCreateNdjosnLogFile } from './utils/get-or-create-ndjosn-log-file.js';
-import { chunkArray } from './utils/utils.js';
-import { KanariaItems } from '../abis/KanariaItems.js';
-import invariant from 'tiny-invariant';
 import fs from 'fs';
+import hre from 'hardhat';
+import invariant from 'tiny-invariant';
+import { Address, decodeEventLog } from 'viem';
+import { KanariaItems } from '../abis/KanariaItems.js';
+import { getOrCreateNdjosnLogFile } from './utils/get-or-create-ndjosn-log-file.js';
 import { jsonStringifyWithBigint } from './utils/json-stringify-with-bigint.js';
+import { chunkArray } from './utils/utils.js';
 
 export type BatchMintWithAssetsIdsInputData = {
   contractAddress: Address;

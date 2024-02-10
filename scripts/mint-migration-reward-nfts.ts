@@ -1,11 +1,11 @@
+import fs from 'fs';
 import hre from 'hardhat';
-import { RMRK_MINTER_ADDRESS } from './consts/kanaria-contracts.js';
-import { ITEM_BATCH_MINTER_ADDRESS } from './consts/rmrk-contracts.js';
 import invariant from 'tiny-invariant';
 import { Address, getAddress } from 'viem';
 import { ItemsBatchMinter } from '../abis/ItemsBatchMinter.js';
+import { RMRK_MINTER_ADDRESS } from './consts/kanaria-contracts.js';
+import { ITEM_BATCH_MINTER_ADDRESS } from './consts/rmrk-contracts.js';
 import { getOrCreateNdjosnLogFile } from './utils/get-or-create-ndjosn-log-file.js';
-import fs from 'fs';
 import { jsonStringifyWithBigint } from './utils/json-stringify-with-bigint.js';
 import { chunkArray } from './utils/utils.js';
 

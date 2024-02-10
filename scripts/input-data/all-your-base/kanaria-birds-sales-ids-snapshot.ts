@@ -64,5 +64,5 @@ export const kanariaBirdsSalesIdsSnapshot = [
   },
   {
     id: 'base:0x011ff409bc4803ec5cfab41c3fd1db99fd05c004:7083',
-  }
+  },
 ];

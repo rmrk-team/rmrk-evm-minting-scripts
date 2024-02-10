@@ -1,12 +1,12 @@
-import { Metadata } from '@rmrk-team/types';
 import * as fs from 'fs';
-import { pinMetadata, pinToFilebase } from './utils/utils-filebase.js';
-import {
-  mapMimeToContentType,
-  MEDIA_TYPES,
-} from './utils/map-mime-type-to-content-type.js';
-import invariant from 'tiny-invariant';
+import { Metadata } from '@rmrk-team/types';
 import mime from 'mime-types';
+import invariant from 'tiny-invariant';
+import {
+  MEDIA_TYPES,
+  mapMimeToContentType,
+} from './utils/map-mime-type-to-content-type.js';
+import { pinMetadata, pinToFilebase } from './utils/utils-filebase.js';
 
 export type InputData = {
   metadataFields: Metadata;
