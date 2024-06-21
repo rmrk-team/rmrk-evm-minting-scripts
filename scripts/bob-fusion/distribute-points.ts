@@ -89,6 +89,9 @@ export const distributePoints = async (
     })),
   };
 
+  // Always send 5% to RMRK deployer shared wallet
+  distributionRequestObject.transfers.push({toAddress: '0xD38c5De0a2DE53da1552f9eEAd15Be167d8B2e8D', points: totalSingularSpicePoints * 0.05});
+
   const distributionResponse = await fetch(
     `${BOB_FUSION_API_URL}/distribute-points`,
     {
