@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { File, FilebaseClient } from '@filebase/client';
+import { File, type FilebaseClient } from '@filebase/client';
 import { Metadata } from '@rmrk-team/types';
 import 'dotenv/config';
 import mime from 'mime-types';

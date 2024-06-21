@@ -9,7 +9,7 @@ import {
   base,
   baseSepolia,
   mainnet,
-  moonbeam,
+  moonbeam, moonriver,
   polygonMumbai,
   sepolia,
 } from 'viem/chains';
@@ -84,6 +84,11 @@ const config: HardhatUserConfig = {
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       gasPrice: 1000000000,
     },
+    moonriver: {
+      url: process.env.MOONRIVER_URL || 'https://rpc.api.moonriver.moonbeam.network',
+      chainId: moonriver.id,
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    }
   },
   etherscan: {
     apiKey: {

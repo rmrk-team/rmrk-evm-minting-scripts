@@ -1,0 +1,5075 @@
+"""Exposes a URL that specifies the behaviour of this scalar."""
+directive @specifiedBy(
+  """The URL that specifies the behaviour of this scalar."""
+  url: String!
+) on SCALAR
+
+type Asset {
+  id: String!
+  collection: Collection!
+}
+
+type AssetAcceptedEventPayload {
+  tokenId: BigInt!
+  assetId: BigInt!
+  replacesId: BigInt!
+}
+
+type AssetAddedToTokensEventPayload {
+  tokenId: BigInt!
+  assetId: BigInt!
+  replacesId: BigInt!
+}
+
+type AssetEdge {
+  node: Asset!
+  cursor: String!
+}
+
+enum AssetOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  collection_id_ASC
+  collection_id_DESC
+  collection_id_ASC_NULLS_FIRST
+  collection_id_DESC_NULLS_LAST
+  collection_contractAddress_ASC
+  collection_contractAddress_DESC
+  collection_contractAddress_ASC_NULLS_FIRST
+  collection_contractAddress_DESC_NULLS_LAST
+  collection_metadata_ASC
+  collection_metadata_DESC
+  collection_metadata_ASC_NULLS_FIRST
+  collection_metadata_DESC_NULLS_LAST
+  collection_name_ASC
+  collection_name_DESC
+  collection_name_ASC_NULLS_FIRST
+  collection_name_DESC_NULLS_LAST
+  collection_symbol_ASC
+  collection_symbol_DESC
+  collection_symbol_ASC_NULLS_FIRST
+  collection_symbol_DESC_NULLS_LAST
+  collection_royaltyRecipient_ASC
+  collection_royaltyRecipient_DESC
+  collection_royaltyRecipient_ASC_NULLS_FIRST
+  collection_royaltyRecipient_DESC_NULLS_LAST
+  collection_royaltyPercentageBps_ASC
+  collection_royaltyPercentageBps_DESC
+  collection_royaltyPercentageBps_ASC_NULLS_FIRST
+  collection_royaltyPercentageBps_DESC_NULLS_LAST
+  collection_legoCombination_ASC
+  collection_legoCombination_DESC
+  collection_legoCombination_ASC_NULLS_FIRST
+  collection_legoCombination_DESC_NULLS_LAST
+  collection_mintingType_ASC
+  collection_mintingType_DESC
+  collection_mintingType_ASC_NULLS_FIRST
+  collection_mintingType_DESC_NULLS_LAST
+  collection_registryIsSoulbound_ASC
+  collection_registryIsSoulbound_DESC
+  collection_registryIsSoulbound_ASC_NULLS_FIRST
+  collection_registryIsSoulbound_DESC_NULLS_LAST
+  collection_maxSupply_ASC
+  collection_maxSupply_DESC
+  collection_maxSupply_ASC_NULLS_FIRST
+  collection_maxSupply_DESC_NULLS_LAST
+  collection_deployer_ASC
+  collection_deployer_DESC
+  collection_deployer_ASC_NULLS_FIRST
+  collection_deployer_DESC_NULLS_LAST
+  collection_owner_ASC
+  collection_owner_DESC
+  collection_owner_ASC_NULLS_FIRST
+  collection_owner_DESC_NULLS_LAST
+  collection_hasSoulBoundInterface_ASC
+  collection_hasSoulBoundInterface_DESC
+  collection_hasSoulBoundInterface_ASC_NULLS_FIRST
+  collection_hasSoulBoundInterface_DESC_NULLS_LAST
+  collection_hasEquippableInterface_ASC
+  collection_hasEquippableInterface_DESC
+  collection_hasEquippableInterface_ASC_NULLS_FIRST
+  collection_hasEquippableInterface_DESC_NULLS_LAST
+  collection_hasTokenHolderInterface_ASC
+  collection_hasTokenHolderInterface_DESC
+  collection_hasTokenHolderInterface_ASC_NULLS_FIRST
+  collection_hasTokenHolderInterface_DESC_NULLS_LAST
+  collection_chainName_ASC
+  collection_chainName_DESC
+  collection_chainName_ASC_NULLS_FIRST
+  collection_chainName_DESC_NULLS_LAST
+  collection_deletedAt_ASC
+  collection_deletedAt_DESC
+  collection_deletedAt_ASC_NULLS_FIRST
+  collection_deletedAt_DESC_NULLS_LAST
+  collection_createdAt_ASC
+  collection_createdAt_DESC
+  collection_createdAt_ASC_NULLS_FIRST
+  collection_createdAt_DESC_NULLS_LAST
+}
+
+type AssetPrioritySetEventPayload {
+  tokenId: BigInt!
+}
+
+type AssetsConnection {
+  edges: [AssetEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input AssetWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  collection_isNull: Boolean
+  collection: CollectionWhereInput
+  AND: [AssetWhereInput!]
+  OR: [AssetWhereInput!]
+}
+
+type AuctionConfig {
+  id: String!
+  timeBuffer: BigInt!
+  auctionCancellationPeriod: BigInt!
+}
+
+type AuctionConfigEdge {
+  node: AuctionConfig!
+  cursor: String!
+}
+
+enum AuctionConfigOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  timeBuffer_ASC
+  timeBuffer_DESC
+  timeBuffer_ASC_NULLS_FIRST
+  timeBuffer_DESC_NULLS_LAST
+  auctionCancellationPeriod_ASC
+  auctionCancellationPeriod_DESC
+  auctionCancellationPeriod_ASC_NULLS_FIRST
+  auctionCancellationPeriod_DESC_NULLS_LAST
+}
+
+type AuctionConfigsConnection {
+  edges: [AuctionConfigEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input AuctionConfigWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  timeBuffer_isNull: Boolean
+  timeBuffer_eq: BigInt
+  timeBuffer_not_eq: BigInt
+  timeBuffer_gt: BigInt
+  timeBuffer_gte: BigInt
+  timeBuffer_lt: BigInt
+  timeBuffer_lte: BigInt
+  timeBuffer_in: [BigInt!]
+  timeBuffer_not_in: [BigInt!]
+  auctionCancellationPeriod_isNull: Boolean
+  auctionCancellationPeriod_eq: BigInt
+  auctionCancellationPeriod_not_eq: BigInt
+  auctionCancellationPeriod_gt: BigInt
+  auctionCancellationPeriod_gte: BigInt
+  auctionCancellationPeriod_lt: BigInt
+  auctionCancellationPeriod_lte: BigInt
+  auctionCancellationPeriod_in: [BigInt!]
+  auctionCancellationPeriod_not_in: [BigInt!]
+  AND: [AuctionConfigWhereInput!]
+  OR: [AuctionConfigWhereInput!]
+}
+
+type BatchMetadataUpdateEventPayload {
+  collectionId: String!
+  fromTokenId: BigInt!
+  toTokenId: BigInt!
+}
+
+type Bid {
+  id: String!
+  buyer: String!
+  quantityWanted: BigInt!
+  totalDirectOfferAmount: BigInt!
+  currency: String!
+  listing: Listing!
+  block: Block!
+  incentiveIfOutbid: BigInt
+}
+
+type BidEdge {
+  node: Bid!
+  cursor: String!
+}
+
+enum BidOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  buyer_ASC
+  buyer_DESC
+  buyer_ASC_NULLS_FIRST
+  buyer_DESC_NULLS_LAST
+  quantityWanted_ASC
+  quantityWanted_DESC
+  quantityWanted_ASC_NULLS_FIRST
+  quantityWanted_DESC_NULLS_LAST
+  totalDirectOfferAmount_ASC
+  totalDirectOfferAmount_DESC
+  totalDirectOfferAmount_ASC_NULLS_FIRST
+  totalDirectOfferAmount_DESC_NULLS_LAST
+  currency_ASC
+  currency_DESC
+  currency_ASC_NULLS_FIRST
+  currency_DESC_NULLS_LAST
+  listing_id_ASC
+  listing_id_DESC
+  listing_id_ASC_NULLS_FIRST
+  listing_id_DESC_NULLS_LAST
+  listing_buyoutPricePerToken_ASC
+  listing_buyoutPricePerToken_DESC
+  listing_buyoutPricePerToken_ASC_NULLS_FIRST
+  listing_buyoutPricePerToken_DESC_NULLS_LAST
+  listing_saleType_ASC
+  listing_saleType_DESC
+  listing_saleType_ASC_NULLS_FIRST
+  listing_saleType_DESC_NULLS_LAST
+  listing_paymentCurrency_ASC
+  listing_paymentCurrency_DESC
+  listing_paymentCurrency_ASC_NULLS_FIRST
+  listing_paymentCurrency_DESC_NULLS_LAST
+  listing_quantity_ASC
+  listing_quantity_DESC
+  listing_quantity_ASC_NULLS_FIRST
+  listing_quantity_DESC_NULLS_LAST
+  listing_startTime_ASC
+  listing_startTime_DESC
+  listing_startTime_ASC_NULLS_FIRST
+  listing_startTime_DESC_NULLS_LAST
+  listing_endTime_ASC
+  listing_endTime_DESC
+  listing_endTime_ASC_NULLS_FIRST
+  listing_endTime_DESC_NULLS_LAST
+  listing_endTimeOriginal_ASC
+  listing_endTimeOriginal_DESC
+  listing_endTimeOriginal_ASC_NULLS_FIRST
+  listing_endTimeOriginal_DESC_NULLS_LAST
+  listing_listingCreator_ASC
+  listing_listingCreator_DESC
+  listing_listingCreator_ASC_NULLS_FIRST
+  listing_listingCreator_DESC_NULLS_LAST
+  listing_tokenType_ASC
+  listing_tokenType_DESC
+  listing_tokenType_ASC_NULLS_FIRST
+  listing_tokenType_DESC_NULLS_LAST
+  block_id_ASC
+  block_id_DESC
+  block_id_ASC_NULLS_FIRST
+  block_id_DESC_NULLS_LAST
+  block_number_ASC
+  block_number_DESC
+  block_number_ASC_NULLS_FIRST
+  block_number_DESC_NULLS_LAST
+  block_timestamp_ASC
+  block_timestamp_DESC
+  block_timestamp_ASC_NULLS_FIRST
+  block_timestamp_DESC_NULLS_LAST
+  incentiveIfOutbid_ASC
+  incentiveIfOutbid_DESC
+  incentiveIfOutbid_ASC_NULLS_FIRST
+  incentiveIfOutbid_DESC_NULLS_LAST
+}
+
+type BidsConnection {
+  edges: [BidEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input BidWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  buyer_isNull: Boolean
+  buyer_eq: String
+  buyer_not_eq: String
+  buyer_gt: String
+  buyer_gte: String
+  buyer_lt: String
+  buyer_lte: String
+  buyer_in: [String!]
+  buyer_not_in: [String!]
+  buyer_contains: String
+  buyer_not_contains: String
+  buyer_containsInsensitive: String
+  buyer_not_containsInsensitive: String
+  buyer_startsWith: String
+  buyer_not_startsWith: String
+  buyer_endsWith: String
+  buyer_not_endsWith: String
+  quantityWanted_isNull: Boolean
+  quantityWanted_eq: BigInt
+  quantityWanted_not_eq: BigInt
+  quantityWanted_gt: BigInt
+  quantityWanted_gte: BigInt
+  quantityWanted_lt: BigInt
+  quantityWanted_lte: BigInt
+  quantityWanted_in: [BigInt!]
+  quantityWanted_not_in: [BigInt!]
+  totalDirectOfferAmount_isNull: Boolean
+  totalDirectOfferAmount_eq: BigInt
+  totalDirectOfferAmount_not_eq: BigInt
+  totalDirectOfferAmount_gt: BigInt
+  totalDirectOfferAmount_gte: BigInt
+  totalDirectOfferAmount_lt: BigInt
+  totalDirectOfferAmount_lte: BigInt
+  totalDirectOfferAmount_in: [BigInt!]
+  totalDirectOfferAmount_not_in: [BigInt!]
+  currency_isNull: Boolean
+  currency_eq: String
+  currency_not_eq: String
+  currency_gt: String
+  currency_gte: String
+  currency_lt: String
+  currency_lte: String
+  currency_in: [String!]
+  currency_not_in: [String!]
+  currency_contains: String
+  currency_not_contains: String
+  currency_containsInsensitive: String
+  currency_not_containsInsensitive: String
+  currency_startsWith: String
+  currency_not_startsWith: String
+  currency_endsWith: String
+  currency_not_endsWith: String
+  listing_isNull: Boolean
+  listing: ListingWhereInput
+  block_isNull: Boolean
+  block: BlockWhereInput
+  incentiveIfOutbid_isNull: Boolean
+  incentiveIfOutbid_eq: BigInt
+  incentiveIfOutbid_not_eq: BigInt
+  incentiveIfOutbid_gt: BigInt
+  incentiveIfOutbid_gte: BigInt
+  incentiveIfOutbid_lt: BigInt
+  incentiveIfOutbid_lte: BigInt
+  incentiveIfOutbid_in: [BigInt!]
+  incentiveIfOutbid_not_in: [BigInt!]
+  AND: [BidWhereInput!]
+  OR: [BidWhereInput!]
+}
+
+"""Big number integer"""
+scalar BigInt
+
+type Block {
+  id: String!
+  number: Int!
+  timestamp: DateTime!
+  network: Network!
+  events(where: EventWhereInput, orderBy: [EventOrderByInput!], offset: Int, limit: Int): [Event!]!
+}
+
+type BlockEdge {
+  node: Block!
+  cursor: String!
+}
+
+enum BlockOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  number_ASC
+  number_DESC
+  number_ASC_NULLS_FIRST
+  number_DESC_NULLS_LAST
+  timestamp_ASC
+  timestamp_DESC
+  timestamp_ASC_NULLS_FIRST
+  timestamp_DESC_NULLS_LAST
+  network_id_ASC
+  network_id_DESC
+  network_id_ASC_NULLS_FIRST
+  network_id_DESC_NULLS_LAST
+}
+
+type BlocksConnection {
+  edges: [BlockEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input BlockWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  number_isNull: Boolean
+  number_eq: Int
+  number_not_eq: Int
+  number_gt: Int
+  number_gte: Int
+  number_lt: Int
+  number_lte: Int
+  number_in: [Int!]
+  number_not_in: [Int!]
+  timestamp_isNull: Boolean
+  timestamp_eq: DateTime
+  timestamp_not_eq: DateTime
+  timestamp_gt: DateTime
+  timestamp_gte: DateTime
+  timestamp_lt: DateTime
+  timestamp_lte: DateTime
+  timestamp_in: [DateTime!]
+  timestamp_not_in: [DateTime!]
+  network_isNull: Boolean
+  network: NetworkWhereInput
+  events_every: EventWhereInput
+  events_some: EventWhereInput
+  events_none: EventWhereInput
+  AND: [BlockWhereInput!]
+  OR: [BlockWhereInput!]
+}
+
+type BurnEventPayload {
+  from: String!
+  to: String!
+  tokenId: BigInt!
+}
+
+type Catalog {
+  id: String!
+  owner: String
+  metadataUri: String
+  type: String
+  parts(where: CatalogPartWhereInput, orderBy: [CatalogPartOrderByInput!], offset: Int, limit: Int): [CatalogPart!]!
+  events(where: EventWhereInput, orderBy: [EventOrderByInput!], offset: Int, limit: Int): [Event!]!
+  network: Network!
+  createdAt: DateTime
+  updatedAt: DateTime
+}
+
+type CatalogAddedEquippablesEventPayload {
+  partId: BigInt!
+  equippableAddresses: [String]!
+}
+
+type CatalogAddedPartEventPayload {
+  partId: BigInt!
+  itemType: ItemType!
+  z: Int!
+  equippable: [String]!
+  metadataUri: String!
+}
+
+type CatalogEdge {
+  node: Catalog!
+  cursor: String!
+}
+
+enum CatalogOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  owner_ASC
+  owner_DESC
+  owner_ASC_NULLS_FIRST
+  owner_DESC_NULLS_LAST
+  metadataUri_ASC
+  metadataUri_DESC
+  metadataUri_ASC_NULLS_FIRST
+  metadataUri_DESC_NULLS_LAST
+  type_ASC
+  type_DESC
+  type_ASC_NULLS_FIRST
+  type_DESC_NULLS_LAST
+  network_id_ASC
+  network_id_DESC
+  network_id_ASC_NULLS_FIRST
+  network_id_DESC_NULLS_LAST
+  createdAt_ASC
+  createdAt_DESC
+  createdAt_ASC_NULLS_FIRST
+  createdAt_DESC_NULLS_LAST
+  updatedAt_ASC
+  updatedAt_DESC
+  updatedAt_ASC_NULLS_FIRST
+  updatedAt_DESC_NULLS_LAST
+}
+
+type CatalogPart {
+  id: String!
+  itemType: ItemType!
+  z: Int!
+  equippable: [String]
+  metadataUri: String
+  isEquippableToAll: Boolean
+  catalog: Catalog!
+}
+
+type CatalogPartEdge {
+  node: CatalogPart!
+  cursor: String!
+}
+
+enum CatalogPartOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  itemType_ASC
+  itemType_DESC
+  itemType_ASC_NULLS_FIRST
+  itemType_DESC_NULLS_LAST
+  z_ASC
+  z_DESC
+  z_ASC_NULLS_FIRST
+  z_DESC_NULLS_LAST
+  metadataUri_ASC
+  metadataUri_DESC
+  metadataUri_ASC_NULLS_FIRST
+  metadataUri_DESC_NULLS_LAST
+  isEquippableToAll_ASC
+  isEquippableToAll_DESC
+  isEquippableToAll_ASC_NULLS_FIRST
+  isEquippableToAll_DESC_NULLS_LAST
+  catalog_id_ASC
+  catalog_id_DESC
+  catalog_id_ASC_NULLS_FIRST
+  catalog_id_DESC_NULLS_LAST
+  catalog_owner_ASC
+  catalog_owner_DESC
+  catalog_owner_ASC_NULLS_FIRST
+  catalog_owner_DESC_NULLS_LAST
+  catalog_metadataUri_ASC
+  catalog_metadataUri_DESC
+  catalog_metadataUri_ASC_NULLS_FIRST
+  catalog_metadataUri_DESC_NULLS_LAST
+  catalog_type_ASC
+  catalog_type_DESC
+  catalog_type_ASC_NULLS_FIRST
+  catalog_type_DESC_NULLS_LAST
+  catalog_createdAt_ASC
+  catalog_createdAt_DESC
+  catalog_createdAt_ASC_NULLS_FIRST
+  catalog_createdAt_DESC_NULLS_LAST
+  catalog_updatedAt_ASC
+  catalog_updatedAt_DESC
+  catalog_updatedAt_ASC_NULLS_FIRST
+  catalog_updatedAt_DESC_NULLS_LAST
+}
+
+type CatalogPartsConnection {
+  edges: [CatalogPartEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input CatalogPartWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  itemType_isNull: Boolean
+  itemType_eq: ItemType
+  itemType_not_eq: ItemType
+  itemType_in: [ItemType!]
+  itemType_not_in: [ItemType!]
+  z_isNull: Boolean
+  z_eq: Int
+  z_not_eq: Int
+  z_gt: Int
+  z_gte: Int
+  z_lt: Int
+  z_lte: Int
+  z_in: [Int!]
+  z_not_in: [Int!]
+  equippable_isNull: Boolean
+  equippable_containsAll: [String]
+  equippable_containsAny: [String]
+  equippable_containsNone: [String]
+  metadataUri_isNull: Boolean
+  metadataUri_eq: String
+  metadataUri_not_eq: String
+  metadataUri_gt: String
+  metadataUri_gte: String
+  metadataUri_lt: String
+  metadataUri_lte: String
+  metadataUri_in: [String!]
+  metadataUri_not_in: [String!]
+  metadataUri_contains: String
+  metadataUri_not_contains: String
+  metadataUri_containsInsensitive: String
+  metadataUri_not_containsInsensitive: String
+  metadataUri_startsWith: String
+  metadataUri_not_startsWith: String
+  metadataUri_endsWith: String
+  metadataUri_not_endsWith: String
+  isEquippableToAll_isNull: Boolean
+  isEquippableToAll_eq: Boolean
+  isEquippableToAll_not_eq: Boolean
+  catalog_isNull: Boolean
+  catalog: CatalogWhereInput
+  AND: [CatalogPartWhereInput!]
+  OR: [CatalogPartWhereInput!]
+}
+
+type CatalogsConnection {
+  edges: [CatalogEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type CatalogSetEquippablesEventPayload {
+  partId: BigInt!
+  equippableAddresses: [String]!
+}
+
+type CatalogSetEquippableToAllEventPayload {
+  partId: BigInt!
+}
+
+input CatalogWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  owner_isNull: Boolean
+  owner_eq: String
+  owner_not_eq: String
+  owner_gt: String
+  owner_gte: String
+  owner_lt: String
+  owner_lte: String
+  owner_in: [String!]
+  owner_not_in: [String!]
+  owner_contains: String
+  owner_not_contains: String
+  owner_containsInsensitive: String
+  owner_not_containsInsensitive: String
+  owner_startsWith: String
+  owner_not_startsWith: String
+  owner_endsWith: String
+  owner_not_endsWith: String
+  metadataUri_isNull: Boolean
+  metadataUri_eq: String
+  metadataUri_not_eq: String
+  metadataUri_gt: String
+  metadataUri_gte: String
+  metadataUri_lt: String
+  metadataUri_lte: String
+  metadataUri_in: [String!]
+  metadataUri_not_in: [String!]
+  metadataUri_contains: String
+  metadataUri_not_contains: String
+  metadataUri_containsInsensitive: String
+  metadataUri_not_containsInsensitive: String
+  metadataUri_startsWith: String
+  metadataUri_not_startsWith: String
+  metadataUri_endsWith: String
+  metadataUri_not_endsWith: String
+  type_isNull: Boolean
+  type_eq: String
+  type_not_eq: String
+  type_gt: String
+  type_gte: String
+  type_lt: String
+  type_lte: String
+  type_in: [String!]
+  type_not_in: [String!]
+  type_contains: String
+  type_not_contains: String
+  type_containsInsensitive: String
+  type_not_containsInsensitive: String
+  type_startsWith: String
+  type_not_startsWith: String
+  type_endsWith: String
+  type_not_endsWith: String
+  parts_every: CatalogPartWhereInput
+  parts_some: CatalogPartWhereInput
+  parts_none: CatalogPartWhereInput
+  events_every: EventWhereInput
+  events_some: EventWhereInput
+  events_none: EventWhereInput
+  network_isNull: Boolean
+  network: NetworkWhereInput
+  createdAt_isNull: Boolean
+  createdAt_eq: DateTime
+  createdAt_not_eq: DateTime
+  createdAt_gt: DateTime
+  createdAt_gte: DateTime
+  createdAt_lt: DateTime
+  createdAt_lte: DateTime
+  createdAt_in: [DateTime!]
+  createdAt_not_in: [DateTime!]
+  updatedAt_isNull: Boolean
+  updatedAt_eq: DateTime
+  updatedAt_not_eq: DateTime
+  updatedAt_gt: DateTime
+  updatedAt_gte: DateTime
+  updatedAt_lt: DateTime
+  updatedAt_lte: DateTime
+  updatedAt_in: [DateTime!]
+  updatedAt_not_in: [DateTime!]
+  AND: [CatalogWhereInput!]
+  OR: [CatalogWhereInput!]
+}
+
+enum ChainName {
+  MoonbaseAlpha
+  Moonbeam
+  sepolia
+  ethereum
+  polygon
+  base
+  baseSepolia
+  astar
+  bsc
+  astarZkEvm
+  bob
+}
+
+type ChildAbandonedEventPayload {
+  tokenId: BigInt!
+  childAddress: String!
+  childId: BigInt!
+  toZero: Boolean!
+  fromPending: Boolean!
+}
+
+type ChildAcceptedEventPayload {
+  childIndex: BigInt!
+  tokenId: BigInt!
+  childAddress: String!
+  childId: BigInt!
+}
+
+type ChildRejectedEventPayload {
+  tokenId: BigInt!
+  childAddress: String!
+  childId: BigInt!
+  toZero: Boolean!
+  fromPending: Boolean!
+}
+
+type Collection {
+  id: String!
+  contractAddress: String!
+  metadata: String!
+  name: String!
+  symbol: String!
+  royaltyRecipient: String
+  royaltyPercentageBps: Int
+  legoCombination: LegoCombination!
+  mintingType: MintingType!
+  registryIsSoulbound: Boolean!
+  registryConfig: RegistryConfig!
+  maxSupply: Int
+  deployer: String!
+  owner: String!
+  hasSoulBoundInterface: Boolean!
+  hasEquippableInterface: Boolean!
+  hasTokenHolderInterface: Boolean
+  chainName: ChainName!
+  network: Network!
+  events(where: EventWhereInput, orderBy: [EventOrderByInput!], offset: Int, limit: Int): [Event!]!
+  nfts(where: NftWhereInput, orderBy: [NftOrderByInput!], offset: Int, limit: Int): [Nft!]!
+  assets(where: AssetWhereInput, orderBy: [AssetOrderByInput!], offset: Int, limit: Int): [Asset!]!
+  equippableGroups(where: EquippableGroupWhereInput, orderBy: [EquippableGroupOrderByInput!], offset: Int, limit: Int): [EquippableGroup!]!
+  offers(where: CollectionOfferWhereInput, orderBy: [CollectionOfferOrderByInput!], offset: Int, limit: Int): [CollectionOffer!]!
+  deletedAt: DateTime
+  createdAt: DateTime
+}
+
+type CollectionAddedEventPayload {
+  collection: String!
+  deployer: String!
+  name: String!
+  symbol: String!
+  maxSupply: Int!
+  collectionMetadata: String!
+  legoCombination: LegoCombination!
+  mintingType: MintingType!
+  registryIsSoulbound: Boolean!
+  registryConfig: RegistryConfig!
+}
+
+type CollectionEdge {
+  node: Collection!
+  cursor: String!
+}
+
+type CollectionOffer {
+  id: String!
+  block: Block
+  collection: Collection!
+  buyer: String!
+  quantityWanted: BigInt!
+  totalDirectOfferAmount: BigInt
+  currency: String!
+  expirationTimestamp: DateTime
+  expectedChildren: [ExpectedChildren]!
+}
+
+type CollectionOfferEdge {
+  node: CollectionOffer!
+  cursor: String!
+}
+
+enum CollectionOfferOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  block_id_ASC
+  block_id_DESC
+  block_id_ASC_NULLS_FIRST
+  block_id_DESC_NULLS_LAST
+  block_number_ASC
+  block_number_DESC
+  block_number_ASC_NULLS_FIRST
+  block_number_DESC_NULLS_LAST
+  block_timestamp_ASC
+  block_timestamp_DESC
+  block_timestamp_ASC_NULLS_FIRST
+  block_timestamp_DESC_NULLS_LAST
+  collection_id_ASC
+  collection_id_DESC
+  collection_id_ASC_NULLS_FIRST
+  collection_id_DESC_NULLS_LAST
+  collection_contractAddress_ASC
+  collection_contractAddress_DESC
+  collection_contractAddress_ASC_NULLS_FIRST
+  collection_contractAddress_DESC_NULLS_LAST
+  collection_metadata_ASC
+  collection_metadata_DESC
+  collection_metadata_ASC_NULLS_FIRST
+  collection_metadata_DESC_NULLS_LAST
+  collection_name_ASC
+  collection_name_DESC
+  collection_name_ASC_NULLS_FIRST
+  collection_name_DESC_NULLS_LAST
+  collection_symbol_ASC
+  collection_symbol_DESC
+  collection_symbol_ASC_NULLS_FIRST
+  collection_symbol_DESC_NULLS_LAST
+  collection_royaltyRecipient_ASC
+  collection_royaltyRecipient_DESC
+  collection_royaltyRecipient_ASC_NULLS_FIRST
+  collection_royaltyRecipient_DESC_NULLS_LAST
+  collection_royaltyPercentageBps_ASC
+  collection_royaltyPercentageBps_DESC
+  collection_royaltyPercentageBps_ASC_NULLS_FIRST
+  collection_royaltyPercentageBps_DESC_NULLS_LAST
+  collection_legoCombination_ASC
+  collection_legoCombination_DESC
+  collection_legoCombination_ASC_NULLS_FIRST
+  collection_legoCombination_DESC_NULLS_LAST
+  collection_mintingType_ASC
+  collection_mintingType_DESC
+  collection_mintingType_ASC_NULLS_FIRST
+  collection_mintingType_DESC_NULLS_LAST
+  collection_registryIsSoulbound_ASC
+  collection_registryIsSoulbound_DESC
+  collection_registryIsSoulbound_ASC_NULLS_FIRST
+  collection_registryIsSoulbound_DESC_NULLS_LAST
+  collection_maxSupply_ASC
+  collection_maxSupply_DESC
+  collection_maxSupply_ASC_NULLS_FIRST
+  collection_maxSupply_DESC_NULLS_LAST
+  collection_deployer_ASC
+  collection_deployer_DESC
+  collection_deployer_ASC_NULLS_FIRST
+  collection_deployer_DESC_NULLS_LAST
+  collection_owner_ASC
+  collection_owner_DESC
+  collection_owner_ASC_NULLS_FIRST
+  collection_owner_DESC_NULLS_LAST
+  collection_hasSoulBoundInterface_ASC
+  collection_hasSoulBoundInterface_DESC
+  collection_hasSoulBoundInterface_ASC_NULLS_FIRST
+  collection_hasSoulBoundInterface_DESC_NULLS_LAST
+  collection_hasEquippableInterface_ASC
+  collection_hasEquippableInterface_DESC
+  collection_hasEquippableInterface_ASC_NULLS_FIRST
+  collection_hasEquippableInterface_DESC_NULLS_LAST
+  collection_hasTokenHolderInterface_ASC
+  collection_hasTokenHolderInterface_DESC
+  collection_hasTokenHolderInterface_ASC_NULLS_FIRST
+  collection_hasTokenHolderInterface_DESC_NULLS_LAST
+  collection_chainName_ASC
+  collection_chainName_DESC
+  collection_chainName_ASC_NULLS_FIRST
+  collection_chainName_DESC_NULLS_LAST
+  collection_deletedAt_ASC
+  collection_deletedAt_DESC
+  collection_deletedAt_ASC_NULLS_FIRST
+  collection_deletedAt_DESC_NULLS_LAST
+  collection_createdAt_ASC
+  collection_createdAt_DESC
+  collection_createdAt_ASC_NULLS_FIRST
+  collection_createdAt_DESC_NULLS_LAST
+  buyer_ASC
+  buyer_DESC
+  buyer_ASC_NULLS_FIRST
+  buyer_DESC_NULLS_LAST
+  quantityWanted_ASC
+  quantityWanted_DESC
+  quantityWanted_ASC_NULLS_FIRST
+  quantityWanted_DESC_NULLS_LAST
+  totalDirectOfferAmount_ASC
+  totalDirectOfferAmount_DESC
+  totalDirectOfferAmount_ASC_NULLS_FIRST
+  totalDirectOfferAmount_DESC_NULLS_LAST
+  currency_ASC
+  currency_DESC
+  currency_ASC_NULLS_FIRST
+  currency_DESC_NULLS_LAST
+  expirationTimestamp_ASC
+  expirationTimestamp_DESC
+  expirationTimestamp_ASC_NULLS_FIRST
+  expirationTimestamp_DESC_NULLS_LAST
+}
+
+type CollectionOffersConnection {
+  edges: [CollectionOfferEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input CollectionOfferWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  block_isNull: Boolean
+  block: BlockWhereInput
+  collection_isNull: Boolean
+  collection: CollectionWhereInput
+  buyer_isNull: Boolean
+  buyer_eq: String
+  buyer_not_eq: String
+  buyer_gt: String
+  buyer_gte: String
+  buyer_lt: String
+  buyer_lte: String
+  buyer_in: [String!]
+  buyer_not_in: [String!]
+  buyer_contains: String
+  buyer_not_contains: String
+  buyer_containsInsensitive: String
+  buyer_not_containsInsensitive: String
+  buyer_startsWith: String
+  buyer_not_startsWith: String
+  buyer_endsWith: String
+  buyer_not_endsWith: String
+  quantityWanted_isNull: Boolean
+  quantityWanted_eq: BigInt
+  quantityWanted_not_eq: BigInt
+  quantityWanted_gt: BigInt
+  quantityWanted_gte: BigInt
+  quantityWanted_lt: BigInt
+  quantityWanted_lte: BigInt
+  quantityWanted_in: [BigInt!]
+  quantityWanted_not_in: [BigInt!]
+  totalDirectOfferAmount_isNull: Boolean
+  totalDirectOfferAmount_eq: BigInt
+  totalDirectOfferAmount_not_eq: BigInt
+  totalDirectOfferAmount_gt: BigInt
+  totalDirectOfferAmount_gte: BigInt
+  totalDirectOfferAmount_lt: BigInt
+  totalDirectOfferAmount_lte: BigInt
+  totalDirectOfferAmount_in: [BigInt!]
+  totalDirectOfferAmount_not_in: [BigInt!]
+  currency_isNull: Boolean
+  currency_eq: String
+  currency_not_eq: String
+  currency_gt: String
+  currency_gte: String
+  currency_lt: String
+  currency_lte: String
+  currency_in: [String!]
+  currency_not_in: [String!]
+  currency_contains: String
+  currency_not_contains: String
+  currency_containsInsensitive: String
+  currency_not_containsInsensitive: String
+  currency_startsWith: String
+  currency_not_startsWith: String
+  currency_endsWith: String
+  currency_not_endsWith: String
+  expirationTimestamp_isNull: Boolean
+  expirationTimestamp_eq: DateTime
+  expirationTimestamp_not_eq: DateTime
+  expirationTimestamp_gt: DateTime
+  expirationTimestamp_gte: DateTime
+  expirationTimestamp_lt: DateTime
+  expirationTimestamp_lte: DateTime
+  expirationTimestamp_in: [DateTime!]
+  expirationTimestamp_not_in: [DateTime!]
+  expectedChildren_isNull: Boolean
+  AND: [CollectionOfferWhereInput!]
+  OR: [CollectionOfferWhereInput!]
+}
+
+enum CollectionOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  contractAddress_ASC
+  contractAddress_DESC
+  contractAddress_ASC_NULLS_FIRST
+  contractAddress_DESC_NULLS_LAST
+  metadata_ASC
+  metadata_DESC
+  metadata_ASC_NULLS_FIRST
+  metadata_DESC_NULLS_LAST
+  name_ASC
+  name_DESC
+  name_ASC_NULLS_FIRST
+  name_DESC_NULLS_LAST
+  symbol_ASC
+  symbol_DESC
+  symbol_ASC_NULLS_FIRST
+  symbol_DESC_NULLS_LAST
+  royaltyRecipient_ASC
+  royaltyRecipient_DESC
+  royaltyRecipient_ASC_NULLS_FIRST
+  royaltyRecipient_DESC_NULLS_LAST
+  royaltyPercentageBps_ASC
+  royaltyPercentageBps_DESC
+  royaltyPercentageBps_ASC_NULLS_FIRST
+  royaltyPercentageBps_DESC_NULLS_LAST
+  legoCombination_ASC
+  legoCombination_DESC
+  legoCombination_ASC_NULLS_FIRST
+  legoCombination_DESC_NULLS_LAST
+  mintingType_ASC
+  mintingType_DESC
+  mintingType_ASC_NULLS_FIRST
+  mintingType_DESC_NULLS_LAST
+  registryIsSoulbound_ASC
+  registryIsSoulbound_DESC
+  registryIsSoulbound_ASC_NULLS_FIRST
+  registryIsSoulbound_DESC_NULLS_LAST
+  registryConfig_usesOwnable_ASC
+  registryConfig_usesOwnable_DESC
+  registryConfig_usesOwnable_ASC_NULLS_FIRST
+  registryConfig_usesOwnable_DESC_NULLS_LAST
+  registryConfig_usesAccessControl_ASC
+  registryConfig_usesAccessControl_DESC
+  registryConfig_usesAccessControl_ASC_NULLS_FIRST
+  registryConfig_usesAccessControl_DESC_NULLS_LAST
+  registryConfig_hasStandardAssetManagement_ASC
+  registryConfig_hasStandardAssetManagement_DESC
+  registryConfig_hasStandardAssetManagement_ASC_NULLS_FIRST
+  registryConfig_hasStandardAssetManagement_DESC_NULLS_LAST
+  registryConfig_hasStandardMinting_ASC
+  registryConfig_hasStandardMinting_DESC
+  registryConfig_hasStandardMinting_ASC_NULLS_FIRST
+  registryConfig_hasStandardMinting_DESC_NULLS_LAST
+  registryConfig_hasStandardNestMinting_ASC
+  registryConfig_hasStandardNestMinting_DESC
+  registryConfig_hasStandardNestMinting_ASC_NULLS_FIRST
+  registryConfig_hasStandardNestMinting_DESC_NULLS_LAST
+  registryConfig_autoAcceptsFirstAsset_ASC
+  registryConfig_autoAcceptsFirstAsset_DESC
+  registryConfig_autoAcceptsFirstAsset_ASC_NULLS_FIRST
+  registryConfig_autoAcceptsFirstAsset_DESC_NULLS_LAST
+  registryConfig_adminRole_ASC
+  registryConfig_adminRole_DESC
+  registryConfig_adminRole_ASC_NULLS_FIRST
+  registryConfig_adminRole_DESC_NULLS_LAST
+  registryConfig_customLegoCombination_ASC
+  registryConfig_customLegoCombination_DESC
+  registryConfig_customLegoCombination_ASC_NULLS_FIRST
+  registryConfig_customLegoCombination_DESC_NULLS_LAST
+  registryConfig_customMintingType_ASC
+  registryConfig_customMintingType_DESC
+  registryConfig_customMintingType_ASC_NULLS_FIRST
+  registryConfig_customMintingType_DESC_NULLS_LAST
+  registryConfig_usesRMRKContributor_ASC
+  registryConfig_usesRMRKContributor_DESC
+  registryConfig_usesRMRKContributor_ASC_NULLS_FIRST
+  registryConfig_usesRMRKContributor_DESC_NULLS_LAST
+  registryConfig_usesRMRKMintingUtils_ASC
+  registryConfig_usesRMRKMintingUtils_DESC
+  registryConfig_usesRMRKMintingUtils_ASC_NULLS_FIRST
+  registryConfig_usesRMRKMintingUtils_DESC_NULLS_LAST
+  registryConfig_usesRMRKLockable_ASC
+  registryConfig_usesRMRKLockable_DESC
+  registryConfig_usesRMRKLockable_ASC_NULLS_FIRST
+  registryConfig_usesRMRKLockable_DESC_NULLS_LAST
+  maxSupply_ASC
+  maxSupply_DESC
+  maxSupply_ASC_NULLS_FIRST
+  maxSupply_DESC_NULLS_LAST
+  deployer_ASC
+  deployer_DESC
+  deployer_ASC_NULLS_FIRST
+  deployer_DESC_NULLS_LAST
+  owner_ASC
+  owner_DESC
+  owner_ASC_NULLS_FIRST
+  owner_DESC_NULLS_LAST
+  hasSoulBoundInterface_ASC
+  hasSoulBoundInterface_DESC
+  hasSoulBoundInterface_ASC_NULLS_FIRST
+  hasSoulBoundInterface_DESC_NULLS_LAST
+  hasEquippableInterface_ASC
+  hasEquippableInterface_DESC
+  hasEquippableInterface_ASC_NULLS_FIRST
+  hasEquippableInterface_DESC_NULLS_LAST
+  hasTokenHolderInterface_ASC
+  hasTokenHolderInterface_DESC
+  hasTokenHolderInterface_ASC_NULLS_FIRST
+  hasTokenHolderInterface_DESC_NULLS_LAST
+  chainName_ASC
+  chainName_DESC
+  chainName_ASC_NULLS_FIRST
+  chainName_DESC_NULLS_LAST
+  network_id_ASC
+  network_id_DESC
+  network_id_ASC_NULLS_FIRST
+  network_id_DESC_NULLS_LAST
+  deletedAt_ASC
+  deletedAt_DESC
+  deletedAt_ASC_NULLS_FIRST
+  deletedAt_DESC_NULLS_LAST
+  createdAt_ASC
+  createdAt_DESC
+  createdAt_ASC_NULLS_FIRST
+  createdAt_DESC_NULLS_LAST
+}
+
+type CollectionRemovedEventPayload {
+  collectionId: String!
+}
+
+type CollectionsConnection {
+  edges: [CollectionEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type CollectionValidParentEquippableGroupIdSetEventPayload {
+  equippableGroupId: BigInt!
+  slotPartId: BigInt!
+  parentAddress: String!
+}
+
+input CollectionWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  contractAddress_isNull: Boolean
+  contractAddress_eq: String
+  contractAddress_not_eq: String
+  contractAddress_gt: String
+  contractAddress_gte: String
+  contractAddress_lt: String
+  contractAddress_lte: String
+  contractAddress_in: [String!]
+  contractAddress_not_in: [String!]
+  contractAddress_contains: String
+  contractAddress_not_contains: String
+  contractAddress_containsInsensitive: String
+  contractAddress_not_containsInsensitive: String
+  contractAddress_startsWith: String
+  contractAddress_not_startsWith: String
+  contractAddress_endsWith: String
+  contractAddress_not_endsWith: String
+  metadata_isNull: Boolean
+  metadata_eq: String
+  metadata_not_eq: String
+  metadata_gt: String
+  metadata_gte: String
+  metadata_lt: String
+  metadata_lte: String
+  metadata_in: [String!]
+  metadata_not_in: [String!]
+  metadata_contains: String
+  metadata_not_contains: String
+  metadata_containsInsensitive: String
+  metadata_not_containsInsensitive: String
+  metadata_startsWith: String
+  metadata_not_startsWith: String
+  metadata_endsWith: String
+  metadata_not_endsWith: String
+  name_isNull: Boolean
+  name_eq: String
+  name_not_eq: String
+  name_gt: String
+  name_gte: String
+  name_lt: String
+  name_lte: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_contains: String
+  name_not_contains: String
+  name_containsInsensitive: String
+  name_not_containsInsensitive: String
+  name_startsWith: String
+  name_not_startsWith: String
+  name_endsWith: String
+  name_not_endsWith: String
+  symbol_isNull: Boolean
+  symbol_eq: String
+  symbol_not_eq: String
+  symbol_gt: String
+  symbol_gte: String
+  symbol_lt: String
+  symbol_lte: String
+  symbol_in: [String!]
+  symbol_not_in: [String!]
+  symbol_contains: String
+  symbol_not_contains: String
+  symbol_containsInsensitive: String
+  symbol_not_containsInsensitive: String
+  symbol_startsWith: String
+  symbol_not_startsWith: String
+  symbol_endsWith: String
+  symbol_not_endsWith: String
+  royaltyRecipient_isNull: Boolean
+  royaltyRecipient_eq: String
+  royaltyRecipient_not_eq: String
+  royaltyRecipient_gt: String
+  royaltyRecipient_gte: String
+  royaltyRecipient_lt: String
+  royaltyRecipient_lte: String
+  royaltyRecipient_in: [String!]
+  royaltyRecipient_not_in: [String!]
+  royaltyRecipient_contains: String
+  royaltyRecipient_not_contains: String
+  royaltyRecipient_containsInsensitive: String
+  royaltyRecipient_not_containsInsensitive: String
+  royaltyRecipient_startsWith: String
+  royaltyRecipient_not_startsWith: String
+  royaltyRecipient_endsWith: String
+  royaltyRecipient_not_endsWith: String
+  royaltyPercentageBps_isNull: Boolean
+  royaltyPercentageBps_eq: Int
+  royaltyPercentageBps_not_eq: Int
+  royaltyPercentageBps_gt: Int
+  royaltyPercentageBps_gte: Int
+  royaltyPercentageBps_lt: Int
+  royaltyPercentageBps_lte: Int
+  royaltyPercentageBps_in: [Int!]
+  royaltyPercentageBps_not_in: [Int!]
+  legoCombination_isNull: Boolean
+  legoCombination_eq: LegoCombination
+  legoCombination_not_eq: LegoCombination
+  legoCombination_in: [LegoCombination!]
+  legoCombination_not_in: [LegoCombination!]
+  mintingType_isNull: Boolean
+  mintingType_eq: MintingType
+  mintingType_not_eq: MintingType
+  mintingType_in: [MintingType!]
+  mintingType_not_in: [MintingType!]
+  registryIsSoulbound_isNull: Boolean
+  registryIsSoulbound_eq: Boolean
+  registryIsSoulbound_not_eq: Boolean
+  registryConfig_isNull: Boolean
+  registryConfig: RegistryConfigWhereInput
+  maxSupply_isNull: Boolean
+  maxSupply_eq: Int
+  maxSupply_not_eq: Int
+  maxSupply_gt: Int
+  maxSupply_gte: Int
+  maxSupply_lt: Int
+  maxSupply_lte: Int
+  maxSupply_in: [Int!]
+  maxSupply_not_in: [Int!]
+  deployer_isNull: Boolean
+  deployer_eq: String
+  deployer_not_eq: String
+  deployer_gt: String
+  deployer_gte: String
+  deployer_lt: String
+  deployer_lte: String
+  deployer_in: [String!]
+  deployer_not_in: [String!]
+  deployer_contains: String
+  deployer_not_contains: String
+  deployer_containsInsensitive: String
+  deployer_not_containsInsensitive: String
+  deployer_startsWith: String
+  deployer_not_startsWith: String
+  deployer_endsWith: String
+  deployer_not_endsWith: String
+  owner_isNull: Boolean
+  owner_eq: String
+  owner_not_eq: String
+  owner_gt: String
+  owner_gte: String
+  owner_lt: String
+  owner_lte: String
+  owner_in: [String!]
+  owner_not_in: [String!]
+  owner_contains: String
+  owner_not_contains: String
+  owner_containsInsensitive: String
+  owner_not_containsInsensitive: String
+  owner_startsWith: String
+  owner_not_startsWith: String
+  owner_endsWith: String
+  owner_not_endsWith: String
+  hasSoulBoundInterface_isNull: Boolean
+  hasSoulBoundInterface_eq: Boolean
+  hasSoulBoundInterface_not_eq: Boolean
+  hasEquippableInterface_isNull: Boolean
+  hasEquippableInterface_eq: Boolean
+  hasEquippableInterface_not_eq: Boolean
+  hasTokenHolderInterface_isNull: Boolean
+  hasTokenHolderInterface_eq: Boolean
+  hasTokenHolderInterface_not_eq: Boolean
+  chainName_isNull: Boolean
+  chainName_eq: ChainName
+  chainName_not_eq: ChainName
+  chainName_in: [ChainName!]
+  chainName_not_in: [ChainName!]
+  network_isNull: Boolean
+  network: NetworkWhereInput
+  events_every: EventWhereInput
+  events_some: EventWhereInput
+  events_none: EventWhereInput
+  nfts_every: NftWhereInput
+  nfts_some: NftWhereInput
+  nfts_none: NftWhereInput
+  assets_every: AssetWhereInput
+  assets_some: AssetWhereInput
+  assets_none: AssetWhereInput
+  equippableGroups_every: EquippableGroupWhereInput
+  equippableGroups_some: EquippableGroupWhereInput
+  equippableGroups_none: EquippableGroupWhereInput
+  offers_every: CollectionOfferWhereInput
+  offers_some: CollectionOfferWhereInput
+  offers_none: CollectionOfferWhereInput
+  deletedAt_isNull: Boolean
+  deletedAt_eq: DateTime
+  deletedAt_not_eq: DateTime
+  deletedAt_gt: DateTime
+  deletedAt_gte: DateTime
+  deletedAt_lt: DateTime
+  deletedAt_lte: DateTime
+  deletedAt_in: [DateTime!]
+  deletedAt_not_in: [DateTime!]
+  createdAt_isNull: Boolean
+  createdAt_eq: DateTime
+  createdAt_not_eq: DateTime
+  createdAt_gt: DateTime
+  createdAt_gte: DateTime
+  createdAt_lt: DateTime
+  createdAt_lte: DateTime
+  createdAt_in: [DateTime!]
+  createdAt_not_in: [DateTime!]
+  AND: [CollectionWhereInput!]
+  OR: [CollectionWhereInput!]
+}
+
+type CollectionWithTotalSupplyEntity {
+  id: String!
+  metadata: String!
+  name: String!
+  symbol: String!
+  maxSupply: Float
+  deployer: String!
+  owner: String!
+  totalSupply: Float
+  mintingType: String!
+  registryConfig: RegistryConfig!
+}
+
+type ContractEventAuctionClosed {
+  listingId: BigInt!
+  closer: String!
+  cancelled: Boolean!
+  auctionCreator: String!
+  winningBidder: String!
+  totalPricePaid: BigInt
+  currency: String
+}
+
+type ContractEventIncentivesPaid {
+  listingId: BigInt!
+  earner: String!
+  payer: String!
+  incentivePaid: BigInt!
+}
+
+type ContractEventListingAdded {
+  listingId: BigInt
+  buyoutPricePerToken: BigInt
+  saleType: Int!
+  paymentCurrency: String!
+  quantity: BigInt
+  startTime: DateTime
+  endTime: DateTime
+  listingCreator: String
+  tokenType: Int
+  tokenId: BigInt!
+  tokenAddress: String!
+  gbm: Gbm
+}
+
+type ContractEventListingRemoved {
+  listingId: BigInt!
+  listingCreator: String!
+}
+
+type ContractEventListingUpdated {
+  listingId: BigInt!
+  buyoutPricePerToken: BigInt
+  saleType: Int!
+  paymentCurrency: String!
+  quantity: BigInt
+  startTime: DateTime
+  endTime: DateTime
+  listingCreator: String
+  tokenType: Int
+  tokenId: BigInt!
+  tokenAddress: String!
+  gbm: Gbm
+}
+
+type ContractEventNewBid {
+  listingId: BigInt!
+  buyer: String!
+  quantityWanted: BigInt!
+  totalDirectOfferAmount: BigInt!
+  currency: String!
+  incentiveIfOutbid: BigInt
+  outbidBidId: String
+}
+
+type ContractEventNewOffer {
+  offerId: BigInt!
+  tokenAddress: String!
+  tokenId: BigInt!
+  buyer: String!
+  saleType: Int!
+  quantityWanted: BigInt!
+  totalDirectOfferAmount: BigInt!
+  currency: String!
+  expirationTimestamp: DateTime
+  expectedChildren: [ExpectedChildren]!
+}
+
+type ContractEventNewSale {
+  listingId: BigInt!
+  tokenAddress: String!
+  tokenId: BigInt!
+  seller: String!
+  buyer: String!
+  quantityBought: BigInt!
+  totalPricePaid: BigInt
+  currency: String
+}
+
+type ContractEventOfferCancelled {
+  offerId: BigInt!
+}
+
+type ContractEventOwnershipTransferred {
+  previousOwner: String!
+  newOwner: String!
+}
+
+type ContractEventPaused {
+  account: String!
+  pauseState: Boolean!
+}
+
+type ContractEventRoyaltiesPaid {
+  listingId: BigInt!
+  tokenAddress: String!
+  tokenId: BigInt!
+  recipient: String!
+  royaltyAmount: BigInt!
+  offerId: BigInt
+}
+
+"""
+A date-time string in simplified extended ISO 8601 format (YYYY-MM-DDTHH:mm:ss.sssZ)
+"""
+scalar DateTime
+
+type EquippableGroup {
+  id: String!
+  parentCollectionId: String!
+  slotPartId: BigInt!
+  collection: Collection!
+  nftAssets(where: NftAssetWhereInput, orderBy: [NftAssetOrderByInput!], offset: Int, limit: Int): [NftAsset!]!
+}
+
+type EquippableGroupEdge {
+  node: EquippableGroup!
+  cursor: String!
+}
+
+enum EquippableGroupOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  parentCollectionId_ASC
+  parentCollectionId_DESC
+  parentCollectionId_ASC_NULLS_FIRST
+  parentCollectionId_DESC_NULLS_LAST
+  slotPartId_ASC
+  slotPartId_DESC
+  slotPartId_ASC_NULLS_FIRST
+  slotPartId_DESC_NULLS_LAST
+  collection_id_ASC
+  collection_id_DESC
+  collection_id_ASC_NULLS_FIRST
+  collection_id_DESC_NULLS_LAST
+  collection_contractAddress_ASC
+  collection_contractAddress_DESC
+  collection_contractAddress_ASC_NULLS_FIRST
+  collection_contractAddress_DESC_NULLS_LAST
+  collection_metadata_ASC
+  collection_metadata_DESC
+  collection_metadata_ASC_NULLS_FIRST
+  collection_metadata_DESC_NULLS_LAST
+  collection_name_ASC
+  collection_name_DESC
+  collection_name_ASC_NULLS_FIRST
+  collection_name_DESC_NULLS_LAST
+  collection_symbol_ASC
+  collection_symbol_DESC
+  collection_symbol_ASC_NULLS_FIRST
+  collection_symbol_DESC_NULLS_LAST
+  collection_royaltyRecipient_ASC
+  collection_royaltyRecipient_DESC
+  collection_royaltyRecipient_ASC_NULLS_FIRST
+  collection_royaltyRecipient_DESC_NULLS_LAST
+  collection_royaltyPercentageBps_ASC
+  collection_royaltyPercentageBps_DESC
+  collection_royaltyPercentageBps_ASC_NULLS_FIRST
+  collection_royaltyPercentageBps_DESC_NULLS_LAST
+  collection_legoCombination_ASC
+  collection_legoCombination_DESC
+  collection_legoCombination_ASC_NULLS_FIRST
+  collection_legoCombination_DESC_NULLS_LAST
+  collection_mintingType_ASC
+  collection_mintingType_DESC
+  collection_mintingType_ASC_NULLS_FIRST
+  collection_mintingType_DESC_NULLS_LAST
+  collection_registryIsSoulbound_ASC
+  collection_registryIsSoulbound_DESC
+  collection_registryIsSoulbound_ASC_NULLS_FIRST
+  collection_registryIsSoulbound_DESC_NULLS_LAST
+  collection_maxSupply_ASC
+  collection_maxSupply_DESC
+  collection_maxSupply_ASC_NULLS_FIRST
+  collection_maxSupply_DESC_NULLS_LAST
+  collection_deployer_ASC
+  collection_deployer_DESC
+  collection_deployer_ASC_NULLS_FIRST
+  collection_deployer_DESC_NULLS_LAST
+  collection_owner_ASC
+  collection_owner_DESC
+  collection_owner_ASC_NULLS_FIRST
+  collection_owner_DESC_NULLS_LAST
+  collection_hasSoulBoundInterface_ASC
+  collection_hasSoulBoundInterface_DESC
+  collection_hasSoulBoundInterface_ASC_NULLS_FIRST
+  collection_hasSoulBoundInterface_DESC_NULLS_LAST
+  collection_hasEquippableInterface_ASC
+  collection_hasEquippableInterface_DESC
+  collection_hasEquippableInterface_ASC_NULLS_FIRST
+  collection_hasEquippableInterface_DESC_NULLS_LAST
+  collection_hasTokenHolderInterface_ASC
+  collection_hasTokenHolderInterface_DESC
+  collection_hasTokenHolderInterface_ASC_NULLS_FIRST
+  collection_hasTokenHolderInterface_DESC_NULLS_LAST
+  collection_chainName_ASC
+  collection_chainName_DESC
+  collection_chainName_ASC_NULLS_FIRST
+  collection_chainName_DESC_NULLS_LAST
+  collection_deletedAt_ASC
+  collection_deletedAt_DESC
+  collection_deletedAt_ASC_NULLS_FIRST
+  collection_deletedAt_DESC_NULLS_LAST
+  collection_createdAt_ASC
+  collection_createdAt_DESC
+  collection_createdAt_ASC_NULLS_FIRST
+  collection_createdAt_DESC_NULLS_LAST
+}
+
+type EquippableGroupsConnection {
+  edges: [EquippableGroupEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input EquippableGroupWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  parentCollectionId_isNull: Boolean
+  parentCollectionId_eq: String
+  parentCollectionId_not_eq: String
+  parentCollectionId_gt: String
+  parentCollectionId_gte: String
+  parentCollectionId_lt: String
+  parentCollectionId_lte: String
+  parentCollectionId_in: [String!]
+  parentCollectionId_not_in: [String!]
+  parentCollectionId_contains: String
+  parentCollectionId_not_contains: String
+  parentCollectionId_containsInsensitive: String
+  parentCollectionId_not_containsInsensitive: String
+  parentCollectionId_startsWith: String
+  parentCollectionId_not_startsWith: String
+  parentCollectionId_endsWith: String
+  parentCollectionId_not_endsWith: String
+  slotPartId_isNull: Boolean
+  slotPartId_eq: BigInt
+  slotPartId_not_eq: BigInt
+  slotPartId_gt: BigInt
+  slotPartId_gte: BigInt
+  slotPartId_lt: BigInt
+  slotPartId_lte: BigInt
+  slotPartId_in: [BigInt!]
+  slotPartId_not_in: [BigInt!]
+  collection_isNull: Boolean
+  collection: CollectionWhereInput
+  nftAssets_every: NftAssetWhereInput
+  nftAssets_some: NftAssetWhereInput
+  nftAssets_none: NftAssetWhereInput
+  AND: [EquippableGroupWhereInput!]
+  OR: [EquippableGroupWhereInput!]
+}
+
+type EquippedEventPayload {
+  tokenId: BigInt!
+  assetId: BigInt!
+  slotPartId: BigInt!
+  childId: BigInt!
+  childAddress: String!
+  childAssetId: BigInt!
+}
+
+type Erc20TokenHolderToken {
+  id: String!
+  token: Nft!
+  amount: BigInt!
+  contractAddress: String!
+}
+
+type Erc20TokenHolderTokenEdge {
+  node: Erc20TokenHolderToken!
+  cursor: String!
+}
+
+enum Erc20TokenHolderTokenOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  token_id_ASC
+  token_id_DESC
+  token_id_ASC_NULLS_FIRST
+  token_id_DESC_NULLS_LAST
+  token_owner_ASC
+  token_owner_DESC
+  token_owner_ASC_NULLS_FIRST
+  token_owner_DESC_NULLS_LAST
+  token_burned_ASC
+  token_burned_DESC
+  token_burned_ASC_NULLS_FIRST
+  token_burned_DESC_NULLS_LAST
+  token_metadata_ASC
+  token_metadata_DESC
+  token_metadata_ASC_NULLS_FIRST
+  token_metadata_DESC_NULLS_LAST
+  token_pending_ASC
+  token_pending_DESC
+  token_pending_ASC_NULLS_FIRST
+  token_pending_DESC_NULLS_LAST
+  token_equipmentUpdatedAt_ASC
+  token_equipmentUpdatedAt_DESC
+  token_equipmentUpdatedAt_ASC_NULLS_FIRST
+  token_equipmentUpdatedAt_DESC_NULLS_LAST
+  token_isTransferable_ASC
+  token_isTransferable_DESC
+  token_isTransferable_ASC_NULLS_FIRST
+  token_isTransferable_DESC_NULLS_LAST
+  token_lastTransferabilityCheckAt_ASC
+  token_lastTransferabilityCheckAt_DESC
+  token_lastTransferabilityCheckAt_ASC_NULLS_FIRST
+  token_lastTransferabilityCheckAt_DESC_NULLS_LAST
+  amount_ASC
+  amount_DESC
+  amount_ASC_NULLS_FIRST
+  amount_DESC_NULLS_LAST
+  contractAddress_ASC
+  contractAddress_DESC
+  contractAddress_ASC_NULLS_FIRST
+  contractAddress_DESC_NULLS_LAST
+}
+
+type Erc20TokenHolderTokensConnection {
+  edges: [Erc20TokenHolderTokenEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input Erc20TokenHolderTokenWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  token_isNull: Boolean
+  token: NftWhereInput
+  amount_isNull: Boolean
+  amount_eq: BigInt
+  amount_not_eq: BigInt
+  amount_gt: BigInt
+  amount_gte: BigInt
+  amount_lt: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  contractAddress_isNull: Boolean
+  contractAddress_eq: String
+  contractAddress_not_eq: String
+  contractAddress_gt: String
+  contractAddress_gte: String
+  contractAddress_lt: String
+  contractAddress_lte: String
+  contractAddress_in: [String!]
+  contractAddress_not_in: [String!]
+  contractAddress_contains: String
+  contractAddress_not_contains: String
+  contractAddress_containsInsensitive: String
+  contractAddress_not_containsInsensitive: String
+  contractAddress_startsWith: String
+  contractAddress_not_startsWith: String
+  contractAddress_endsWith: String
+  contractAddress_not_endsWith: String
+  AND: [Erc20TokenHolderTokenWhereInput!]
+  OR: [Erc20TokenHolderTokenWhereInput!]
+}
+
+type Event {
+  id: String!
+  block: Block!
+  transactionHash: String!
+  eventType: EventType
+  marketplaceEventMetadata: MarketplaceEventMetadata
+  token: Nft
+  collection: Collection
+  catalog: Catalog
+  from: String
+  payload: EventPayloads!
+}
+
+type EventEdge {
+  node: Event!
+  cursor: String!
+}
+
+enum EventOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  block_id_ASC
+  block_id_DESC
+  block_id_ASC_NULLS_FIRST
+  block_id_DESC_NULLS_LAST
+  block_number_ASC
+  block_number_DESC
+  block_number_ASC_NULLS_FIRST
+  block_number_DESC_NULLS_LAST
+  block_timestamp_ASC
+  block_timestamp_DESC
+  block_timestamp_ASC_NULLS_FIRST
+  block_timestamp_DESC_NULLS_LAST
+  transactionHash_ASC
+  transactionHash_DESC
+  transactionHash_ASC_NULLS_FIRST
+  transactionHash_DESC_NULLS_LAST
+  eventType_ASC
+  eventType_DESC
+  eventType_ASC_NULLS_FIRST
+  eventType_DESC_NULLS_LAST
+  marketplaceEventMetadata_tokenId_ASC
+  marketplaceEventMetadata_tokenId_DESC
+  marketplaceEventMetadata_tokenId_ASC_NULLS_FIRST
+  marketplaceEventMetadata_tokenId_DESC_NULLS_LAST
+  marketplaceEventMetadata_listingId_ASC
+  marketplaceEventMetadata_listingId_DESC
+  marketplaceEventMetadata_listingId_ASC_NULLS_FIRST
+  marketplaceEventMetadata_listingId_DESC_NULLS_LAST
+  marketplaceEventMetadata_buyoutPricePerToken_ASC
+  marketplaceEventMetadata_buyoutPricePerToken_DESC
+  marketplaceEventMetadata_buyoutPricePerToken_ASC_NULLS_FIRST
+  marketplaceEventMetadata_buyoutPricePerToken_DESC_NULLS_LAST
+  marketplaceEventMetadata_saleType_ASC
+  marketplaceEventMetadata_saleType_DESC
+  marketplaceEventMetadata_saleType_ASC_NULLS_FIRST
+  marketplaceEventMetadata_saleType_DESC_NULLS_LAST
+  marketplaceEventMetadata_paymentCurrency_ASC
+  marketplaceEventMetadata_paymentCurrency_DESC
+  marketplaceEventMetadata_paymentCurrency_ASC_NULLS_FIRST
+  marketplaceEventMetadata_paymentCurrency_DESC_NULLS_LAST
+  marketplaceEventMetadata_quantity_ASC
+  marketplaceEventMetadata_quantity_DESC
+  marketplaceEventMetadata_quantity_ASC_NULLS_FIRST
+  marketplaceEventMetadata_quantity_DESC_NULLS_LAST
+  marketplaceEventMetadata_startTime_ASC
+  marketplaceEventMetadata_startTime_DESC
+  marketplaceEventMetadata_startTime_ASC_NULLS_FIRST
+  marketplaceEventMetadata_startTime_DESC_NULLS_LAST
+  marketplaceEventMetadata_endTime_ASC
+  marketplaceEventMetadata_endTime_DESC
+  marketplaceEventMetadata_endTime_ASC_NULLS_FIRST
+  marketplaceEventMetadata_endTime_DESC_NULLS_LAST
+  marketplaceEventMetadata_endTimeOriginal_ASC
+  marketplaceEventMetadata_endTimeOriginal_DESC
+  marketplaceEventMetadata_endTimeOriginal_ASC_NULLS_FIRST
+  marketplaceEventMetadata_endTimeOriginal_DESC_NULLS_LAST
+  marketplaceEventMetadata_listingCreator_ASC
+  marketplaceEventMetadata_listingCreator_DESC
+  marketplaceEventMetadata_listingCreator_ASC_NULLS_FIRST
+  marketplaceEventMetadata_listingCreator_DESC_NULLS_LAST
+  marketplaceEventMetadata_tokenType_ASC
+  marketplaceEventMetadata_tokenType_DESC
+  marketplaceEventMetadata_tokenType_ASC_NULLS_FIRST
+  marketplaceEventMetadata_tokenType_DESC_NULLS_LAST
+  token_id_ASC
+  token_id_DESC
+  token_id_ASC_NULLS_FIRST
+  token_id_DESC_NULLS_LAST
+  token_owner_ASC
+  token_owner_DESC
+  token_owner_ASC_NULLS_FIRST
+  token_owner_DESC_NULLS_LAST
+  token_burned_ASC
+  token_burned_DESC
+  token_burned_ASC_NULLS_FIRST
+  token_burned_DESC_NULLS_LAST
+  token_metadata_ASC
+  token_metadata_DESC
+  token_metadata_ASC_NULLS_FIRST
+  token_metadata_DESC_NULLS_LAST
+  token_pending_ASC
+  token_pending_DESC
+  token_pending_ASC_NULLS_FIRST
+  token_pending_DESC_NULLS_LAST
+  token_equipmentUpdatedAt_ASC
+  token_equipmentUpdatedAt_DESC
+  token_equipmentUpdatedAt_ASC_NULLS_FIRST
+  token_equipmentUpdatedAt_DESC_NULLS_LAST
+  token_isTransferable_ASC
+  token_isTransferable_DESC
+  token_isTransferable_ASC_NULLS_FIRST
+  token_isTransferable_DESC_NULLS_LAST
+  token_lastTransferabilityCheckAt_ASC
+  token_lastTransferabilityCheckAt_DESC
+  token_lastTransferabilityCheckAt_ASC_NULLS_FIRST
+  token_lastTransferabilityCheckAt_DESC_NULLS_LAST
+  collection_id_ASC
+  collection_id_DESC
+  collection_id_ASC_NULLS_FIRST
+  collection_id_DESC_NULLS_LAST
+  collection_contractAddress_ASC
+  collection_contractAddress_DESC
+  collection_contractAddress_ASC_NULLS_FIRST
+  collection_contractAddress_DESC_NULLS_LAST
+  collection_metadata_ASC
+  collection_metadata_DESC
+  collection_metadata_ASC_NULLS_FIRST
+  collection_metadata_DESC_NULLS_LAST
+  collection_name_ASC
+  collection_name_DESC
+  collection_name_ASC_NULLS_FIRST
+  collection_name_DESC_NULLS_LAST
+  collection_symbol_ASC
+  collection_symbol_DESC
+  collection_symbol_ASC_NULLS_FIRST
+  collection_symbol_DESC_NULLS_LAST
+  collection_royaltyRecipient_ASC
+  collection_royaltyRecipient_DESC
+  collection_royaltyRecipient_ASC_NULLS_FIRST
+  collection_royaltyRecipient_DESC_NULLS_LAST
+  collection_royaltyPercentageBps_ASC
+  collection_royaltyPercentageBps_DESC
+  collection_royaltyPercentageBps_ASC_NULLS_FIRST
+  collection_royaltyPercentageBps_DESC_NULLS_LAST
+  collection_legoCombination_ASC
+  collection_legoCombination_DESC
+  collection_legoCombination_ASC_NULLS_FIRST
+  collection_legoCombination_DESC_NULLS_LAST
+  collection_mintingType_ASC
+  collection_mintingType_DESC
+  collection_mintingType_ASC_NULLS_FIRST
+  collection_mintingType_DESC_NULLS_LAST
+  collection_registryIsSoulbound_ASC
+  collection_registryIsSoulbound_DESC
+  collection_registryIsSoulbound_ASC_NULLS_FIRST
+  collection_registryIsSoulbound_DESC_NULLS_LAST
+  collection_maxSupply_ASC
+  collection_maxSupply_DESC
+  collection_maxSupply_ASC_NULLS_FIRST
+  collection_maxSupply_DESC_NULLS_LAST
+  collection_deployer_ASC
+  collection_deployer_DESC
+  collection_deployer_ASC_NULLS_FIRST
+  collection_deployer_DESC_NULLS_LAST
+  collection_owner_ASC
+  collection_owner_DESC
+  collection_owner_ASC_NULLS_FIRST
+  collection_owner_DESC_NULLS_LAST
+  collection_hasSoulBoundInterface_ASC
+  collection_hasSoulBoundInterface_DESC
+  collection_hasSoulBoundInterface_ASC_NULLS_FIRST
+  collection_hasSoulBoundInterface_DESC_NULLS_LAST
+  collection_hasEquippableInterface_ASC
+  collection_hasEquippableInterface_DESC
+  collection_hasEquippableInterface_ASC_NULLS_FIRST
+  collection_hasEquippableInterface_DESC_NULLS_LAST
+  collection_hasTokenHolderInterface_ASC
+  collection_hasTokenHolderInterface_DESC
+  collection_hasTokenHolderInterface_ASC_NULLS_FIRST
+  collection_hasTokenHolderInterface_DESC_NULLS_LAST
+  collection_chainName_ASC
+  collection_chainName_DESC
+  collection_chainName_ASC_NULLS_FIRST
+  collection_chainName_DESC_NULLS_LAST
+  collection_deletedAt_ASC
+  collection_deletedAt_DESC
+  collection_deletedAt_ASC_NULLS_FIRST
+  collection_deletedAt_DESC_NULLS_LAST
+  collection_createdAt_ASC
+  collection_createdAt_DESC
+  collection_createdAt_ASC_NULLS_FIRST
+  collection_createdAt_DESC_NULLS_LAST
+  catalog_id_ASC
+  catalog_id_DESC
+  catalog_id_ASC_NULLS_FIRST
+  catalog_id_DESC_NULLS_LAST
+  catalog_owner_ASC
+  catalog_owner_DESC
+  catalog_owner_ASC_NULLS_FIRST
+  catalog_owner_DESC_NULLS_LAST
+  catalog_metadataUri_ASC
+  catalog_metadataUri_DESC
+  catalog_metadataUri_ASC_NULLS_FIRST
+  catalog_metadataUri_DESC_NULLS_LAST
+  catalog_type_ASC
+  catalog_type_DESC
+  catalog_type_ASC_NULLS_FIRST
+  catalog_type_DESC_NULLS_LAST
+  catalog_createdAt_ASC
+  catalog_createdAt_DESC
+  catalog_createdAt_ASC_NULLS_FIRST
+  catalog_createdAt_DESC_NULLS_LAST
+  catalog_updatedAt_ASC
+  catalog_updatedAt_DESC
+  catalog_updatedAt_ASC_NULLS_FIRST
+  catalog_updatedAt_DESC_NULLS_LAST
+  from_ASC
+  from_DESC
+  from_ASC_NULLS_FIRST
+  from_DESC_NULLS_LAST
+  payload_from_ASC
+  payload_from_DESC
+  payload_from_ASC_NULLS_FIRST
+  payload_from_DESC_NULLS_LAST
+  payload_to_ASC
+  payload_to_DESC
+  payload_to_ASC_NULLS_FIRST
+  payload_to_DESC_NULLS_LAST
+  payload_fromTokenId_ASC
+  payload_fromTokenId_DESC
+  payload_fromTokenId_ASC_NULLS_FIRST
+  payload_fromTokenId_DESC_NULLS_LAST
+  payload_toTokenId_ASC
+  payload_toTokenId_DESC
+  payload_toTokenId_ASC_NULLS_FIRST
+  payload_toTokenId_DESC_NULLS_LAST
+  payload_tokenId_ASC
+  payload_tokenId_DESC
+  payload_tokenId_ASC_NULLS_FIRST
+  payload_tokenId_DESC_NULLS_LAST
+  payload_previousOwner_ASC
+  payload_previousOwner_DESC
+  payload_previousOwner_ASC_NULLS_FIRST
+  payload_previousOwner_DESC_NULLS_LAST
+  payload_newOwner_ASC
+  payload_newOwner_DESC
+  payload_newOwner_ASC_NULLS_FIRST
+  payload_newOwner_DESC_NULLS_LAST
+  payload_account_ASC
+  payload_account_DESC
+  payload_account_ASC_NULLS_FIRST
+  payload_account_DESC_NULLS_LAST
+  payload_pauseState_ASC
+  payload_pauseState_DESC
+  payload_pauseState_ASC_NULLS_FIRST
+  payload_pauseState_DESC_NULLS_LAST
+  payload_assetId_ASC
+  payload_assetId_DESC
+  payload_assetId_ASC_NULLS_FIRST
+  payload_assetId_DESC_NULLS_LAST
+  payload_replacesId_ASC
+  payload_replacesId_DESC
+  payload_replacesId_ASC_NULLS_FIRST
+  payload_replacesId_DESC_NULLS_LAST
+  payload_collection_ASC
+  payload_collection_DESC
+  payload_collection_ASC_NULLS_FIRST
+  payload_collection_DESC_NULLS_LAST
+  payload_deployer_ASC
+  payload_deployer_DESC
+  payload_deployer_ASC_NULLS_FIRST
+  payload_deployer_DESC_NULLS_LAST
+  payload_name_ASC
+  payload_name_DESC
+  payload_name_ASC_NULLS_FIRST
+  payload_name_DESC_NULLS_LAST
+  payload_symbol_ASC
+  payload_symbol_DESC
+  payload_symbol_ASC_NULLS_FIRST
+  payload_symbol_DESC_NULLS_LAST
+  payload_maxSupply_ASC
+  payload_maxSupply_DESC
+  payload_maxSupply_ASC_NULLS_FIRST
+  payload_maxSupply_DESC_NULLS_LAST
+  payload_collectionMetadata_ASC
+  payload_collectionMetadata_DESC
+  payload_collectionMetadata_ASC_NULLS_FIRST
+  payload_collectionMetadata_DESC_NULLS_LAST
+  payload_legoCombination_ASC
+  payload_legoCombination_DESC
+  payload_legoCombination_ASC_NULLS_FIRST
+  payload_legoCombination_DESC_NULLS_LAST
+  payload_mintingType_ASC
+  payload_mintingType_DESC
+  payload_mintingType_ASC_NULLS_FIRST
+  payload_mintingType_DESC_NULLS_LAST
+  payload_registryIsSoulbound_ASC
+  payload_registryIsSoulbound_DESC
+  payload_registryIsSoulbound_ASC_NULLS_FIRST
+  payload_registryIsSoulbound_DESC_NULLS_LAST
+  payload_collectionId_ASC
+  payload_collectionId_DESC
+  payload_collectionId_ASC_NULLS_FIRST
+  payload_collectionId_DESC_NULLS_LAST
+  payload_listingId_ASC
+  payload_listingId_DESC
+  payload_listingId_ASC_NULLS_FIRST
+  payload_listingId_DESC_NULLS_LAST
+  payload_closer_ASC
+  payload_closer_DESC
+  payload_closer_ASC_NULLS_FIRST
+  payload_closer_DESC_NULLS_LAST
+  payload_cancelled_ASC
+  payload_cancelled_DESC
+  payload_cancelled_ASC_NULLS_FIRST
+  payload_cancelled_DESC_NULLS_LAST
+  payload_auctionCreator_ASC
+  payload_auctionCreator_DESC
+  payload_auctionCreator_ASC_NULLS_FIRST
+  payload_auctionCreator_DESC_NULLS_LAST
+  payload_winningBidder_ASC
+  payload_winningBidder_DESC
+  payload_winningBidder_ASC_NULLS_FIRST
+  payload_winningBidder_DESC_NULLS_LAST
+  payload_totalPricePaid_ASC
+  payload_totalPricePaid_DESC
+  payload_totalPricePaid_ASC_NULLS_FIRST
+  payload_totalPricePaid_DESC_NULLS_LAST
+  payload_currency_ASC
+  payload_currency_DESC
+  payload_currency_ASC_NULLS_FIRST
+  payload_currency_DESC_NULLS_LAST
+  payload_buyer_ASC
+  payload_buyer_DESC
+  payload_buyer_ASC_NULLS_FIRST
+  payload_buyer_DESC_NULLS_LAST
+  payload_quantityWanted_ASC
+  payload_quantityWanted_DESC
+  payload_quantityWanted_ASC_NULLS_FIRST
+  payload_quantityWanted_DESC_NULLS_LAST
+  payload_totalDirectOfferAmount_ASC
+  payload_totalDirectOfferAmount_DESC
+  payload_totalDirectOfferAmount_ASC_NULLS_FIRST
+  payload_totalDirectOfferAmount_DESC_NULLS_LAST
+  payload_incentiveIfOutbid_ASC
+  payload_incentiveIfOutbid_DESC
+  payload_incentiveIfOutbid_ASC_NULLS_FIRST
+  payload_incentiveIfOutbid_DESC_NULLS_LAST
+  payload_outbidBidId_ASC
+  payload_outbidBidId_DESC
+  payload_outbidBidId_ASC_NULLS_FIRST
+  payload_outbidBidId_DESC_NULLS_LAST
+  payload_buyoutPricePerToken_ASC
+  payload_buyoutPricePerToken_DESC
+  payload_buyoutPricePerToken_ASC_NULLS_FIRST
+  payload_buyoutPricePerToken_DESC_NULLS_LAST
+  payload_saleType_ASC
+  payload_saleType_DESC
+  payload_saleType_ASC_NULLS_FIRST
+  payload_saleType_DESC_NULLS_LAST
+  payload_paymentCurrency_ASC
+  payload_paymentCurrency_DESC
+  payload_paymentCurrency_ASC_NULLS_FIRST
+  payload_paymentCurrency_DESC_NULLS_LAST
+  payload_quantity_ASC
+  payload_quantity_DESC
+  payload_quantity_ASC_NULLS_FIRST
+  payload_quantity_DESC_NULLS_LAST
+  payload_startTime_ASC
+  payload_startTime_DESC
+  payload_startTime_ASC_NULLS_FIRST
+  payload_startTime_DESC_NULLS_LAST
+  payload_endTime_ASC
+  payload_endTime_DESC
+  payload_endTime_ASC_NULLS_FIRST
+  payload_endTime_DESC_NULLS_LAST
+  payload_listingCreator_ASC
+  payload_listingCreator_DESC
+  payload_listingCreator_ASC_NULLS_FIRST
+  payload_listingCreator_DESC_NULLS_LAST
+  payload_tokenType_ASC
+  payload_tokenType_DESC
+  payload_tokenType_ASC_NULLS_FIRST
+  payload_tokenType_DESC_NULLS_LAST
+  payload_tokenAddress_ASC
+  payload_tokenAddress_DESC
+  payload_tokenAddress_ASC_NULLS_FIRST
+  payload_tokenAddress_DESC_NULLS_LAST
+  payload_offerId_ASC
+  payload_offerId_DESC
+  payload_offerId_ASC_NULLS_FIRST
+  payload_offerId_DESC_NULLS_LAST
+  payload_expirationTimestamp_ASC
+  payload_expirationTimestamp_DESC
+  payload_expirationTimestamp_ASC_NULLS_FIRST
+  payload_expirationTimestamp_DESC_NULLS_LAST
+  payload_seller_ASC
+  payload_seller_DESC
+  payload_seller_ASC_NULLS_FIRST
+  payload_seller_DESC_NULLS_LAST
+  payload_quantityBought_ASC
+  payload_quantityBought_DESC
+  payload_quantityBought_ASC_NULLS_FIRST
+  payload_quantityBought_DESC_NULLS_LAST
+  payload_recipient_ASC
+  payload_recipient_DESC
+  payload_recipient_ASC_NULLS_FIRST
+  payload_recipient_DESC_NULLS_LAST
+  payload_royaltyAmount_ASC
+  payload_royaltyAmount_DESC
+  payload_royaltyAmount_ASC_NULLS_FIRST
+  payload_royaltyAmount_DESC_NULLS_LAST
+  payload_earner_ASC
+  payload_earner_DESC
+  payload_earner_ASC_NULLS_FIRST
+  payload_earner_DESC_NULLS_LAST
+  payload_payer_ASC
+  payload_payer_DESC
+  payload_payer_ASC_NULLS_FIRST
+  payload_payer_DESC_NULLS_LAST
+  payload_incentivePaid_ASC
+  payload_incentivePaid_DESC
+  payload_incentivePaid_ASC_NULLS_FIRST
+  payload_incentivePaid_DESC_NULLS_LAST
+  payload_slotPartId_ASC
+  payload_slotPartId_DESC
+  payload_slotPartId_ASC_NULLS_FIRST
+  payload_slotPartId_DESC_NULLS_LAST
+  payload_childId_ASC
+  payload_childId_DESC
+  payload_childId_ASC_NULLS_FIRST
+  payload_childId_DESC_NULLS_LAST
+  payload_childAddress_ASC
+  payload_childAddress_DESC
+  payload_childAddress_ASC_NULLS_FIRST
+  payload_childAddress_DESC_NULLS_LAST
+  payload_childAssetId_ASC
+  payload_childAssetId_DESC
+  payload_childAssetId_ASC_NULLS_FIRST
+  payload_childAssetId_DESC_NULLS_LAST
+  payload_childIndex_ASC
+  payload_childIndex_DESC
+  payload_childIndex_ASC_NULLS_FIRST
+  payload_childIndex_DESC_NULLS_LAST
+  payload_toZero_ASC
+  payload_toZero_DESC
+  payload_toZero_ASC_NULLS_FIRST
+  payload_toZero_DESC_NULLS_LAST
+  payload_fromPending_ASC
+  payload_fromPending_DESC
+  payload_fromPending_ASC_NULLS_FIRST
+  payload_fromPending_DESC_NULLS_LAST
+  payload_equippableGroupId_ASC
+  payload_equippableGroupId_DESC
+  payload_equippableGroupId_ASC_NULLS_FIRST
+  payload_equippableGroupId_DESC_NULLS_LAST
+  payload_parentAddress_ASC
+  payload_parentAddress_DESC
+  payload_parentAddress_ASC_NULLS_FIRST
+  payload_parentAddress_DESC_NULLS_LAST
+  payload_partId_ASC
+  payload_partId_DESC
+  payload_partId_ASC_NULLS_FIRST
+  payload_partId_DESC_NULLS_LAST
+  payload_itemType_ASC
+  payload_itemType_DESC
+  payload_itemType_ASC_NULLS_FIRST
+  payload_itemType_DESC_NULLS_LAST
+  payload_z_ASC
+  payload_z_DESC
+  payload_z_ASC_NULLS_FIRST
+  payload_z_DESC_NULLS_LAST
+  payload_metadataUri_ASC
+  payload_metadataUri_DESC
+  payload_metadataUri_ASC_NULLS_FIRST
+  payload_metadataUri_DESC_NULLS_LAST
+  payload_erc20Contract_ASC
+  payload_erc20Contract_DESC
+  payload_erc20Contract_ASC_NULLS_FIRST
+  payload_erc20Contract_DESC_NULLS_LAST
+  payload_amount_ASC
+  payload_amount_DESC
+  payload_amount_ASC_NULLS_FIRST
+  payload_amount_DESC_NULLS_LAST
+  payload_isTypeOf_ASC
+  payload_isTypeOf_DESC
+  payload_isTypeOf_ASC_NULLS_FIRST
+  payload_isTypeOf_DESC_NULLS_LAST
+}
+
+union EventPayloads = NestTransferEventPayload | OwnershipTransferredEventPayload | TransferEventPayload | ContractEventPaused | BurnEventPayload | MintEventPayload | AssetAddedToTokensEventPayload | AssetAcceptedEventPayload | AssetPrioritySetEventPayload | CollectionAddedEventPayload | CollectionRemovedEventPayload | ContractEventAuctionClosed | ContractEventNewBid | ContractEventListingAdded | ContractEventListingRemoved | ContractEventListingUpdated | ContractEventNewOffer | ContractEventNewSale | ContractEventOfferCancelled | ContractEventOwnershipTransferred | ContractEventRoyaltiesPaid | ContractEventIncentivesPaid | EquippedEventPayload | ChildAcceptedEventPayload | ChildRejectedEventPayload | ChildAbandonedEventPayload | CollectionValidParentEquippableGroupIdSetEventPayload | CatalogAddedEquippablesEventPayload | CatalogAddedPartEventPayload | CatalogSetEquippableToAllEventPayload | CatalogSetEquippablesEventPayload | MetadataUpdateEventPayload | BatchMetadataUpdateEventPayload | ReceivedERC20EventPayload | TransferredERC20EventPayload
+
+input EventPayloadsWhereInput {
+  from_isNull: Boolean
+  from_eq: String
+  from_not_eq: String
+  from_gt: String
+  from_gte: String
+  from_lt: String
+  from_lte: String
+  from_in: [String!]
+  from_not_in: [String!]
+  from_contains: String
+  from_not_contains: String
+  from_containsInsensitive: String
+  from_not_containsInsensitive: String
+  from_startsWith: String
+  from_not_startsWith: String
+  from_endsWith: String
+  from_not_endsWith: String
+  to_isNull: Boolean
+  to_eq: String
+  to_not_eq: String
+  to_gt: String
+  to_gte: String
+  to_lt: String
+  to_lte: String
+  to_in: [String!]
+  to_not_in: [String!]
+  to_contains: String
+  to_not_contains: String
+  to_containsInsensitive: String
+  to_not_containsInsensitive: String
+  to_startsWith: String
+  to_not_startsWith: String
+  to_endsWith: String
+  to_not_endsWith: String
+  fromTokenId_isNull: Boolean
+  fromTokenId_eq: BigInt
+  fromTokenId_not_eq: BigInt
+  fromTokenId_gt: BigInt
+  fromTokenId_gte: BigInt
+  fromTokenId_lt: BigInt
+  fromTokenId_lte: BigInt
+  fromTokenId_in: [BigInt!]
+  fromTokenId_not_in: [BigInt!]
+  toTokenId_isNull: Boolean
+  toTokenId_eq: BigInt
+  toTokenId_not_eq: BigInt
+  toTokenId_gt: BigInt
+  toTokenId_gte: BigInt
+  toTokenId_lt: BigInt
+  toTokenId_lte: BigInt
+  toTokenId_in: [BigInt!]
+  toTokenId_not_in: [BigInt!]
+  tokenId_isNull: Boolean
+  tokenId_eq: BigInt
+  tokenId_not_eq: BigInt
+  tokenId_gt: BigInt
+  tokenId_gte: BigInt
+  tokenId_lt: BigInt
+  tokenId_lte: BigInt
+  tokenId_in: [BigInt!]
+  tokenId_not_in: [BigInt!]
+  previousOwner_isNull: Boolean
+  previousOwner_eq: String
+  previousOwner_not_eq: String
+  previousOwner_gt: String
+  previousOwner_gte: String
+  previousOwner_lt: String
+  previousOwner_lte: String
+  previousOwner_in: [String!]
+  previousOwner_not_in: [String!]
+  previousOwner_contains: String
+  previousOwner_not_contains: String
+  previousOwner_containsInsensitive: String
+  previousOwner_not_containsInsensitive: String
+  previousOwner_startsWith: String
+  previousOwner_not_startsWith: String
+  previousOwner_endsWith: String
+  previousOwner_not_endsWith: String
+  newOwner_isNull: Boolean
+  newOwner_eq: String
+  newOwner_not_eq: String
+  newOwner_gt: String
+  newOwner_gte: String
+  newOwner_lt: String
+  newOwner_lte: String
+  newOwner_in: [String!]
+  newOwner_not_in: [String!]
+  newOwner_contains: String
+  newOwner_not_contains: String
+  newOwner_containsInsensitive: String
+  newOwner_not_containsInsensitive: String
+  newOwner_startsWith: String
+  newOwner_not_startsWith: String
+  newOwner_endsWith: String
+  newOwner_not_endsWith: String
+  account_isNull: Boolean
+  account_eq: String
+  account_not_eq: String
+  account_gt: String
+  account_gte: String
+  account_lt: String
+  account_lte: String
+  account_in: [String!]
+  account_not_in: [String!]
+  account_contains: String
+  account_not_contains: String
+  account_containsInsensitive: String
+  account_not_containsInsensitive: String
+  account_startsWith: String
+  account_not_startsWith: String
+  account_endsWith: String
+  account_not_endsWith: String
+  pauseState_isNull: Boolean
+  pauseState_eq: Boolean
+  pauseState_not_eq: Boolean
+  assetId_isNull: Boolean
+  assetId_eq: BigInt
+  assetId_not_eq: BigInt
+  assetId_gt: BigInt
+  assetId_gte: BigInt
+  assetId_lt: BigInt
+  assetId_lte: BigInt
+  assetId_in: [BigInt!]
+  assetId_not_in: [BigInt!]
+  replacesId_isNull: Boolean
+  replacesId_eq: BigInt
+  replacesId_not_eq: BigInt
+  replacesId_gt: BigInt
+  replacesId_gte: BigInt
+  replacesId_lt: BigInt
+  replacesId_lte: BigInt
+  replacesId_in: [BigInt!]
+  replacesId_not_in: [BigInt!]
+  collection_isNull: Boolean
+  collection_eq: String
+  collection_not_eq: String
+  collection_gt: String
+  collection_gte: String
+  collection_lt: String
+  collection_lte: String
+  collection_in: [String!]
+  collection_not_in: [String!]
+  collection_contains: String
+  collection_not_contains: String
+  collection_containsInsensitive: String
+  collection_not_containsInsensitive: String
+  collection_startsWith: String
+  collection_not_startsWith: String
+  collection_endsWith: String
+  collection_not_endsWith: String
+  deployer_isNull: Boolean
+  deployer_eq: String
+  deployer_not_eq: String
+  deployer_gt: String
+  deployer_gte: String
+  deployer_lt: String
+  deployer_lte: String
+  deployer_in: [String!]
+  deployer_not_in: [String!]
+  deployer_contains: String
+  deployer_not_contains: String
+  deployer_containsInsensitive: String
+  deployer_not_containsInsensitive: String
+  deployer_startsWith: String
+  deployer_not_startsWith: String
+  deployer_endsWith: String
+  deployer_not_endsWith: String
+  name_isNull: Boolean
+  name_eq: String
+  name_not_eq: String
+  name_gt: String
+  name_gte: String
+  name_lt: String
+  name_lte: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_contains: String
+  name_not_contains: String
+  name_containsInsensitive: String
+  name_not_containsInsensitive: String
+  name_startsWith: String
+  name_not_startsWith: String
+  name_endsWith: String
+  name_not_endsWith: String
+  symbol_isNull: Boolean
+  symbol_eq: String
+  symbol_not_eq: String
+  symbol_gt: String
+  symbol_gte: String
+  symbol_lt: String
+  symbol_lte: String
+  symbol_in: [String!]
+  symbol_not_in: [String!]
+  symbol_contains: String
+  symbol_not_contains: String
+  symbol_containsInsensitive: String
+  symbol_not_containsInsensitive: String
+  symbol_startsWith: String
+  symbol_not_startsWith: String
+  symbol_endsWith: String
+  symbol_not_endsWith: String
+  maxSupply_isNull: Boolean
+  maxSupply_eq: Int
+  maxSupply_not_eq: Int
+  maxSupply_gt: Int
+  maxSupply_gte: Int
+  maxSupply_lt: Int
+  maxSupply_lte: Int
+  maxSupply_in: [Int!]
+  maxSupply_not_in: [Int!]
+  collectionMetadata_isNull: Boolean
+  collectionMetadata_eq: String
+  collectionMetadata_not_eq: String
+  collectionMetadata_gt: String
+  collectionMetadata_gte: String
+  collectionMetadata_lt: String
+  collectionMetadata_lte: String
+  collectionMetadata_in: [String!]
+  collectionMetadata_not_in: [String!]
+  collectionMetadata_contains: String
+  collectionMetadata_not_contains: String
+  collectionMetadata_containsInsensitive: String
+  collectionMetadata_not_containsInsensitive: String
+  collectionMetadata_startsWith: String
+  collectionMetadata_not_startsWith: String
+  collectionMetadata_endsWith: String
+  collectionMetadata_not_endsWith: String
+  legoCombination_isNull: Boolean
+  legoCombination_eq: LegoCombination
+  legoCombination_not_eq: LegoCombination
+  legoCombination_in: [LegoCombination!]
+  legoCombination_not_in: [LegoCombination!]
+  mintingType_isNull: Boolean
+  mintingType_eq: MintingType
+  mintingType_not_eq: MintingType
+  mintingType_in: [MintingType!]
+  mintingType_not_in: [MintingType!]
+  registryIsSoulbound_isNull: Boolean
+  registryIsSoulbound_eq: Boolean
+  registryIsSoulbound_not_eq: Boolean
+  registryConfig_isNull: Boolean
+  registryConfig: RegistryConfigWhereInput
+  collectionId_isNull: Boolean
+  collectionId_eq: String
+  collectionId_not_eq: String
+  collectionId_gt: String
+  collectionId_gte: String
+  collectionId_lt: String
+  collectionId_lte: String
+  collectionId_in: [String!]
+  collectionId_not_in: [String!]
+  collectionId_contains: String
+  collectionId_not_contains: String
+  collectionId_containsInsensitive: String
+  collectionId_not_containsInsensitive: String
+  collectionId_startsWith: String
+  collectionId_not_startsWith: String
+  collectionId_endsWith: String
+  collectionId_not_endsWith: String
+  listingId_isNull: Boolean
+  listingId_eq: BigInt
+  listingId_not_eq: BigInt
+  listingId_gt: BigInt
+  listingId_gte: BigInt
+  listingId_lt: BigInt
+  listingId_lte: BigInt
+  listingId_in: [BigInt!]
+  listingId_not_in: [BigInt!]
+  closer_isNull: Boolean
+  closer_eq: String
+  closer_not_eq: String
+  closer_gt: String
+  closer_gte: String
+  closer_lt: String
+  closer_lte: String
+  closer_in: [String!]
+  closer_not_in: [String!]
+  closer_contains: String
+  closer_not_contains: String
+  closer_containsInsensitive: String
+  closer_not_containsInsensitive: String
+  closer_startsWith: String
+  closer_not_startsWith: String
+  closer_endsWith: String
+  closer_not_endsWith: String
+  cancelled_isNull: Boolean
+  cancelled_eq: Boolean
+  cancelled_not_eq: Boolean
+  auctionCreator_isNull: Boolean
+  auctionCreator_eq: String
+  auctionCreator_not_eq: String
+  auctionCreator_gt: String
+  auctionCreator_gte: String
+  auctionCreator_lt: String
+  auctionCreator_lte: String
+  auctionCreator_in: [String!]
+  auctionCreator_not_in: [String!]
+  auctionCreator_contains: String
+  auctionCreator_not_contains: String
+  auctionCreator_containsInsensitive: String
+  auctionCreator_not_containsInsensitive: String
+  auctionCreator_startsWith: String
+  auctionCreator_not_startsWith: String
+  auctionCreator_endsWith: String
+  auctionCreator_not_endsWith: String
+  winningBidder_isNull: Boolean
+  winningBidder_eq: String
+  winningBidder_not_eq: String
+  winningBidder_gt: String
+  winningBidder_gte: String
+  winningBidder_lt: String
+  winningBidder_lte: String
+  winningBidder_in: [String!]
+  winningBidder_not_in: [String!]
+  winningBidder_contains: String
+  winningBidder_not_contains: String
+  winningBidder_containsInsensitive: String
+  winningBidder_not_containsInsensitive: String
+  winningBidder_startsWith: String
+  winningBidder_not_startsWith: String
+  winningBidder_endsWith: String
+  winningBidder_not_endsWith: String
+  totalPricePaid_isNull: Boolean
+  totalPricePaid_eq: BigInt
+  totalPricePaid_not_eq: BigInt
+  totalPricePaid_gt: BigInt
+  totalPricePaid_gte: BigInt
+  totalPricePaid_lt: BigInt
+  totalPricePaid_lte: BigInt
+  totalPricePaid_in: [BigInt!]
+  totalPricePaid_not_in: [BigInt!]
+  currency_isNull: Boolean
+  currency_eq: String
+  currency_not_eq: String
+  currency_gt: String
+  currency_gte: String
+  currency_lt: String
+  currency_lte: String
+  currency_in: [String!]
+  currency_not_in: [String!]
+  currency_contains: String
+  currency_not_contains: String
+  currency_containsInsensitive: String
+  currency_not_containsInsensitive: String
+  currency_startsWith: String
+  currency_not_startsWith: String
+  currency_endsWith: String
+  currency_not_endsWith: String
+  buyer_isNull: Boolean
+  buyer_eq: String
+  buyer_not_eq: String
+  buyer_gt: String
+  buyer_gte: String
+  buyer_lt: String
+  buyer_lte: String
+  buyer_in: [String!]
+  buyer_not_in: [String!]
+  buyer_contains: String
+  buyer_not_contains: String
+  buyer_containsInsensitive: String
+  buyer_not_containsInsensitive: String
+  buyer_startsWith: String
+  buyer_not_startsWith: String
+  buyer_endsWith: String
+  buyer_not_endsWith: String
+  quantityWanted_isNull: Boolean
+  quantityWanted_eq: BigInt
+  quantityWanted_not_eq: BigInt
+  quantityWanted_gt: BigInt
+  quantityWanted_gte: BigInt
+  quantityWanted_lt: BigInt
+  quantityWanted_lte: BigInt
+  quantityWanted_in: [BigInt!]
+  quantityWanted_not_in: [BigInt!]
+  totalDirectOfferAmount_isNull: Boolean
+  totalDirectOfferAmount_eq: BigInt
+  totalDirectOfferAmount_not_eq: BigInt
+  totalDirectOfferAmount_gt: BigInt
+  totalDirectOfferAmount_gte: BigInt
+  totalDirectOfferAmount_lt: BigInt
+  totalDirectOfferAmount_lte: BigInt
+  totalDirectOfferAmount_in: [BigInt!]
+  totalDirectOfferAmount_not_in: [BigInt!]
+  incentiveIfOutbid_isNull: Boolean
+  incentiveIfOutbid_eq: BigInt
+  incentiveIfOutbid_not_eq: BigInt
+  incentiveIfOutbid_gt: BigInt
+  incentiveIfOutbid_gte: BigInt
+  incentiveIfOutbid_lt: BigInt
+  incentiveIfOutbid_lte: BigInt
+  incentiveIfOutbid_in: [BigInt!]
+  incentiveIfOutbid_not_in: [BigInt!]
+  outbidBidId_isNull: Boolean
+  outbidBidId_eq: String
+  outbidBidId_not_eq: String
+  outbidBidId_gt: String
+  outbidBidId_gte: String
+  outbidBidId_lt: String
+  outbidBidId_lte: String
+  outbidBidId_in: [String!]
+  outbidBidId_not_in: [String!]
+  outbidBidId_contains: String
+  outbidBidId_not_contains: String
+  outbidBidId_containsInsensitive: String
+  outbidBidId_not_containsInsensitive: String
+  outbidBidId_startsWith: String
+  outbidBidId_not_startsWith: String
+  outbidBidId_endsWith: String
+  outbidBidId_not_endsWith: String
+  buyoutPricePerToken_isNull: Boolean
+  buyoutPricePerToken_eq: BigInt
+  buyoutPricePerToken_not_eq: BigInt
+  buyoutPricePerToken_gt: BigInt
+  buyoutPricePerToken_gte: BigInt
+  buyoutPricePerToken_lt: BigInt
+  buyoutPricePerToken_lte: BigInt
+  buyoutPricePerToken_in: [BigInt!]
+  buyoutPricePerToken_not_in: [BigInt!]
+  saleType_isNull: Boolean
+  saleType_eq: Int
+  saleType_not_eq: Int
+  saleType_gt: Int
+  saleType_gte: Int
+  saleType_lt: Int
+  saleType_lte: Int
+  saleType_in: [Int!]
+  saleType_not_in: [Int!]
+  paymentCurrency_isNull: Boolean
+  paymentCurrency_eq: String
+  paymentCurrency_not_eq: String
+  paymentCurrency_gt: String
+  paymentCurrency_gte: String
+  paymentCurrency_lt: String
+  paymentCurrency_lte: String
+  paymentCurrency_in: [String!]
+  paymentCurrency_not_in: [String!]
+  paymentCurrency_contains: String
+  paymentCurrency_not_contains: String
+  paymentCurrency_containsInsensitive: String
+  paymentCurrency_not_containsInsensitive: String
+  paymentCurrency_startsWith: String
+  paymentCurrency_not_startsWith: String
+  paymentCurrency_endsWith: String
+  paymentCurrency_not_endsWith: String
+  quantity_isNull: Boolean
+  quantity_eq: BigInt
+  quantity_not_eq: BigInt
+  quantity_gt: BigInt
+  quantity_gte: BigInt
+  quantity_lt: BigInt
+  quantity_lte: BigInt
+  quantity_in: [BigInt!]
+  quantity_not_in: [BigInt!]
+  startTime_isNull: Boolean
+  startTime_eq: DateTime
+  startTime_not_eq: DateTime
+  startTime_gt: DateTime
+  startTime_gte: DateTime
+  startTime_lt: DateTime
+  startTime_lte: DateTime
+  startTime_in: [DateTime!]
+  startTime_not_in: [DateTime!]
+  endTime_isNull: Boolean
+  endTime_eq: DateTime
+  endTime_not_eq: DateTime
+  endTime_gt: DateTime
+  endTime_gte: DateTime
+  endTime_lt: DateTime
+  endTime_lte: DateTime
+  endTime_in: [DateTime!]
+  endTime_not_in: [DateTime!]
+  listingCreator_isNull: Boolean
+  listingCreator_eq: String
+  listingCreator_not_eq: String
+  listingCreator_gt: String
+  listingCreator_gte: String
+  listingCreator_lt: String
+  listingCreator_lte: String
+  listingCreator_in: [String!]
+  listingCreator_not_in: [String!]
+  listingCreator_contains: String
+  listingCreator_not_contains: String
+  listingCreator_containsInsensitive: String
+  listingCreator_not_containsInsensitive: String
+  listingCreator_startsWith: String
+  listingCreator_not_startsWith: String
+  listingCreator_endsWith: String
+  listingCreator_not_endsWith: String
+  tokenType_isNull: Boolean
+  tokenType_eq: Int
+  tokenType_not_eq: Int
+  tokenType_gt: Int
+  tokenType_gte: Int
+  tokenType_lt: Int
+  tokenType_lte: Int
+  tokenType_in: [Int!]
+  tokenType_not_in: [Int!]
+  tokenAddress_isNull: Boolean
+  tokenAddress_eq: String
+  tokenAddress_not_eq: String
+  tokenAddress_gt: String
+  tokenAddress_gte: String
+  tokenAddress_lt: String
+  tokenAddress_lte: String
+  tokenAddress_in: [String!]
+  tokenAddress_not_in: [String!]
+  tokenAddress_contains: String
+  tokenAddress_not_contains: String
+  tokenAddress_containsInsensitive: String
+  tokenAddress_not_containsInsensitive: String
+  tokenAddress_startsWith: String
+  tokenAddress_not_startsWith: String
+  tokenAddress_endsWith: String
+  tokenAddress_not_endsWith: String
+  gbm_isNull: Boolean
+  gbm: GbmWhereInput
+  offerId_isNull: Boolean
+  offerId_eq: BigInt
+  offerId_not_eq: BigInt
+  offerId_gt: BigInt
+  offerId_gte: BigInt
+  offerId_lt: BigInt
+  offerId_lte: BigInt
+  offerId_in: [BigInt!]
+  offerId_not_in: [BigInt!]
+  expirationTimestamp_isNull: Boolean
+  expirationTimestamp_eq: DateTime
+  expirationTimestamp_not_eq: DateTime
+  expirationTimestamp_gt: DateTime
+  expirationTimestamp_gte: DateTime
+  expirationTimestamp_lt: DateTime
+  expirationTimestamp_lte: DateTime
+  expirationTimestamp_in: [DateTime!]
+  expirationTimestamp_not_in: [DateTime!]
+  expectedChildren_isNull: Boolean
+  seller_isNull: Boolean
+  seller_eq: String
+  seller_not_eq: String
+  seller_gt: String
+  seller_gte: String
+  seller_lt: String
+  seller_lte: String
+  seller_in: [String!]
+  seller_not_in: [String!]
+  seller_contains: String
+  seller_not_contains: String
+  seller_containsInsensitive: String
+  seller_not_containsInsensitive: String
+  seller_startsWith: String
+  seller_not_startsWith: String
+  seller_endsWith: String
+  seller_not_endsWith: String
+  quantityBought_isNull: Boolean
+  quantityBought_eq: BigInt
+  quantityBought_not_eq: BigInt
+  quantityBought_gt: BigInt
+  quantityBought_gte: BigInt
+  quantityBought_lt: BigInt
+  quantityBought_lte: BigInt
+  quantityBought_in: [BigInt!]
+  quantityBought_not_in: [BigInt!]
+  recipient_isNull: Boolean
+  recipient_eq: String
+  recipient_not_eq: String
+  recipient_gt: String
+  recipient_gte: String
+  recipient_lt: String
+  recipient_lte: String
+  recipient_in: [String!]
+  recipient_not_in: [String!]
+  recipient_contains: String
+  recipient_not_contains: String
+  recipient_containsInsensitive: String
+  recipient_not_containsInsensitive: String
+  recipient_startsWith: String
+  recipient_not_startsWith: String
+  recipient_endsWith: String
+  recipient_not_endsWith: String
+  royaltyAmount_isNull: Boolean
+  royaltyAmount_eq: BigInt
+  royaltyAmount_not_eq: BigInt
+  royaltyAmount_gt: BigInt
+  royaltyAmount_gte: BigInt
+  royaltyAmount_lt: BigInt
+  royaltyAmount_lte: BigInt
+  royaltyAmount_in: [BigInt!]
+  royaltyAmount_not_in: [BigInt!]
+  earner_isNull: Boolean
+  earner_eq: String
+  earner_not_eq: String
+  earner_gt: String
+  earner_gte: String
+  earner_lt: String
+  earner_lte: String
+  earner_in: [String!]
+  earner_not_in: [String!]
+  earner_contains: String
+  earner_not_contains: String
+  earner_containsInsensitive: String
+  earner_not_containsInsensitive: String
+  earner_startsWith: String
+  earner_not_startsWith: String
+  earner_endsWith: String
+  earner_not_endsWith: String
+  payer_isNull: Boolean
+  payer_eq: String
+  payer_not_eq: String
+  payer_gt: String
+  payer_gte: String
+  payer_lt: String
+  payer_lte: String
+  payer_in: [String!]
+  payer_not_in: [String!]
+  payer_contains: String
+  payer_not_contains: String
+  payer_containsInsensitive: String
+  payer_not_containsInsensitive: String
+  payer_startsWith: String
+  payer_not_startsWith: String
+  payer_endsWith: String
+  payer_not_endsWith: String
+  incentivePaid_isNull: Boolean
+  incentivePaid_eq: BigInt
+  incentivePaid_not_eq: BigInt
+  incentivePaid_gt: BigInt
+  incentivePaid_gte: BigInt
+  incentivePaid_lt: BigInt
+  incentivePaid_lte: BigInt
+  incentivePaid_in: [BigInt!]
+  incentivePaid_not_in: [BigInt!]
+  slotPartId_isNull: Boolean
+  slotPartId_eq: BigInt
+  slotPartId_not_eq: BigInt
+  slotPartId_gt: BigInt
+  slotPartId_gte: BigInt
+  slotPartId_lt: BigInt
+  slotPartId_lte: BigInt
+  slotPartId_in: [BigInt!]
+  slotPartId_not_in: [BigInt!]
+  childId_isNull: Boolean
+  childId_eq: BigInt
+  childId_not_eq: BigInt
+  childId_gt: BigInt
+  childId_gte: BigInt
+  childId_lt: BigInt
+  childId_lte: BigInt
+  childId_in: [BigInt!]
+  childId_not_in: [BigInt!]
+  childAddress_isNull: Boolean
+  childAddress_eq: String
+  childAddress_not_eq: String
+  childAddress_gt: String
+  childAddress_gte: String
+  childAddress_lt: String
+  childAddress_lte: String
+  childAddress_in: [String!]
+  childAddress_not_in: [String!]
+  childAddress_contains: String
+  childAddress_not_contains: String
+  childAddress_containsInsensitive: String
+  childAddress_not_containsInsensitive: String
+  childAddress_startsWith: String
+  childAddress_not_startsWith: String
+  childAddress_endsWith: String
+  childAddress_not_endsWith: String
+  childAssetId_isNull: Boolean
+  childAssetId_eq: BigInt
+  childAssetId_not_eq: BigInt
+  childAssetId_gt: BigInt
+  childAssetId_gte: BigInt
+  childAssetId_lt: BigInt
+  childAssetId_lte: BigInt
+  childAssetId_in: [BigInt!]
+  childAssetId_not_in: [BigInt!]
+  childIndex_isNull: Boolean
+  childIndex_eq: BigInt
+  childIndex_not_eq: BigInt
+  childIndex_gt: BigInt
+  childIndex_gte: BigInt
+  childIndex_lt: BigInt
+  childIndex_lte: BigInt
+  childIndex_in: [BigInt!]
+  childIndex_not_in: [BigInt!]
+  toZero_isNull: Boolean
+  toZero_eq: Boolean
+  toZero_not_eq: Boolean
+  fromPending_isNull: Boolean
+  fromPending_eq: Boolean
+  fromPending_not_eq: Boolean
+  equippableGroupId_isNull: Boolean
+  equippableGroupId_eq: BigInt
+  equippableGroupId_not_eq: BigInt
+  equippableGroupId_gt: BigInt
+  equippableGroupId_gte: BigInt
+  equippableGroupId_lt: BigInt
+  equippableGroupId_lte: BigInt
+  equippableGroupId_in: [BigInt!]
+  equippableGroupId_not_in: [BigInt!]
+  parentAddress_isNull: Boolean
+  parentAddress_eq: String
+  parentAddress_not_eq: String
+  parentAddress_gt: String
+  parentAddress_gte: String
+  parentAddress_lt: String
+  parentAddress_lte: String
+  parentAddress_in: [String!]
+  parentAddress_not_in: [String!]
+  parentAddress_contains: String
+  parentAddress_not_contains: String
+  parentAddress_containsInsensitive: String
+  parentAddress_not_containsInsensitive: String
+  parentAddress_startsWith: String
+  parentAddress_not_startsWith: String
+  parentAddress_endsWith: String
+  parentAddress_not_endsWith: String
+  partId_isNull: Boolean
+  partId_eq: BigInt
+  partId_not_eq: BigInt
+  partId_gt: BigInt
+  partId_gte: BigInt
+  partId_lt: BigInt
+  partId_lte: BigInt
+  partId_in: [BigInt!]
+  partId_not_in: [BigInt!]
+  equippableAddresses_isNull: Boolean
+  equippableAddresses_containsAll: [String]
+  equippableAddresses_containsAny: [String]
+  equippableAddresses_containsNone: [String]
+  itemType_isNull: Boolean
+  itemType_eq: ItemType
+  itemType_not_eq: ItemType
+  itemType_in: [ItemType!]
+  itemType_not_in: [ItemType!]
+  z_isNull: Boolean
+  z_eq: Int
+  z_not_eq: Int
+  z_gt: Int
+  z_gte: Int
+  z_lt: Int
+  z_lte: Int
+  z_in: [Int!]
+  z_not_in: [Int!]
+  equippable_isNull: Boolean
+  equippable_containsAll: [String]
+  equippable_containsAny: [String]
+  equippable_containsNone: [String]
+  metadataUri_isNull: Boolean
+  metadataUri_eq: String
+  metadataUri_not_eq: String
+  metadataUri_gt: String
+  metadataUri_gte: String
+  metadataUri_lt: String
+  metadataUri_lte: String
+  metadataUri_in: [String!]
+  metadataUri_not_in: [String!]
+  metadataUri_contains: String
+  metadataUri_not_contains: String
+  metadataUri_containsInsensitive: String
+  metadataUri_not_containsInsensitive: String
+  metadataUri_startsWith: String
+  metadataUri_not_startsWith: String
+  metadataUri_endsWith: String
+  metadataUri_not_endsWith: String
+  erc20Contract_isNull: Boolean
+  erc20Contract_eq: String
+  erc20Contract_not_eq: String
+  erc20Contract_gt: String
+  erc20Contract_gte: String
+  erc20Contract_lt: String
+  erc20Contract_lte: String
+  erc20Contract_in: [String!]
+  erc20Contract_not_in: [String!]
+  erc20Contract_contains: String
+  erc20Contract_not_contains: String
+  erc20Contract_containsInsensitive: String
+  erc20Contract_not_containsInsensitive: String
+  erc20Contract_startsWith: String
+  erc20Contract_not_startsWith: String
+  erc20Contract_endsWith: String
+  erc20Contract_not_endsWith: String
+  amount_isNull: Boolean
+  amount_eq: BigInt
+  amount_not_eq: BigInt
+  amount_gt: BigInt
+  amount_gte: BigInt
+  amount_lt: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  isTypeOf_isNull: Boolean
+  isTypeOf_eq: String
+  isTypeOf_not_eq: String
+  isTypeOf_gt: String
+  isTypeOf_gte: String
+  isTypeOf_lt: String
+  isTypeOf_lte: String
+  isTypeOf_in: [String!]
+  isTypeOf_not_in: [String!]
+  isTypeOf_contains: String
+  isTypeOf_not_contains: String
+  isTypeOf_containsInsensitive: String
+  isTypeOf_not_containsInsensitive: String
+  isTypeOf_startsWith: String
+  isTypeOf_not_startsWith: String
+  isTypeOf_endsWith: String
+  isTypeOf_not_endsWith: String
+}
+
+type EventsConnection {
+  edges: [EventEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+enum EventType {
+  TokenNestTransfer
+  TokenTransfer
+  TokenMint
+  TokenBurn
+  AssetAddedToTokens
+  AssetPrioritySet
+  AssetAccepted
+  ChildAssetEquipped
+  ChildAssetUnequipped
+  ChildAccepted
+  ChildRejected
+  ChildAbandoned
+  CollectionAdded
+  CollectionOwnershipTransfer
+  CollectionRemoved
+  AuctionClosed
+  NewBid
+  ListingAdded
+  ListingRemoved
+  ListingUpdated
+  NewOffer
+  NewSale
+  OfferCancelled
+  OwnershipTransferred
+  RoyaltiesPaid
+  IncentivesPaid
+  ValidParentEquippableGroupIdSet
+  AddedEquippables
+  AddedPart
+  SetEquippables
+  SetEquippableToAll
+  MetadataUpdate
+  BatchMetadataUpdate
+  ReceivedERC20
+  TransferredERC20
+}
+
+input EventWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  block_isNull: Boolean
+  block: BlockWhereInput
+  transactionHash_isNull: Boolean
+  transactionHash_eq: String
+  transactionHash_not_eq: String
+  transactionHash_gt: String
+  transactionHash_gte: String
+  transactionHash_lt: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_not_contains: String
+  transactionHash_containsInsensitive: String
+  transactionHash_not_containsInsensitive: String
+  transactionHash_startsWith: String
+  transactionHash_not_startsWith: String
+  transactionHash_endsWith: String
+  transactionHash_not_endsWith: String
+  eventType_isNull: Boolean
+  eventType_eq: EventType
+  eventType_not_eq: EventType
+  eventType_in: [EventType!]
+  eventType_not_in: [EventType!]
+  marketplaceEventMetadata_isNull: Boolean
+  marketplaceEventMetadata: MarketplaceEventMetadataWhereInput
+  token_isNull: Boolean
+  token: NftWhereInput
+  collection_isNull: Boolean
+  collection: CollectionWhereInput
+  catalog_isNull: Boolean
+  catalog: CatalogWhereInput
+  from_isNull: Boolean
+  from_eq: String
+  from_not_eq: String
+  from_gt: String
+  from_gte: String
+  from_lt: String
+  from_lte: String
+  from_in: [String!]
+  from_not_in: [String!]
+  from_contains: String
+  from_not_contains: String
+  from_containsInsensitive: String
+  from_not_containsInsensitive: String
+  from_startsWith: String
+  from_not_startsWith: String
+  from_endsWith: String
+  from_not_endsWith: String
+  payload_isNull: Boolean
+  payload: EventPayloadsWhereInput
+  AND: [EventWhereInput!]
+  OR: [EventWhereInput!]
+}
+
+type ExpectedChildren {
+  tokenId: BigInt!
+  contractAddress: String!
+}
+
+type Gbm {
+  preset: GbmPreset!
+  auctionDebt: BigInt!
+  lastBidDueIncentives: BigInt!
+  minBidPerToken: BigInt!
+}
+
+enum GbmPreset {
+  None
+  Low
+  Medium
+  High
+  Degen
+}
+
+input GbmWhereInput {
+  preset_isNull: Boolean
+  preset_eq: GbmPreset
+  preset_not_eq: GbmPreset
+  preset_in: [GbmPreset!]
+  preset_not_in: [GbmPreset!]
+  auctionDebt_isNull: Boolean
+  auctionDebt_eq: BigInt
+  auctionDebt_not_eq: BigInt
+  auctionDebt_gt: BigInt
+  auctionDebt_gte: BigInt
+  auctionDebt_lt: BigInt
+  auctionDebt_lte: BigInt
+  auctionDebt_in: [BigInt!]
+  auctionDebt_not_in: [BigInt!]
+  lastBidDueIncentives_isNull: Boolean
+  lastBidDueIncentives_eq: BigInt
+  lastBidDueIncentives_not_eq: BigInt
+  lastBidDueIncentives_gt: BigInt
+  lastBidDueIncentives_gte: BigInt
+  lastBidDueIncentives_lt: BigInt
+  lastBidDueIncentives_lte: BigInt
+  lastBidDueIncentives_in: [BigInt!]
+  lastBidDueIncentives_not_in: [BigInt!]
+  minBidPerToken_isNull: Boolean
+  minBidPerToken_eq: BigInt
+  minBidPerToken_not_eq: BigInt
+  minBidPerToken_gt: BigInt
+  minBidPerToken_gte: BigInt
+  minBidPerToken_lt: BigInt
+  minBidPerToken_lte: BigInt
+  minBidPerToken_in: [BigInt!]
+  minBidPerToken_not_in: [BigInt!]
+}
+
+enum ItemType {
+  None
+  Slot
+  Fixed
+}
+
+enum LegoCombination {
+  None
+  MultiAsset
+  Nestable
+  NestableMultiAsset
+  Equippable
+  ERC721
+  ERC1155
+  Custom
+}
+
+type Listing {
+  id: String!
+  buyoutPricePerToken: BigInt
+  saleType: ListingType!
+  paymentCurrency: String!
+  quantity: BigInt
+  startTime: DateTime
+  endTime: DateTime
+  endTimeOriginal: DateTime
+  listingCreator: String
+  tokenType: Int
+  token: Nft!
+  gbm: Gbm
+  bids(where: BidWhereInput, orderBy: [BidOrderByInput!], offset: Int, limit: Int): [Bid!]!
+}
+
+type ListingEdge {
+  node: Listing!
+  cursor: String!
+}
+
+enum ListingOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  buyoutPricePerToken_ASC
+  buyoutPricePerToken_DESC
+  buyoutPricePerToken_ASC_NULLS_FIRST
+  buyoutPricePerToken_DESC_NULLS_LAST
+  saleType_ASC
+  saleType_DESC
+  saleType_ASC_NULLS_FIRST
+  saleType_DESC_NULLS_LAST
+  paymentCurrency_ASC
+  paymentCurrency_DESC
+  paymentCurrency_ASC_NULLS_FIRST
+  paymentCurrency_DESC_NULLS_LAST
+  quantity_ASC
+  quantity_DESC
+  quantity_ASC_NULLS_FIRST
+  quantity_DESC_NULLS_LAST
+  startTime_ASC
+  startTime_DESC
+  startTime_ASC_NULLS_FIRST
+  startTime_DESC_NULLS_LAST
+  endTime_ASC
+  endTime_DESC
+  endTime_ASC_NULLS_FIRST
+  endTime_DESC_NULLS_LAST
+  endTimeOriginal_ASC
+  endTimeOriginal_DESC
+  endTimeOriginal_ASC_NULLS_FIRST
+  endTimeOriginal_DESC_NULLS_LAST
+  listingCreator_ASC
+  listingCreator_DESC
+  listingCreator_ASC_NULLS_FIRST
+  listingCreator_DESC_NULLS_LAST
+  tokenType_ASC
+  tokenType_DESC
+  tokenType_ASC_NULLS_FIRST
+  tokenType_DESC_NULLS_LAST
+  token_id_ASC
+  token_id_DESC
+  token_id_ASC_NULLS_FIRST
+  token_id_DESC_NULLS_LAST
+  token_owner_ASC
+  token_owner_DESC
+  token_owner_ASC_NULLS_FIRST
+  token_owner_DESC_NULLS_LAST
+  token_burned_ASC
+  token_burned_DESC
+  token_burned_ASC_NULLS_FIRST
+  token_burned_DESC_NULLS_LAST
+  token_metadata_ASC
+  token_metadata_DESC
+  token_metadata_ASC_NULLS_FIRST
+  token_metadata_DESC_NULLS_LAST
+  token_pending_ASC
+  token_pending_DESC
+  token_pending_ASC_NULLS_FIRST
+  token_pending_DESC_NULLS_LAST
+  token_equipmentUpdatedAt_ASC
+  token_equipmentUpdatedAt_DESC
+  token_equipmentUpdatedAt_ASC_NULLS_FIRST
+  token_equipmentUpdatedAt_DESC_NULLS_LAST
+  token_isTransferable_ASC
+  token_isTransferable_DESC
+  token_isTransferable_ASC_NULLS_FIRST
+  token_isTransferable_DESC_NULLS_LAST
+  token_lastTransferabilityCheckAt_ASC
+  token_lastTransferabilityCheckAt_DESC
+  token_lastTransferabilityCheckAt_ASC_NULLS_FIRST
+  token_lastTransferabilityCheckAt_DESC_NULLS_LAST
+  gbm_preset_ASC
+  gbm_preset_DESC
+  gbm_preset_ASC_NULLS_FIRST
+  gbm_preset_DESC_NULLS_LAST
+  gbm_auctionDebt_ASC
+  gbm_auctionDebt_DESC
+  gbm_auctionDebt_ASC_NULLS_FIRST
+  gbm_auctionDebt_DESC_NULLS_LAST
+  gbm_lastBidDueIncentives_ASC
+  gbm_lastBidDueIncentives_DESC
+  gbm_lastBidDueIncentives_ASC_NULLS_FIRST
+  gbm_lastBidDueIncentives_DESC_NULLS_LAST
+  gbm_minBidPerToken_ASC
+  gbm_minBidPerToken_DESC
+  gbm_minBidPerToken_ASC_NULLS_FIRST
+  gbm_minBidPerToken_DESC_NULLS_LAST
+}
+
+type ListingsConnection {
+  edges: [ListingEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+enum ListingType {
+  Direct
+  GBMAuction
+  CollectionOffer
+  UnlistedOffer
+}
+
+input ListingWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  buyoutPricePerToken_isNull: Boolean
+  buyoutPricePerToken_eq: BigInt
+  buyoutPricePerToken_not_eq: BigInt
+  buyoutPricePerToken_gt: BigInt
+  buyoutPricePerToken_gte: BigInt
+  buyoutPricePerToken_lt: BigInt
+  buyoutPricePerToken_lte: BigInt
+  buyoutPricePerToken_in: [BigInt!]
+  buyoutPricePerToken_not_in: [BigInt!]
+  saleType_isNull: Boolean
+  saleType_eq: ListingType
+  saleType_not_eq: ListingType
+  saleType_in: [ListingType!]
+  saleType_not_in: [ListingType!]
+  paymentCurrency_isNull: Boolean
+  paymentCurrency_eq: String
+  paymentCurrency_not_eq: String
+  paymentCurrency_gt: String
+  paymentCurrency_gte: String
+  paymentCurrency_lt: String
+  paymentCurrency_lte: String
+  paymentCurrency_in: [String!]
+  paymentCurrency_not_in: [String!]
+  paymentCurrency_contains: String
+  paymentCurrency_not_contains: String
+  paymentCurrency_containsInsensitive: String
+  paymentCurrency_not_containsInsensitive: String
+  paymentCurrency_startsWith: String
+  paymentCurrency_not_startsWith: String
+  paymentCurrency_endsWith: String
+  paymentCurrency_not_endsWith: String
+  quantity_isNull: Boolean
+  quantity_eq: BigInt
+  quantity_not_eq: BigInt
+  quantity_gt: BigInt
+  quantity_gte: BigInt
+  quantity_lt: BigInt
+  quantity_lte: BigInt
+  quantity_in: [BigInt!]
+  quantity_not_in: [BigInt!]
+  startTime_isNull: Boolean
+  startTime_eq: DateTime
+  startTime_not_eq: DateTime
+  startTime_gt: DateTime
+  startTime_gte: DateTime
+  startTime_lt: DateTime
+  startTime_lte: DateTime
+  startTime_in: [DateTime!]
+  startTime_not_in: [DateTime!]
+  endTime_isNull: Boolean
+  endTime_eq: DateTime
+  endTime_not_eq: DateTime
+  endTime_gt: DateTime
+  endTime_gte: DateTime
+  endTime_lt: DateTime
+  endTime_lte: DateTime
+  endTime_in: [DateTime!]
+  endTime_not_in: [DateTime!]
+  endTimeOriginal_isNull: Boolean
+  endTimeOriginal_eq: DateTime
+  endTimeOriginal_not_eq: DateTime
+  endTimeOriginal_gt: DateTime
+  endTimeOriginal_gte: DateTime
+  endTimeOriginal_lt: DateTime
+  endTimeOriginal_lte: DateTime
+  endTimeOriginal_in: [DateTime!]
+  endTimeOriginal_not_in: [DateTime!]
+  listingCreator_isNull: Boolean
+  listingCreator_eq: String
+  listingCreator_not_eq: String
+  listingCreator_gt: String
+  listingCreator_gte: String
+  listingCreator_lt: String
+  listingCreator_lte: String
+  listingCreator_in: [String!]
+  listingCreator_not_in: [String!]
+  listingCreator_contains: String
+  listingCreator_not_contains: String
+  listingCreator_containsInsensitive: String
+  listingCreator_not_containsInsensitive: String
+  listingCreator_startsWith: String
+  listingCreator_not_startsWith: String
+  listingCreator_endsWith: String
+  listingCreator_not_endsWith: String
+  tokenType_isNull: Boolean
+  tokenType_eq: Int
+  tokenType_not_eq: Int
+  tokenType_gt: Int
+  tokenType_gte: Int
+  tokenType_lt: Int
+  tokenType_lte: Int
+  tokenType_in: [Int!]
+  tokenType_not_in: [Int!]
+  token_isNull: Boolean
+  token: NftWhereInput
+  gbm_isNull: Boolean
+  gbm: GbmWhereInput
+  bids_every: BidWhereInput
+  bids_some: BidWhereInput
+  bids_none: BidWhereInput
+  AND: [ListingWhereInput!]
+  OR: [ListingWhereInput!]
+}
+
+type MarketplaceEventMetadata {
+  tokenId: String
+  listingId: String
+  buyoutPricePerToken: BigInt
+  saleType: ListingType!
+  paymentCurrency: String!
+  quantity: BigInt
+  startTime: DateTime
+  endTime: DateTime
+  endTimeOriginal: DateTime
+  listingCreator: String
+  tokenType: Int
+  gbm: Gbm
+}
+
+input MarketplaceEventMetadataWhereInput {
+  tokenId_isNull: Boolean
+  tokenId_eq: String
+  tokenId_not_eq: String
+  tokenId_gt: String
+  tokenId_gte: String
+  tokenId_lt: String
+  tokenId_lte: String
+  tokenId_in: [String!]
+  tokenId_not_in: [String!]
+  tokenId_contains: String
+  tokenId_not_contains: String
+  tokenId_containsInsensitive: String
+  tokenId_not_containsInsensitive: String
+  tokenId_startsWith: String
+  tokenId_not_startsWith: String
+  tokenId_endsWith: String
+  tokenId_not_endsWith: String
+  listingId_isNull: Boolean
+  listingId_eq: String
+  listingId_not_eq: String
+  listingId_gt: String
+  listingId_gte: String
+  listingId_lt: String
+  listingId_lte: String
+  listingId_in: [String!]
+  listingId_not_in: [String!]
+  listingId_contains: String
+  listingId_not_contains: String
+  listingId_containsInsensitive: String
+  listingId_not_containsInsensitive: String
+  listingId_startsWith: String
+  listingId_not_startsWith: String
+  listingId_endsWith: String
+  listingId_not_endsWith: String
+  buyoutPricePerToken_isNull: Boolean
+  buyoutPricePerToken_eq: BigInt
+  buyoutPricePerToken_not_eq: BigInt
+  buyoutPricePerToken_gt: BigInt
+  buyoutPricePerToken_gte: BigInt
+  buyoutPricePerToken_lt: BigInt
+  buyoutPricePerToken_lte: BigInt
+  buyoutPricePerToken_in: [BigInt!]
+  buyoutPricePerToken_not_in: [BigInt!]
+  saleType_isNull: Boolean
+  saleType_eq: ListingType
+  saleType_not_eq: ListingType
+  saleType_in: [ListingType!]
+  saleType_not_in: [ListingType!]
+  paymentCurrency_isNull: Boolean
+  paymentCurrency_eq: String
+  paymentCurrency_not_eq: String
+  paymentCurrency_gt: String
+  paymentCurrency_gte: String
+  paymentCurrency_lt: String
+  paymentCurrency_lte: String
+  paymentCurrency_in: [String!]
+  paymentCurrency_not_in: [String!]
+  paymentCurrency_contains: String
+  paymentCurrency_not_contains: String
+  paymentCurrency_containsInsensitive: String
+  paymentCurrency_not_containsInsensitive: String
+  paymentCurrency_startsWith: String
+  paymentCurrency_not_startsWith: String
+  paymentCurrency_endsWith: String
+  paymentCurrency_not_endsWith: String
+  quantity_isNull: Boolean
+  quantity_eq: BigInt
+  quantity_not_eq: BigInt
+  quantity_gt: BigInt
+  quantity_gte: BigInt
+  quantity_lt: BigInt
+  quantity_lte: BigInt
+  quantity_in: [BigInt!]
+  quantity_not_in: [BigInt!]
+  startTime_isNull: Boolean
+  startTime_eq: DateTime
+  startTime_not_eq: DateTime
+  startTime_gt: DateTime
+  startTime_gte: DateTime
+  startTime_lt: DateTime
+  startTime_lte: DateTime
+  startTime_in: [DateTime!]
+  startTime_not_in: [DateTime!]
+  endTime_isNull: Boolean
+  endTime_eq: DateTime
+  endTime_not_eq: DateTime
+  endTime_gt: DateTime
+  endTime_gte: DateTime
+  endTime_lt: DateTime
+  endTime_lte: DateTime
+  endTime_in: [DateTime!]
+  endTime_not_in: [DateTime!]
+  endTimeOriginal_isNull: Boolean
+  endTimeOriginal_eq: DateTime
+  endTimeOriginal_not_eq: DateTime
+  endTimeOriginal_gt: DateTime
+  endTimeOriginal_gte: DateTime
+  endTimeOriginal_lt: DateTime
+  endTimeOriginal_lte: DateTime
+  endTimeOriginal_in: [DateTime!]
+  endTimeOriginal_not_in: [DateTime!]
+  listingCreator_isNull: Boolean
+  listingCreator_eq: String
+  listingCreator_not_eq: String
+  listingCreator_gt: String
+  listingCreator_gte: String
+  listingCreator_lt: String
+  listingCreator_lte: String
+  listingCreator_in: [String!]
+  listingCreator_not_in: [String!]
+  listingCreator_contains: String
+  listingCreator_not_contains: String
+  listingCreator_containsInsensitive: String
+  listingCreator_not_containsInsensitive: String
+  listingCreator_startsWith: String
+  listingCreator_not_startsWith: String
+  listingCreator_endsWith: String
+  listingCreator_not_endsWith: String
+  tokenType_isNull: Boolean
+  tokenType_eq: Int
+  tokenType_not_eq: Int
+  tokenType_gt: Int
+  tokenType_gte: Int
+  tokenType_lt: Int
+  tokenType_lte: Int
+  tokenType_in: [Int!]
+  tokenType_not_in: [Int!]
+  gbm_isNull: Boolean
+  gbm: GbmWhereInput
+}
+
+type MetadataUpdateEventPayload {
+  collectionId: String!
+  tokenId: BigInt!
+}
+
+type MintEventPayload {
+  from: String!
+  to: String!
+  fromTokenId: BigInt
+  toTokenId: BigInt
+  tokenId: BigInt!
+}
+
+enum MintingType {
+  None
+  RMRKPreMint
+  RMRKLazyMintNativeToken
+  RMRKLazyMintERC20
+  Custom
+}
+
+type NestTransferEventPayload {
+  from: String!
+  to: String!
+  fromTokenId: BigInt!
+  toTokenId: BigInt!
+  tokenId: BigInt!
+}
+
+type Network {
+  id: String!
+}
+
+type NetworkEdge {
+  node: Network!
+  cursor: String!
+}
+
+enum NetworkOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+}
+
+type NetworksConnection {
+  edges: [NetworkEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input NetworkWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  AND: [NetworkWhereInput!]
+  OR: [NetworkWhereInput!]
+}
+
+type Nft {
+  id: String!
+  collection: Collection!
+  priorities: [Int]
+  owner: String!
+  burned: Boolean!
+  metadata: String
+  activeAssetIds: [Int!]
+  events(where: EventWhereInput, orderBy: [EventOrderByInput!], offset: Int, limit: Int): [Event!]!
+  assets(where: NftAssetWhereInput, orderBy: [NftAssetOrderByInput!], offset: Int, limit: Int): [NftAsset!]!
+  pending: Boolean
+  parent: Nft
+  children(where: NftWhereInput, orderBy: [NftOrderByInput!], offset: Int, limit: Int): [Nft!]!
+  equipmentUpdatedAt: DateTime
+  offers(where: UnlistedOfferWhereInput, orderBy: [UnlistedOfferOrderByInput!], offset: Int, limit: Int): [UnlistedOffer!]!
+  listing: Listing
+  isTransferable: Boolean!
+  lastTransferabilityCheckAt: DateTime
+  erc20TokenHolderTokens(where: Erc20TokenHolderTokenWhereInput, orderBy: [Erc20TokenHolderTokenOrderByInput!], offset: Int, limit: Int): [Erc20TokenHolderToken!]!
+}
+
+type NftAsset {
+  id: String!
+  nft: Nft!
+  asset: Asset!
+  pending: Boolean!
+  metadata: String
+  parts: [String!]
+  equippableGroupId: String
+  equippableGroupEntity: EquippableGroup
+  catalogAddress: String
+}
+
+type NftAssetEdge {
+  node: NftAsset!
+  cursor: String!
+}
+
+enum NftAssetOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  nft_id_ASC
+  nft_id_DESC
+  nft_id_ASC_NULLS_FIRST
+  nft_id_DESC_NULLS_LAST
+  nft_owner_ASC
+  nft_owner_DESC
+  nft_owner_ASC_NULLS_FIRST
+  nft_owner_DESC_NULLS_LAST
+  nft_burned_ASC
+  nft_burned_DESC
+  nft_burned_ASC_NULLS_FIRST
+  nft_burned_DESC_NULLS_LAST
+  nft_metadata_ASC
+  nft_metadata_DESC
+  nft_metadata_ASC_NULLS_FIRST
+  nft_metadata_DESC_NULLS_LAST
+  nft_pending_ASC
+  nft_pending_DESC
+  nft_pending_ASC_NULLS_FIRST
+  nft_pending_DESC_NULLS_LAST
+  nft_equipmentUpdatedAt_ASC
+  nft_equipmentUpdatedAt_DESC
+  nft_equipmentUpdatedAt_ASC_NULLS_FIRST
+  nft_equipmentUpdatedAt_DESC_NULLS_LAST
+  nft_isTransferable_ASC
+  nft_isTransferable_DESC
+  nft_isTransferable_ASC_NULLS_FIRST
+  nft_isTransferable_DESC_NULLS_LAST
+  nft_lastTransferabilityCheckAt_ASC
+  nft_lastTransferabilityCheckAt_DESC
+  nft_lastTransferabilityCheckAt_ASC_NULLS_FIRST
+  nft_lastTransferabilityCheckAt_DESC_NULLS_LAST
+  asset_id_ASC
+  asset_id_DESC
+  asset_id_ASC_NULLS_FIRST
+  asset_id_DESC_NULLS_LAST
+  pending_ASC
+  pending_DESC
+  pending_ASC_NULLS_FIRST
+  pending_DESC_NULLS_LAST
+  metadata_ASC
+  metadata_DESC
+  metadata_ASC_NULLS_FIRST
+  metadata_DESC_NULLS_LAST
+  equippableGroupId_ASC
+  equippableGroupId_DESC
+  equippableGroupId_ASC_NULLS_FIRST
+  equippableGroupId_DESC_NULLS_LAST
+  equippableGroupEntity_id_ASC
+  equippableGroupEntity_id_DESC
+  equippableGroupEntity_id_ASC_NULLS_FIRST
+  equippableGroupEntity_id_DESC_NULLS_LAST
+  equippableGroupEntity_parentCollectionId_ASC
+  equippableGroupEntity_parentCollectionId_DESC
+  equippableGroupEntity_parentCollectionId_ASC_NULLS_FIRST
+  equippableGroupEntity_parentCollectionId_DESC_NULLS_LAST
+  equippableGroupEntity_slotPartId_ASC
+  equippableGroupEntity_slotPartId_DESC
+  equippableGroupEntity_slotPartId_ASC_NULLS_FIRST
+  equippableGroupEntity_slotPartId_DESC_NULLS_LAST
+  catalogAddress_ASC
+  catalogAddress_DESC
+  catalogAddress_ASC_NULLS_FIRST
+  catalogAddress_DESC_NULLS_LAST
+}
+
+type NftAssetsConnection {
+  edges: [NftAssetEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input NftAssetWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  nft_isNull: Boolean
+  nft: NftWhereInput
+  asset_isNull: Boolean
+  asset: AssetWhereInput
+  pending_isNull: Boolean
+  pending_eq: Boolean
+  pending_not_eq: Boolean
+  metadata_isNull: Boolean
+  metadata_eq: String
+  metadata_not_eq: String
+  metadata_gt: String
+  metadata_gte: String
+  metadata_lt: String
+  metadata_lte: String
+  metadata_in: [String!]
+  metadata_not_in: [String!]
+  metadata_contains: String
+  metadata_not_contains: String
+  metadata_containsInsensitive: String
+  metadata_not_containsInsensitive: String
+  metadata_startsWith: String
+  metadata_not_startsWith: String
+  metadata_endsWith: String
+  metadata_not_endsWith: String
+  parts_isNull: Boolean
+  parts_containsAll: [String!]
+  parts_containsAny: [String!]
+  parts_containsNone: [String!]
+  equippableGroupId_isNull: Boolean
+  equippableGroupId_eq: String
+  equippableGroupId_not_eq: String
+  equippableGroupId_gt: String
+  equippableGroupId_gte: String
+  equippableGroupId_lt: String
+  equippableGroupId_lte: String
+  equippableGroupId_in: [String!]
+  equippableGroupId_not_in: [String!]
+  equippableGroupId_contains: String
+  equippableGroupId_not_contains: String
+  equippableGroupId_containsInsensitive: String
+  equippableGroupId_not_containsInsensitive: String
+  equippableGroupId_startsWith: String
+  equippableGroupId_not_startsWith: String
+  equippableGroupId_endsWith: String
+  equippableGroupId_not_endsWith: String
+  equippableGroupEntity_isNull: Boolean
+  equippableGroupEntity: EquippableGroupWhereInput
+  catalogAddress_isNull: Boolean
+  catalogAddress_eq: String
+  catalogAddress_not_eq: String
+  catalogAddress_gt: String
+  catalogAddress_gte: String
+  catalogAddress_lt: String
+  catalogAddress_lte: String
+  catalogAddress_in: [String!]
+  catalogAddress_not_in: [String!]
+  catalogAddress_contains: String
+  catalogAddress_not_contains: String
+  catalogAddress_containsInsensitive: String
+  catalogAddress_not_containsInsensitive: String
+  catalogAddress_startsWith: String
+  catalogAddress_not_startsWith: String
+  catalogAddress_endsWith: String
+  catalogAddress_not_endsWith: String
+  AND: [NftAssetWhereInput!]
+  OR: [NftAssetWhereInput!]
+}
+
+type NftEdge {
+  node: Nft!
+  cursor: String!
+}
+
+enum NftOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  collection_id_ASC
+  collection_id_DESC
+  collection_id_ASC_NULLS_FIRST
+  collection_id_DESC_NULLS_LAST
+  collection_contractAddress_ASC
+  collection_contractAddress_DESC
+  collection_contractAddress_ASC_NULLS_FIRST
+  collection_contractAddress_DESC_NULLS_LAST
+  collection_metadata_ASC
+  collection_metadata_DESC
+  collection_metadata_ASC_NULLS_FIRST
+  collection_metadata_DESC_NULLS_LAST
+  collection_name_ASC
+  collection_name_DESC
+  collection_name_ASC_NULLS_FIRST
+  collection_name_DESC_NULLS_LAST
+  collection_symbol_ASC
+  collection_symbol_DESC
+  collection_symbol_ASC_NULLS_FIRST
+  collection_symbol_DESC_NULLS_LAST
+  collection_royaltyRecipient_ASC
+  collection_royaltyRecipient_DESC
+  collection_royaltyRecipient_ASC_NULLS_FIRST
+  collection_royaltyRecipient_DESC_NULLS_LAST
+  collection_royaltyPercentageBps_ASC
+  collection_royaltyPercentageBps_DESC
+  collection_royaltyPercentageBps_ASC_NULLS_FIRST
+  collection_royaltyPercentageBps_DESC_NULLS_LAST
+  collection_legoCombination_ASC
+  collection_legoCombination_DESC
+  collection_legoCombination_ASC_NULLS_FIRST
+  collection_legoCombination_DESC_NULLS_LAST
+  collection_mintingType_ASC
+  collection_mintingType_DESC
+  collection_mintingType_ASC_NULLS_FIRST
+  collection_mintingType_DESC_NULLS_LAST
+  collection_registryIsSoulbound_ASC
+  collection_registryIsSoulbound_DESC
+  collection_registryIsSoulbound_ASC_NULLS_FIRST
+  collection_registryIsSoulbound_DESC_NULLS_LAST
+  collection_maxSupply_ASC
+  collection_maxSupply_DESC
+  collection_maxSupply_ASC_NULLS_FIRST
+  collection_maxSupply_DESC_NULLS_LAST
+  collection_deployer_ASC
+  collection_deployer_DESC
+  collection_deployer_ASC_NULLS_FIRST
+  collection_deployer_DESC_NULLS_LAST
+  collection_owner_ASC
+  collection_owner_DESC
+  collection_owner_ASC_NULLS_FIRST
+  collection_owner_DESC_NULLS_LAST
+  collection_hasSoulBoundInterface_ASC
+  collection_hasSoulBoundInterface_DESC
+  collection_hasSoulBoundInterface_ASC_NULLS_FIRST
+  collection_hasSoulBoundInterface_DESC_NULLS_LAST
+  collection_hasEquippableInterface_ASC
+  collection_hasEquippableInterface_DESC
+  collection_hasEquippableInterface_ASC_NULLS_FIRST
+  collection_hasEquippableInterface_DESC_NULLS_LAST
+  collection_hasTokenHolderInterface_ASC
+  collection_hasTokenHolderInterface_DESC
+  collection_hasTokenHolderInterface_ASC_NULLS_FIRST
+  collection_hasTokenHolderInterface_DESC_NULLS_LAST
+  collection_chainName_ASC
+  collection_chainName_DESC
+  collection_chainName_ASC_NULLS_FIRST
+  collection_chainName_DESC_NULLS_LAST
+  collection_deletedAt_ASC
+  collection_deletedAt_DESC
+  collection_deletedAt_ASC_NULLS_FIRST
+  collection_deletedAt_DESC_NULLS_LAST
+  collection_createdAt_ASC
+  collection_createdAt_DESC
+  collection_createdAt_ASC_NULLS_FIRST
+  collection_createdAt_DESC_NULLS_LAST
+  owner_ASC
+  owner_DESC
+  owner_ASC_NULLS_FIRST
+  owner_DESC_NULLS_LAST
+  burned_ASC
+  burned_DESC
+  burned_ASC_NULLS_FIRST
+  burned_DESC_NULLS_LAST
+  metadata_ASC
+  metadata_DESC
+  metadata_ASC_NULLS_FIRST
+  metadata_DESC_NULLS_LAST
+  pending_ASC
+  pending_DESC
+  pending_ASC_NULLS_FIRST
+  pending_DESC_NULLS_LAST
+  parent_id_ASC
+  parent_id_DESC
+  parent_id_ASC_NULLS_FIRST
+  parent_id_DESC_NULLS_LAST
+  parent_owner_ASC
+  parent_owner_DESC
+  parent_owner_ASC_NULLS_FIRST
+  parent_owner_DESC_NULLS_LAST
+  parent_burned_ASC
+  parent_burned_DESC
+  parent_burned_ASC_NULLS_FIRST
+  parent_burned_DESC_NULLS_LAST
+  parent_metadata_ASC
+  parent_metadata_DESC
+  parent_metadata_ASC_NULLS_FIRST
+  parent_metadata_DESC_NULLS_LAST
+  parent_pending_ASC
+  parent_pending_DESC
+  parent_pending_ASC_NULLS_FIRST
+  parent_pending_DESC_NULLS_LAST
+  parent_equipmentUpdatedAt_ASC
+  parent_equipmentUpdatedAt_DESC
+  parent_equipmentUpdatedAt_ASC_NULLS_FIRST
+  parent_equipmentUpdatedAt_DESC_NULLS_LAST
+  parent_isTransferable_ASC
+  parent_isTransferable_DESC
+  parent_isTransferable_ASC_NULLS_FIRST
+  parent_isTransferable_DESC_NULLS_LAST
+  parent_lastTransferabilityCheckAt_ASC
+  parent_lastTransferabilityCheckAt_DESC
+  parent_lastTransferabilityCheckAt_ASC_NULLS_FIRST
+  parent_lastTransferabilityCheckAt_DESC_NULLS_LAST
+  equipmentUpdatedAt_ASC
+  equipmentUpdatedAt_DESC
+  equipmentUpdatedAt_ASC_NULLS_FIRST
+  equipmentUpdatedAt_DESC_NULLS_LAST
+  listing_id_ASC
+  listing_id_DESC
+  listing_id_ASC_NULLS_FIRST
+  listing_id_DESC_NULLS_LAST
+  listing_buyoutPricePerToken_ASC
+  listing_buyoutPricePerToken_DESC
+  listing_buyoutPricePerToken_ASC_NULLS_FIRST
+  listing_buyoutPricePerToken_DESC_NULLS_LAST
+  listing_saleType_ASC
+  listing_saleType_DESC
+  listing_saleType_ASC_NULLS_FIRST
+  listing_saleType_DESC_NULLS_LAST
+  listing_paymentCurrency_ASC
+  listing_paymentCurrency_DESC
+  listing_paymentCurrency_ASC_NULLS_FIRST
+  listing_paymentCurrency_DESC_NULLS_LAST
+  listing_quantity_ASC
+  listing_quantity_DESC
+  listing_quantity_ASC_NULLS_FIRST
+  listing_quantity_DESC_NULLS_LAST
+  listing_startTime_ASC
+  listing_startTime_DESC
+  listing_startTime_ASC_NULLS_FIRST
+  listing_startTime_DESC_NULLS_LAST
+  listing_endTime_ASC
+  listing_endTime_DESC
+  listing_endTime_ASC_NULLS_FIRST
+  listing_endTime_DESC_NULLS_LAST
+  listing_endTimeOriginal_ASC
+  listing_endTimeOriginal_DESC
+  listing_endTimeOriginal_ASC_NULLS_FIRST
+  listing_endTimeOriginal_DESC_NULLS_LAST
+  listing_listingCreator_ASC
+  listing_listingCreator_DESC
+  listing_listingCreator_ASC_NULLS_FIRST
+  listing_listingCreator_DESC_NULLS_LAST
+  listing_tokenType_ASC
+  listing_tokenType_DESC
+  listing_tokenType_ASC_NULLS_FIRST
+  listing_tokenType_DESC_NULLS_LAST
+  isTransferable_ASC
+  isTransferable_DESC
+  isTransferable_ASC_NULLS_FIRST
+  isTransferable_DESC_NULLS_LAST
+  lastTransferabilityCheckAt_ASC
+  lastTransferabilityCheckAt_DESC
+  lastTransferabilityCheckAt_ASC_NULLS_FIRST
+  lastTransferabilityCheckAt_DESC_NULLS_LAST
+}
+
+type NftsConnection {
+  edges: [NftEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input NftWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  collection_isNull: Boolean
+  collection: CollectionWhereInput
+  priorities_isNull: Boolean
+  priorities_containsAll: [Int]
+  priorities_containsAny: [Int]
+  priorities_containsNone: [Int]
+  owner_isNull: Boolean
+  owner_eq: String
+  owner_not_eq: String
+  owner_gt: String
+  owner_gte: String
+  owner_lt: String
+  owner_lte: String
+  owner_in: [String!]
+  owner_not_in: [String!]
+  owner_contains: String
+  owner_not_contains: String
+  owner_containsInsensitive: String
+  owner_not_containsInsensitive: String
+  owner_startsWith: String
+  owner_not_startsWith: String
+  owner_endsWith: String
+  owner_not_endsWith: String
+  burned_isNull: Boolean
+  burned_eq: Boolean
+  burned_not_eq: Boolean
+  metadata_isNull: Boolean
+  metadata_eq: String
+  metadata_not_eq: String
+  metadata_gt: String
+  metadata_gte: String
+  metadata_lt: String
+  metadata_lte: String
+  metadata_in: [String!]
+  metadata_not_in: [String!]
+  metadata_contains: String
+  metadata_not_contains: String
+  metadata_containsInsensitive: String
+  metadata_not_containsInsensitive: String
+  metadata_startsWith: String
+  metadata_not_startsWith: String
+  metadata_endsWith: String
+  metadata_not_endsWith: String
+  activeAssetIds_isNull: Boolean
+  activeAssetIds_containsAll: [Int!]
+  activeAssetIds_containsAny: [Int!]
+  activeAssetIds_containsNone: [Int!]
+  events_every: EventWhereInput
+  events_some: EventWhereInput
+  events_none: EventWhereInput
+  assets_every: NftAssetWhereInput
+  assets_some: NftAssetWhereInput
+  assets_none: NftAssetWhereInput
+  pending_isNull: Boolean
+  pending_eq: Boolean
+  pending_not_eq: Boolean
+  parent_isNull: Boolean
+  parent: NftWhereInput
+  children_every: NftWhereInput
+  children_some: NftWhereInput
+  children_none: NftWhereInput
+  equipmentUpdatedAt_isNull: Boolean
+  equipmentUpdatedAt_eq: DateTime
+  equipmentUpdatedAt_not_eq: DateTime
+  equipmentUpdatedAt_gt: DateTime
+  equipmentUpdatedAt_gte: DateTime
+  equipmentUpdatedAt_lt: DateTime
+  equipmentUpdatedAt_lte: DateTime
+  equipmentUpdatedAt_in: [DateTime!]
+  equipmentUpdatedAt_not_in: [DateTime!]
+  offers_every: UnlistedOfferWhereInput
+  offers_some: UnlistedOfferWhereInput
+  offers_none: UnlistedOfferWhereInput
+  listing_isNull: Boolean
+  listing: ListingWhereInput
+  isTransferable_isNull: Boolean
+  isTransferable_eq: Boolean
+  isTransferable_not_eq: Boolean
+  lastTransferabilityCheckAt_isNull: Boolean
+  lastTransferabilityCheckAt_eq: DateTime
+  lastTransferabilityCheckAt_not_eq: DateTime
+  lastTransferabilityCheckAt_gt: DateTime
+  lastTransferabilityCheckAt_gte: DateTime
+  lastTransferabilityCheckAt_lt: DateTime
+  lastTransferabilityCheckAt_lte: DateTime
+  lastTransferabilityCheckAt_in: [DateTime!]
+  lastTransferabilityCheckAt_not_in: [DateTime!]
+  erc20TokenHolderTokens_every: Erc20TokenHolderTokenWhereInput
+  erc20TokenHolderTokens_some: Erc20TokenHolderTokenWhereInput
+  erc20TokenHolderTokens_none: Erc20TokenHolderTokenWhereInput
+  AND: [NftWhereInput!]
+  OR: [NftWhereInput!]
+}
+
+type OwnershipTransferredEventPayload {
+  previousOwner: String!
+  newOwner: String!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String!
+  endCursor: String!
+}
+
+type Query {
+  rawLogs(where: RawLogWhereInput, orderBy: [RawLogOrderByInput!], offset: Int, limit: Int): [RawLog!]!
+  rawLogById(id: String!): RawLog
+  rawLogByUniqueInput(where: WhereIdInput!): RawLog @deprecated(reason: "Use rawLogById")
+  rawLogsConnection(orderBy: [RawLogOrderByInput!]!, after: String, first: Int, where: RawLogWhereInput): RawLogsConnection!
+  blocks(where: BlockWhereInput, orderBy: [BlockOrderByInput!], offset: Int, limit: Int): [Block!]!
+  blockById(id: String!): Block
+  blockByUniqueInput(where: WhereIdInput!): Block @deprecated(reason: "Use blockById")
+  blocksConnection(orderBy: [BlockOrderByInput!]!, after: String, first: Int, where: BlockWhereInput): BlocksConnection!
+  events(where: EventWhereInput, orderBy: [EventOrderByInput!], offset: Int, limit: Int): [Event!]!
+  eventById(id: String!): Event
+  eventByUniqueInput(where: WhereIdInput!): Event @deprecated(reason: "Use eventById")
+  eventsConnection(orderBy: [EventOrderByInput!]!, after: String, first: Int, where: EventWhereInput): EventsConnection!
+  networks(where: NetworkWhereInput, orderBy: [NetworkOrderByInput!], offset: Int, limit: Int): [Network!]!
+  networkById(id: String!): Network
+  networkByUniqueInput(where: WhereIdInput!): Network @deprecated(reason: "Use networkById")
+  networksConnection(orderBy: [NetworkOrderByInput!]!, after: String, first: Int, where: NetworkWhereInput): NetworksConnection!
+  collections(where: CollectionWhereInput, orderBy: [CollectionOrderByInput!], offset: Int, limit: Int): [Collection!]!
+  collectionById(id: String!): Collection
+  collectionByUniqueInput(where: WhereIdInput!): Collection @deprecated(reason: "Use collectionById")
+  collectionsConnection(orderBy: [CollectionOrderByInput!]!, after: String, first: Int, where: CollectionWhereInput): CollectionsConnection!
+  nfts(where: NftWhereInput, orderBy: [NftOrderByInput!], offset: Int, limit: Int): [Nft!]!
+  nftById(id: String!): Nft
+  nftByUniqueInput(where: WhereIdInput!): Nft @deprecated(reason: "Use nftById")
+  nftsConnection(orderBy: [NftOrderByInput!]!, after: String, first: Int, where: NftWhereInput): NftsConnection!
+  assets(where: AssetWhereInput, orderBy: [AssetOrderByInput!], offset: Int, limit: Int): [Asset!]!
+  assetById(id: String!): Asset
+  assetByUniqueInput(where: WhereIdInput!): Asset @deprecated(reason: "Use assetById")
+  assetsConnection(orderBy: [AssetOrderByInput!]!, after: String, first: Int, where: AssetWhereInput): AssetsConnection!
+  nftAssets(where: NftAssetWhereInput, orderBy: [NftAssetOrderByInput!], offset: Int, limit: Int): [NftAsset!]!
+  nftAssetById(id: String!): NftAsset
+  nftAssetByUniqueInput(where: WhereIdInput!): NftAsset @deprecated(reason: "Use nftAssetById")
+  nftAssetsConnection(orderBy: [NftAssetOrderByInput!]!, after: String, first: Int, where: NftAssetWhereInput): NftAssetsConnection!
+  listings(where: ListingWhereInput, orderBy: [ListingOrderByInput!], offset: Int, limit: Int): [Listing!]!
+  listingById(id: String!): Listing
+  listingByUniqueInput(where: WhereIdInput!): Listing @deprecated(reason: "Use listingById")
+  listingsConnection(orderBy: [ListingOrderByInput!]!, after: String, first: Int, where: ListingWhereInput): ListingsConnection!
+  bids(where: BidWhereInput, orderBy: [BidOrderByInput!], offset: Int, limit: Int): [Bid!]!
+  bidById(id: String!): Bid
+  bidByUniqueInput(where: WhereIdInput!): Bid @deprecated(reason: "Use bidById")
+  bidsConnection(orderBy: [BidOrderByInput!]!, after: String, first: Int, where: BidWhereInput): BidsConnection!
+  collectionOffers(where: CollectionOfferWhereInput, orderBy: [CollectionOfferOrderByInput!], offset: Int, limit: Int): [CollectionOffer!]!
+  collectionOfferById(id: String!): CollectionOffer
+  collectionOfferByUniqueInput(where: WhereIdInput!): CollectionOffer @deprecated(reason: "Use collectionOfferById")
+  collectionOffersConnection(orderBy: [CollectionOfferOrderByInput!]!, after: String, first: Int, where: CollectionOfferWhereInput): CollectionOffersConnection!
+  unlistedOffers(where: UnlistedOfferWhereInput, orderBy: [UnlistedOfferOrderByInput!], offset: Int, limit: Int): [UnlistedOffer!]!
+  unlistedOfferById(id: String!): UnlistedOffer
+  unlistedOfferByUniqueInput(where: WhereIdInput!): UnlistedOffer @deprecated(reason: "Use unlistedOfferById")
+  unlistedOffersConnection(orderBy: [UnlistedOfferOrderByInput!]!, after: String, first: Int, where: UnlistedOfferWhereInput): UnlistedOffersConnection!
+  auctionConfigs(where: AuctionConfigWhereInput, orderBy: [AuctionConfigOrderByInput!], offset: Int, limit: Int): [AuctionConfig!]!
+  auctionConfigById(id: String!): AuctionConfig
+  auctionConfigByUniqueInput(where: WhereIdInput!): AuctionConfig @deprecated(reason: "Use auctionConfigById")
+  auctionConfigsConnection(orderBy: [AuctionConfigOrderByInput!]!, after: String, first: Int, where: AuctionConfigWhereInput): AuctionConfigsConnection!
+  equippableGroups(where: EquippableGroupWhereInput, orderBy: [EquippableGroupOrderByInput!], offset: Int, limit: Int): [EquippableGroup!]!
+  equippableGroupById(id: String!): EquippableGroup
+  equippableGroupByUniqueInput(where: WhereIdInput!): EquippableGroup @deprecated(reason: "Use equippableGroupById")
+  equippableGroupsConnection(orderBy: [EquippableGroupOrderByInput!]!, after: String, first: Int, where: EquippableGroupWhereInput): EquippableGroupsConnection!
+  catalogParts(where: CatalogPartWhereInput, orderBy: [CatalogPartOrderByInput!], offset: Int, limit: Int): [CatalogPart!]!
+  catalogPartById(id: String!): CatalogPart
+  catalogPartByUniqueInput(where: WhereIdInput!): CatalogPart @deprecated(reason: "Use catalogPartById")
+  catalogPartsConnection(orderBy: [CatalogPartOrderByInput!]!, after: String, first: Int, where: CatalogPartWhereInput): CatalogPartsConnection!
+  catalogs(where: CatalogWhereInput, orderBy: [CatalogOrderByInput!], offset: Int, limit: Int): [Catalog!]!
+  catalogById(id: String!): Catalog
+  catalogByUniqueInput(where: WhereIdInput!): Catalog @deprecated(reason: "Use catalogById")
+  catalogsConnection(orderBy: [CatalogOrderByInput!]!, after: String, first: Int, where: CatalogWhereInput): CatalogsConnection!
+  erc20TokenHolderTokens(where: Erc20TokenHolderTokenWhereInput, orderBy: [Erc20TokenHolderTokenOrderByInput!], offset: Int, limit: Int): [Erc20TokenHolderToken!]!
+  erc20TokenHolderTokenById(id: String!): Erc20TokenHolderToken
+  erc20TokenHolderTokenByUniqueInput(where: WhereIdInput!): Erc20TokenHolderToken @deprecated(reason: "Use erc20TokenHolderTokenById")
+  erc20TokenHolderTokensConnection(orderBy: [Erc20TokenHolderTokenOrderByInput!]!, after: String, first: Int, where: Erc20TokenHolderTokenWhereInput): Erc20TokenHolderTokensConnection!
+  squidStatus: SquidStatus
+  collectionsWithTotalSupply(skip: Int = null, take: Int = null, network: String = null, owner: String = null): [CollectionWithTotalSupplyEntity!]!
+  stats(collectionId: String!): [StatsEntity!]!
+}
+
+type RawLog {
+  id: String!
+  logIndex: Int!
+  transactionIndex: Int!
+  data: String!
+  transactionHash: String!
+  address: String!
+  topics: [String!]!
+  blockNumber: Int
+  syncState: SyncState
+  block: SimbleBlock!
+  network: Network!
+}
+
+type RawLogEdge {
+  node: RawLog!
+  cursor: String!
+}
+
+enum RawLogOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  logIndex_ASC
+  logIndex_DESC
+  logIndex_ASC_NULLS_FIRST
+  logIndex_DESC_NULLS_LAST
+  transactionIndex_ASC
+  transactionIndex_DESC
+  transactionIndex_ASC_NULLS_FIRST
+  transactionIndex_DESC_NULLS_LAST
+  data_ASC
+  data_DESC
+  data_ASC_NULLS_FIRST
+  data_DESC_NULLS_LAST
+  transactionHash_ASC
+  transactionHash_DESC
+  transactionHash_ASC_NULLS_FIRST
+  transactionHash_DESC_NULLS_LAST
+  address_ASC
+  address_DESC
+  address_ASC_NULLS_FIRST
+  address_DESC_NULLS_LAST
+  blockNumber_ASC
+  blockNumber_DESC
+  blockNumber_ASC_NULLS_FIRST
+  blockNumber_DESC_NULLS_LAST
+  syncState_ASC
+  syncState_DESC
+  syncState_ASC_NULLS_FIRST
+  syncState_DESC_NULLS_LAST
+  block_id_ASC
+  block_id_DESC
+  block_id_ASC_NULLS_FIRST
+  block_id_DESC_NULLS_LAST
+  block_hash_ASC
+  block_hash_DESC
+  block_hash_ASC_NULLS_FIRST
+  block_hash_DESC_NULLS_LAST
+  block_height_ASC
+  block_height_DESC
+  block_height_ASC_NULLS_FIRST
+  block_height_DESC_NULLS_LAST
+  block_parentHash_ASC
+  block_parentHash_DESC
+  block_parentHash_ASC_NULLS_FIRST
+  block_parentHash_DESC_NULLS_LAST
+  block_timestamp_ASC
+  block_timestamp_DESC
+  block_timestamp_ASC_NULLS_FIRST
+  block_timestamp_DESC_NULLS_LAST
+  network_id_ASC
+  network_id_DESC
+  network_id_ASC_NULLS_FIRST
+  network_id_DESC_NULLS_LAST
+}
+
+type RawLogsConnection {
+  edges: [RawLogEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input RawLogWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  logIndex_isNull: Boolean
+  logIndex_eq: Int
+  logIndex_not_eq: Int
+  logIndex_gt: Int
+  logIndex_gte: Int
+  logIndex_lt: Int
+  logIndex_lte: Int
+  logIndex_in: [Int!]
+  logIndex_not_in: [Int!]
+  transactionIndex_isNull: Boolean
+  transactionIndex_eq: Int
+  transactionIndex_not_eq: Int
+  transactionIndex_gt: Int
+  transactionIndex_gte: Int
+  transactionIndex_lt: Int
+  transactionIndex_lte: Int
+  transactionIndex_in: [Int!]
+  transactionIndex_not_in: [Int!]
+  data_isNull: Boolean
+  data_eq: String
+  data_not_eq: String
+  data_gt: String
+  data_gte: String
+  data_lt: String
+  data_lte: String
+  data_in: [String!]
+  data_not_in: [String!]
+  data_contains: String
+  data_not_contains: String
+  data_containsInsensitive: String
+  data_not_containsInsensitive: String
+  data_startsWith: String
+  data_not_startsWith: String
+  data_endsWith: String
+  data_not_endsWith: String
+  transactionHash_isNull: Boolean
+  transactionHash_eq: String
+  transactionHash_not_eq: String
+  transactionHash_gt: String
+  transactionHash_gte: String
+  transactionHash_lt: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_not_contains: String
+  transactionHash_containsInsensitive: String
+  transactionHash_not_containsInsensitive: String
+  transactionHash_startsWith: String
+  transactionHash_not_startsWith: String
+  transactionHash_endsWith: String
+  transactionHash_not_endsWith: String
+  address_isNull: Boolean
+  address_eq: String
+  address_not_eq: String
+  address_gt: String
+  address_gte: String
+  address_lt: String
+  address_lte: String
+  address_in: [String!]
+  address_not_in: [String!]
+  address_contains: String
+  address_not_contains: String
+  address_containsInsensitive: String
+  address_not_containsInsensitive: String
+  address_startsWith: String
+  address_not_startsWith: String
+  address_endsWith: String
+  address_not_endsWith: String
+  topics_isNull: Boolean
+  topics_containsAll: [String!]
+  topics_containsAny: [String!]
+  topics_containsNone: [String!]
+  blockNumber_isNull: Boolean
+  blockNumber_eq: Int
+  blockNumber_not_eq: Int
+  blockNumber_gt: Int
+  blockNumber_gte: Int
+  blockNumber_lt: Int
+  blockNumber_lte: Int
+  blockNumber_in: [Int!]
+  blockNumber_not_in: [Int!]
+  syncState_isNull: Boolean
+  syncState_eq: SyncState
+  syncState_not_eq: SyncState
+  syncState_in: [SyncState!]
+  syncState_not_in: [SyncState!]
+  block_isNull: Boolean
+  block: SimbleBlockWhereInput
+  network_isNull: Boolean
+  network: NetworkWhereInput
+  AND: [RawLogWhereInput!]
+  OR: [RawLogWhereInput!]
+}
+
+type ReceivedERC20EventPayload {
+  erc20Contract: String!
+  toTokenId: BigInt!
+  from: String!
+  amount: BigInt!
+}
+
+type RegistryConfig {
+  usesOwnable: Boolean
+  usesAccessControl: Boolean
+  hasStandardAssetManagement: Boolean
+  hasStandardMinting: Boolean
+  hasStandardNestMinting: Boolean
+  autoAcceptsFirstAsset: Boolean
+  adminRole: String
+  customLegoCombination: Int
+  customMintingType: Int
+  usesRMRKContributor: Boolean
+  usesRMRKMintingUtils: Boolean
+  usesRMRKLockable: Boolean
+}
+
+input RegistryConfigWhereInput {
+  usesOwnable_isNull: Boolean
+  usesOwnable_eq: Boolean
+  usesOwnable_not_eq: Boolean
+  usesAccessControl_isNull: Boolean
+  usesAccessControl_eq: Boolean
+  usesAccessControl_not_eq: Boolean
+  hasStandardAssetManagement_isNull: Boolean
+  hasStandardAssetManagement_eq: Boolean
+  hasStandardAssetManagement_not_eq: Boolean
+  hasStandardMinting_isNull: Boolean
+  hasStandardMinting_eq: Boolean
+  hasStandardMinting_not_eq: Boolean
+  hasStandardNestMinting_isNull: Boolean
+  hasStandardNestMinting_eq: Boolean
+  hasStandardNestMinting_not_eq: Boolean
+  autoAcceptsFirstAsset_isNull: Boolean
+  autoAcceptsFirstAsset_eq: Boolean
+  autoAcceptsFirstAsset_not_eq: Boolean
+  adminRole_isNull: Boolean
+  adminRole_eq: String
+  adminRole_not_eq: String
+  adminRole_gt: String
+  adminRole_gte: String
+  adminRole_lt: String
+  adminRole_lte: String
+  adminRole_in: [String!]
+  adminRole_not_in: [String!]
+  adminRole_contains: String
+  adminRole_not_contains: String
+  adminRole_containsInsensitive: String
+  adminRole_not_containsInsensitive: String
+  adminRole_startsWith: String
+  adminRole_not_startsWith: String
+  adminRole_endsWith: String
+  adminRole_not_endsWith: String
+  customLegoCombination_isNull: Boolean
+  customLegoCombination_eq: Int
+  customLegoCombination_not_eq: Int
+  customLegoCombination_gt: Int
+  customLegoCombination_gte: Int
+  customLegoCombination_lt: Int
+  customLegoCombination_lte: Int
+  customLegoCombination_in: [Int!]
+  customLegoCombination_not_in: [Int!]
+  customMintingType_isNull: Boolean
+  customMintingType_eq: Int
+  customMintingType_not_eq: Int
+  customMintingType_gt: Int
+  customMintingType_gte: Int
+  customMintingType_lt: Int
+  customMintingType_lte: Int
+  customMintingType_in: [Int!]
+  customMintingType_not_in: [Int!]
+  usesRMRKContributor_isNull: Boolean
+  usesRMRKContributor_eq: Boolean
+  usesRMRKContributor_not_eq: Boolean
+  usesRMRKMintingUtils_isNull: Boolean
+  usesRMRKMintingUtils_eq: Boolean
+  usesRMRKMintingUtils_not_eq: Boolean
+  usesRMRKLockable_isNull: Boolean
+  usesRMRKLockable_eq: Boolean
+  usesRMRKLockable_not_eq: Boolean
+}
+
+type SimbleBlock {
+  id: String!
+  hash: String!
+  height: Int!
+  parentHash: String!
+  timestamp: Int!
+}
+
+input SimbleBlockWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  hash_isNull: Boolean
+  hash_eq: String
+  hash_not_eq: String
+  hash_gt: String
+  hash_gte: String
+  hash_lt: String
+  hash_lte: String
+  hash_in: [String!]
+  hash_not_in: [String!]
+  hash_contains: String
+  hash_not_contains: String
+  hash_containsInsensitive: String
+  hash_not_containsInsensitive: String
+  hash_startsWith: String
+  hash_not_startsWith: String
+  hash_endsWith: String
+  hash_not_endsWith: String
+  height_isNull: Boolean
+  height_eq: Int
+  height_not_eq: Int
+  height_gt: Int
+  height_gte: Int
+  height_lt: Int
+  height_lte: Int
+  height_in: [Int!]
+  height_not_in: [Int!]
+  parentHash_isNull: Boolean
+  parentHash_eq: String
+  parentHash_not_eq: String
+  parentHash_gt: String
+  parentHash_gte: String
+  parentHash_lt: String
+  parentHash_lte: String
+  parentHash_in: [String!]
+  parentHash_not_in: [String!]
+  parentHash_contains: String
+  parentHash_not_contains: String
+  parentHash_containsInsensitive: String
+  parentHash_not_containsInsensitive: String
+  parentHash_startsWith: String
+  parentHash_not_startsWith: String
+  parentHash_endsWith: String
+  parentHash_not_endsWith: String
+  timestamp_isNull: Boolean
+  timestamp_eq: Int
+  timestamp_not_eq: Int
+  timestamp_gt: Int
+  timestamp_gte: Int
+  timestamp_lt: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+type SquidStatus {
+  """The height of the processed part of the chain"""
+  height: Int
+}
+
+type StatsEntity {
+  currency: String
+  totalVolume: Float!
+  maxSale: Float
+  currentListedFloor: Float
+  collectionId: String!
+  maxCurrentOffer: Float
+}
+
+type Subscription {
+  rawLogs(where: RawLogWhereInput, orderBy: [RawLogOrderByInput!], offset: Int, limit: Int): [RawLog!]!
+  rawLogById(id: String!): RawLog
+  blocks(where: BlockWhereInput, orderBy: [BlockOrderByInput!], offset: Int, limit: Int): [Block!]!
+  blockById(id: String!): Block
+  events(where: EventWhereInput, orderBy: [EventOrderByInput!], offset: Int, limit: Int): [Event!]!
+  eventById(id: String!): Event
+  networks(where: NetworkWhereInput, orderBy: [NetworkOrderByInput!], offset: Int, limit: Int): [Network!]!
+  networkById(id: String!): Network
+  collections(where: CollectionWhereInput, orderBy: [CollectionOrderByInput!], offset: Int, limit: Int): [Collection!]!
+  collectionById(id: String!): Collection
+  nfts(where: NftWhereInput, orderBy: [NftOrderByInput!], offset: Int, limit: Int): [Nft!]!
+  nftById(id: String!): Nft
+  assets(where: AssetWhereInput, orderBy: [AssetOrderByInput!], offset: Int, limit: Int): [Asset!]!
+  assetById(id: String!): Asset
+  nftAssets(where: NftAssetWhereInput, orderBy: [NftAssetOrderByInput!], offset: Int, limit: Int): [NftAsset!]!
+  nftAssetById(id: String!): NftAsset
+  listings(where: ListingWhereInput, orderBy: [ListingOrderByInput!], offset: Int, limit: Int): [Listing!]!
+  listingById(id: String!): Listing
+  bids(where: BidWhereInput, orderBy: [BidOrderByInput!], offset: Int, limit: Int): [Bid!]!
+  bidById(id: String!): Bid
+  collectionOffers(where: CollectionOfferWhereInput, orderBy: [CollectionOfferOrderByInput!], offset: Int, limit: Int): [CollectionOffer!]!
+  collectionOfferById(id: String!): CollectionOffer
+  unlistedOffers(where: UnlistedOfferWhereInput, orderBy: [UnlistedOfferOrderByInput!], offset: Int, limit: Int): [UnlistedOffer!]!
+  unlistedOfferById(id: String!): UnlistedOffer
+  auctionConfigs(where: AuctionConfigWhereInput, orderBy: [AuctionConfigOrderByInput!], offset: Int, limit: Int): [AuctionConfig!]!
+  auctionConfigById(id: String!): AuctionConfig
+  equippableGroups(where: EquippableGroupWhereInput, orderBy: [EquippableGroupOrderByInput!], offset: Int, limit: Int): [EquippableGroup!]!
+  equippableGroupById(id: String!): EquippableGroup
+  catalogParts(where: CatalogPartWhereInput, orderBy: [CatalogPartOrderByInput!], offset: Int, limit: Int): [CatalogPart!]!
+  catalogPartById(id: String!): CatalogPart
+  catalogs(where: CatalogWhereInput, orderBy: [CatalogOrderByInput!], offset: Int, limit: Int): [Catalog!]!
+  catalogById(id: String!): Catalog
+  erc20TokenHolderTokens(where: Erc20TokenHolderTokenWhereInput, orderBy: [Erc20TokenHolderTokenOrderByInput!], offset: Int, limit: Int): [Erc20TokenHolderToken!]!
+  erc20TokenHolderTokenById(id: String!): Erc20TokenHolderToken
+}
+
+enum SyncState {
+  Synced
+  Failed
+  OutOfSync
+}
+
+type TransferEventPayload {
+  from: String!
+  to: String!
+  tokenId: BigInt!
+}
+
+type TransferredERC20EventPayload {
+  erc20Contract: String!
+  fromTokenId: BigInt!
+  to: String!
+  amount: BigInt!
+}
+
+type UnlistedOffer {
+  id: String!
+  token: Nft!
+  buyer: String!
+  quantityWanted: BigInt
+  totalDirectOfferAmount: BigInt
+  currency: String!
+  expirationTimestamp: DateTime
+  expectedChildren: [ExpectedChildren]!
+  block: Block!
+}
+
+type UnlistedOfferEdge {
+  node: UnlistedOffer!
+  cursor: String!
+}
+
+enum UnlistedOfferOrderByInput {
+  id_ASC
+  id_DESC
+  id_ASC_NULLS_FIRST
+  id_DESC_NULLS_LAST
+  token_id_ASC
+  token_id_DESC
+  token_id_ASC_NULLS_FIRST
+  token_id_DESC_NULLS_LAST
+  token_owner_ASC
+  token_owner_DESC
+  token_owner_ASC_NULLS_FIRST
+  token_owner_DESC_NULLS_LAST
+  token_burned_ASC
+  token_burned_DESC
+  token_burned_ASC_NULLS_FIRST
+  token_burned_DESC_NULLS_LAST
+  token_metadata_ASC
+  token_metadata_DESC
+  token_metadata_ASC_NULLS_FIRST
+  token_metadata_DESC_NULLS_LAST
+  token_pending_ASC
+  token_pending_DESC
+  token_pending_ASC_NULLS_FIRST
+  token_pending_DESC_NULLS_LAST
+  token_equipmentUpdatedAt_ASC
+  token_equipmentUpdatedAt_DESC
+  token_equipmentUpdatedAt_ASC_NULLS_FIRST
+  token_equipmentUpdatedAt_DESC_NULLS_LAST
+  token_isTransferable_ASC
+  token_isTransferable_DESC
+  token_isTransferable_ASC_NULLS_FIRST
+  token_isTransferable_DESC_NULLS_LAST
+  token_lastTransferabilityCheckAt_ASC
+  token_lastTransferabilityCheckAt_DESC
+  token_lastTransferabilityCheckAt_ASC_NULLS_FIRST
+  token_lastTransferabilityCheckAt_DESC_NULLS_LAST
+  buyer_ASC
+  buyer_DESC
+  buyer_ASC_NULLS_FIRST
+  buyer_DESC_NULLS_LAST
+  quantityWanted_ASC
+  quantityWanted_DESC
+  quantityWanted_ASC_NULLS_FIRST
+  quantityWanted_DESC_NULLS_LAST
+  totalDirectOfferAmount_ASC
+  totalDirectOfferAmount_DESC
+  totalDirectOfferAmount_ASC_NULLS_FIRST
+  totalDirectOfferAmount_DESC_NULLS_LAST
+  currency_ASC
+  currency_DESC
+  currency_ASC_NULLS_FIRST
+  currency_DESC_NULLS_LAST
+  expirationTimestamp_ASC
+  expirationTimestamp_DESC
+  expirationTimestamp_ASC_NULLS_FIRST
+  expirationTimestamp_DESC_NULLS_LAST
+  block_id_ASC
+  block_id_DESC
+  block_id_ASC_NULLS_FIRST
+  block_id_DESC_NULLS_LAST
+  block_number_ASC
+  block_number_DESC
+  block_number_ASC_NULLS_FIRST
+  block_number_DESC_NULLS_LAST
+  block_timestamp_ASC
+  block_timestamp_DESC
+  block_timestamp_ASC_NULLS_FIRST
+  block_timestamp_DESC_NULLS_LAST
+}
+
+type UnlistedOffersConnection {
+  edges: [UnlistedOfferEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input UnlistedOfferWhereInput {
+  id_isNull: Boolean
+  id_eq: String
+  id_not_eq: String
+  id_gt: String
+  id_gte: String
+  id_lt: String
+  id_lte: String
+  id_in: [String!]
+  id_not_in: [String!]
+  id_contains: String
+  id_not_contains: String
+  id_containsInsensitive: String
+  id_not_containsInsensitive: String
+  id_startsWith: String
+  id_not_startsWith: String
+  id_endsWith: String
+  id_not_endsWith: String
+  token_isNull: Boolean
+  token: NftWhereInput
+  buyer_isNull: Boolean
+  buyer_eq: String
+  buyer_not_eq: String
+  buyer_gt: String
+  buyer_gte: String
+  buyer_lt: String
+  buyer_lte: String
+  buyer_in: [String!]
+  buyer_not_in: [String!]
+  buyer_contains: String
+  buyer_not_contains: String
+  buyer_containsInsensitive: String
+  buyer_not_containsInsensitive: String
+  buyer_startsWith: String
+  buyer_not_startsWith: String
+  buyer_endsWith: String
+  buyer_not_endsWith: String
+  quantityWanted_isNull: Boolean
+  quantityWanted_eq: BigInt
+  quantityWanted_not_eq: BigInt
+  quantityWanted_gt: BigInt
+  quantityWanted_gte: BigInt
+  quantityWanted_lt: BigInt
+  quantityWanted_lte: BigInt
+  quantityWanted_in: [BigInt!]
+  quantityWanted_not_in: [BigInt!]
+  totalDirectOfferAmount_isNull: Boolean
+  totalDirectOfferAmount_eq: BigInt
+  totalDirectOfferAmount_not_eq: BigInt
+  totalDirectOfferAmount_gt: BigInt
+  totalDirectOfferAmount_gte: BigInt
+  totalDirectOfferAmount_lt: BigInt
+  totalDirectOfferAmount_lte: BigInt
+  totalDirectOfferAmount_in: [BigInt!]
+  totalDirectOfferAmount_not_in: [BigInt!]
+  currency_isNull: Boolean
+  currency_eq: String
+  currency_not_eq: String
+  currency_gt: String
+  currency_gte: String
+  currency_lt: String
+  currency_lte: String
+  currency_in: [String!]
+  currency_not_in: [String!]
+  currency_contains: String
+  currency_not_contains: String
+  currency_containsInsensitive: String
+  currency_not_containsInsensitive: String
+  currency_startsWith: String
+  currency_not_startsWith: String
+  currency_endsWith: String
+  currency_not_endsWith: String
+  expirationTimestamp_isNull: Boolean
+  expirationTimestamp_eq: DateTime
+  expirationTimestamp_not_eq: DateTime
+  expirationTimestamp_gt: DateTime
+  expirationTimestamp_gte: DateTime
+  expirationTimestamp_lt: DateTime
+  expirationTimestamp_lte: DateTime
+  expirationTimestamp_in: [DateTime!]
+  expirationTimestamp_not_in: [DateTime!]
+  expectedChildren_isNull: Boolean
+  block_isNull: Boolean
+  block: BlockWhereInput
+  AND: [UnlistedOfferWhereInput!]
+  OR: [UnlistedOfferWhereInput!]
+}
+
+input WhereIdInput {
+  id: String!
+}
+
