@@ -50,7 +50,7 @@ export const distributePoints = async (
   if (!singularPartner) {
     throw new Error('Cannot find Singular in partners list');
   }
-  const totalSingularSpicePoints = parseInt(singularPartner.total_points);
+  const totalSingularSpicePoints = parseInt(singularPartner.current_points);
 
   const distributableSingularPoints = totalSingularSpicePoints * 0.8; // 80% of total points
 
