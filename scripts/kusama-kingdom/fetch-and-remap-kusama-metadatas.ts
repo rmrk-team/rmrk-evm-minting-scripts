@@ -100,7 +100,7 @@ export const fetchAndRemapKusamaMetadatas = async (kusamaDetailsItem: KusamaDeta
     mapLegacyMetadataToNewMetadata({ kusamaNft, namePrepend }),
   );
 
-  const outputPath = `${process.cwd()}/scripts/kusama-kingdom/kusama-kingdom-metadata/${collectionId}`;
+  const outputPath = `${process.cwd()}/scripts/kusama-kingdom/kusama-kingdom-metadata/${collectionId}/nfts`;
 
   const dirExists = fs.existsSync(outputPath);
   if (!dirExists) {
