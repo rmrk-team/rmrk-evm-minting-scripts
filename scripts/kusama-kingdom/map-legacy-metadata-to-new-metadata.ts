@@ -36,46 +36,54 @@ import type { Metadata } from './types/types.js';
 // };
 
 const attributes = {
-  'Limited': [{
-    display_type: 'string',
-    trait_type: 'Rarity',
-    value: 'Limited'
-  }],
-  'Rare': [{
-    display_type: 'string',
-    trait_type: 'Rarity',
-    value: 'Rare'
-  }],
-  'Ultra Rare': [{
-    display_type: 'string',
-    trait_type: 'Rarity',
-    value: 'Ultra Rare'
-  }],
-  'Legendary':  [{
-    display_type: 'string',
-    trait_type: 'Rarity',
-    value: 'Legendary'
-  }],
-}
+  Limited: [
+    {
+      display_type: 'string',
+      trait_type: 'Rarity',
+      value: 'Limited',
+    },
+  ],
+  Rare: [
+    {
+      display_type: 'string',
+      trait_type: 'Rarity',
+      value: 'Rare',
+    },
+  ],
+  'Ultra Rare': [
+    {
+      display_type: 'string',
+      trait_type: 'Rarity',
+      value: 'Ultra Rare',
+    },
+  ],
+  Legendary: [
+    {
+      display_type: 'string',
+      trait_type: 'Rarity',
+      value: 'Legendary',
+    },
+  ],
+};
 
 const getAttributes = (description: string) => {
   switch (true) {
     case description.includes('Limited'):
-      return attributes['Limited']
-    case description.includes('Rare'):
-      return attributes['Rare']
+      return attributes['Limited'];
+    case description.includes('Rare') && !description.includes('Ultra Rare'):
+      return attributes['Rare'];
     case description.includes('Ultra Rare'):
-      return attributes['Ultra Rare']
+      return attributes['Ultra Rare'];
     case description.includes('Legendary'):
-      return attributes['Legendary']
+      return attributes['Legendary'];
     default:
-      return undefined
+      return undefined;
   }
-}
+};
 
 type Props = {
   kusamaNft: KusamaNft;
-  namePrepend?: string
+  namePrepend?: string;
 };
 
 /**
@@ -89,12 +97,10 @@ type Props = {
  * @param kusamaNftId - Kusama NFT id
  */
 export const mapLegacyMetadataToNewMetadata = ({ kusamaNft, namePrepend }: Props) => {
-  const { metadata_image, metadata_description, metadata_name, resources } =
-    kusamaNft;
+  const { metadata_image, metadata_description, metadata_name, resources } = kusamaNft;
 
-  const primaryAsset = resources.find(
-    (resource) => resource.metadata_content_type === 'gif',
-  ) || resources[0];
+  const primaryAsset =
+    resources.find((resource) => resource.metadata_content_type === 'gif') || resources[0];
   const thumbnailAsset =
     resources.length > 1
       ? resources.find((resource) => resource.metadata_content_type !== 'gif')
@@ -126,7 +132,7 @@ export const mapLegacyMetadataToNewMetadata = ({ kusamaNft, namePrepend }: Props
     image: imageUri,
     animation_url: animationUri,
     external_url: 'https://discord.gg/cyQaS3vsKf',
-    name: `${namePrepend ?? ''}${namePrepend ? ' ': ''}${metadata_name.trimEnd()}`,
+    name: `${namePrepend ?? ''}${namePrepend ? ' ' : ''}${metadata_name.trimEnd()}`,
     description: metadata_description.trimEnd(),
     //@ts-ignore
     attributes: getAttributes(metadata_description),
