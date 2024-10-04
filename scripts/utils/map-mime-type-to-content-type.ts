@@ -1,8 +1,4 @@
-import {
-  audioMimeTypes,
-  media3dMimeTypes,
-  videoMimeTypes,
-} from './constants.js';
+import { audioMimeTypes, media3dMimeTypes, videoMimeTypes } from './constants.js';
 
 export const MEDIA_TYPES = {
   image: 'image',
@@ -50,4 +46,16 @@ export const mapMimeToContentType = (mimeType?: string | null): MEDIA_TYPES => {
   }
 
   return MEDIA_TYPES.unknown;
+};
+
+export const fetchMimeTypeByUrl = async (url: string) => {
+  try {
+    const response = await fetch(url, {
+      method: 'HEAD',
+    });
+    return response.headers.get('content-type') || '';
+  } catch (error) {
+    console.log('fetchMimeTypeByUrl', error);
+    return '';
+  }
 };

@@ -44,7 +44,7 @@ export const KUSAMA_KINGDOM_KUSAMA_DETAILS = {
     collectionMetadataFields: {
       name: 'Kingdom Ventures [Babies]',
       description:
-        'The Royal Babies of Kingdom Ventures are granted to holders who claimed and burnt a [Wedding Ring](https://singular.app/collections/2644199cf3652aaa78-WR00) Each are custom based on the genetics of the King and Queen',
+        'The Royal Babies of Kingdom Ventures are granted to holders who claimed and burnt a Wedding Ring Each are custom based on the genetics of the King and Queen',
     },
     namePrepend: 'Baby',
     maxSupply: 30,

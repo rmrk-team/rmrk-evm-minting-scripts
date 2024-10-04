@@ -3,6 +3,10 @@ import { getIpfsCidFromGatewayUrl, sanitizeIpfsUrl } from '@rmrk-team/ipfs-utils
 import { KUSAMA_API_URL_BASE } from './consts.js';
 import type { KusamaDetailsItem } from './kusama-details.js';
 import { mapLegacyMetadataToNewMetadata } from './map-legacy-metadata-to-new-metadata.js';
+import {
+  fetchMimeTypeByUrl,
+  mapMimeToContentType,
+} from '../utils/map-mime-type-to-content-type.js';
 
 const ITEMS_PER_PAGE = 500;
 
@@ -76,6 +80,18 @@ export const fetchAndRemapKusamaMetadatas = async (kusamaDetailsItem: KusamaDeta
         ],
       });
     } else {
+      if (nft.resources.length > 1) {
+        for (const resource of nft.resources) {
+          if (!resource.metadata_content_type && resource.src) {
+            const mimeType = await fetchMimeTypeByUrl(
+              sanitizeIpfsUrl(resource.src, 'https://ipfs2.rmrk.link'),
+            );
+            if (mimeType) {
+              resource.metadata_content_type = mapMimeToContentType(mimeType);
+            }
+          }
+        }
+      }
       nftsWithMetadata.push(nft);
     }
   }
