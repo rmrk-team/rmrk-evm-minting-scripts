@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeibfkmm7y5kz7wav7i27xqc6qopn7f3o53effjtk4kpfn22huqjmim",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #085 Samurai",
+  "description": "11/15 Ultra Rare Kings [Samurai]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeid6bmqzzgqegcxvjh4jykjnwxrob2igtaslmz7c2gasr5vwevtmqm",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #420 Pot",
+  "description": "6/15 Ultra Rare Kings [Pot]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeiclvrbu2ow7rd4lz4hsd6megm56xfbpg4xhp6sdzabr3vmmb5e47i",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #069 Maid",
+  "description": "16/25 Rare Queens [Maid]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

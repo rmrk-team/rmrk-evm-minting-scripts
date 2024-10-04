@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeifkmnqhr5jgkotr6r6i4kqqo6ch76q34ymdoebxha5ngfs6yue3jq",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #018 Paper",
+  "description": "5/25 Rare Queens [Paper]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeie67farwi7mimcvwolfs7eb3xmbqtov4t6gcvg2l6nrvjx5dlvjua",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #017 Gym",
+  "description": "4/25 Rare Queens [Gym]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

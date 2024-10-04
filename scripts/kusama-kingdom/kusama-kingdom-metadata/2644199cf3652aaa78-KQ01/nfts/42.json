@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeibs5yx534tdmiau2m6roxuef7a3ixyaynnkgbasntrhlvkbmipgcm",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #042 Egg",
+  "description": "10/25 Rare Queens [Egg]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

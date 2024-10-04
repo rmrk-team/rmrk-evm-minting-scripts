@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeicti6txam2an7caml7kqq3utfddapt3lwmz5ocrpppqyutn5nxklu",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #083 Buddie",
+  "description": "18/25 Rare Queens [Buddie]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

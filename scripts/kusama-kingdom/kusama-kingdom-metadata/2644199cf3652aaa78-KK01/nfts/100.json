@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeieskijfzw3tulb2crsenfmid5eahfwysedx6nwdjnu4fpjdjlp7uy",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #100 Gold",
+  "description": "13/15 Ultra Rare Kings [Gold]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

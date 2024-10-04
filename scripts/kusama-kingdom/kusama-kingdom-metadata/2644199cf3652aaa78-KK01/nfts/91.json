@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeia32newik6ihmxkbi6nip2e3if3ov3sfc6uwaoyjrmb5dsumjdm6a",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #090 Lion",
+  "description": "19/25 Rare Kings [Lion]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeice5hfpzuamvqt5a2vwhixcuvubs6foy4aw2xakfgiz3eu67h7nve",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #031 Hockey",
+  "description": "4/15 Ultra Rare Kings [Hockey King]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

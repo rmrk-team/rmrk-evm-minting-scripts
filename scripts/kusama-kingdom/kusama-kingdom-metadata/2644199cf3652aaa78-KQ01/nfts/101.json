@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeidaqdfb2qwsquygpi3p2fpg3tycubbhowrjby6etzxhd3ebbitkqm",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #101 Dalmation",
+  "description": "22/25 Rare Queens [Dalmation]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeiaexjdklg24tkhpgtryg6xkyahsnlj7fxqfv222d5r4ncncz3nlxy",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #029 Chainsaw",
+  "description": "9/25 Rare Kings [Chainsaw]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

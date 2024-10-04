@@ -1,0 +1,14 @@
+{
+  "image": "ipfs://bafybeiessyehrmpwaiqmqqlqwrayk6h3youyrgbnwspg37uermdkyzdsui",
+  "animation_url": "ipfs://bafybeiamg5rs7quwjbkln4r5stnilbfkzd6ikbv4s4e2yevajtu2p54x2e",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #011 Space",
+  "description": "1/10 Legendary Queens [Space]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

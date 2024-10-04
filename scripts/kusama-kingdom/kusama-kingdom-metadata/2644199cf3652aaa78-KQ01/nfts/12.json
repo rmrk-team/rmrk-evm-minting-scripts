@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeidlcho5jo3zzmdat6blwtiazcuohartxvnbkusiqavo4nzzl2bybi",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #012 Party",
+  "description": "3/25 Rare Queens [Party]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

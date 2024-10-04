@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeieqgbpynvfmnnw5gxlh6lhbe2o3hwyevtvlsn3wpu5s42gx2qgloa",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #096 Pharaoh",
+  "description": "12/15 Ultra Rare Kings [Pharaoh]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

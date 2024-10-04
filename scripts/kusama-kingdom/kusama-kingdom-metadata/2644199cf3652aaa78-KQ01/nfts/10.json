@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeicwydeit6rrm4axpvilqvpp3ra3s6whjum5wnxt3ppz3jwgl264gu",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #010 Bull",
+  "description": "1/15 Ultra Rare Queens [Bull]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

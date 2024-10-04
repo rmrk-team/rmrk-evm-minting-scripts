@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeif55eppfyajlukyaebukmz7hc2r63zeqey7k6m5ft3th5b2xogboe",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #106 Artist",
+  "description": "14/15 Ultra Rare Kings [Artist]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeid4r5qbftokmrbgfyj2hf2hdmcm5efrtxir7artgbg5pjbonyuxpy",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #056 Magic",
+  "description": "14/25 Rare Kings [Magic]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeieh7fskqqmc4idemlbmhokfbgulguojhy3jbvdwdi7pftc2qepnwa",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #027 Voodoo",
+  "description": "7/25 Rare Kings [Voodoo]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

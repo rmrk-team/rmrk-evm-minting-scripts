@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeic3gbj52n6frfh4sianljnvkfpg454f2auvjurkfoui3e33o2tb3y",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #017 Banana",
+  "description": "5/25 Rare Kings [Banana King]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

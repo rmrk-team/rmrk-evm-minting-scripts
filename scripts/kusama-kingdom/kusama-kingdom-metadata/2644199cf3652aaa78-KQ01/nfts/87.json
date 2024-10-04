@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeigzu4yfkq2qzvqwwdi5xadphz6tgyhkdemoeltgohdkopoune6luy",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #087 Bean",
+  "description": "19/25 Rare Queens [Bean]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

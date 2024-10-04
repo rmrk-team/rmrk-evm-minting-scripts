@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeihy45ixikfubhlgs7mqfykarbvqfshtxcse77cf44wuuhncjyg2oi",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #006 Pancake",
+  "description": "1/25 Rare Kings [Pancake King]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

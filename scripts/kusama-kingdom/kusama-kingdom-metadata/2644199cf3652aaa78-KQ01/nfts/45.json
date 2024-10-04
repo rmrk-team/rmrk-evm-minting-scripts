@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeigulfdxuft5dxs2u6zowajodz7qwblh7lciyx2phpmy2eahzmzcxi",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #045 Cosmos",
+  "description": "11/25 Rare Queens [Cosmos] \n\nCollaboration with [Women From Cosmos](https://twitter.com/womenfromcosmos)",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

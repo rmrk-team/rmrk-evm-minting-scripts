@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeifo6tak6momb4b73fspvduqjaq6y2szhmqgfbgwbmjy5d2xwezcci",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #016 Boxer",
+  "description": "4/25 Rare Kings [Boxer King]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

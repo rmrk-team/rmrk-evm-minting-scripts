@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafkreicqice6vljencjnfw6bq7wupwdgug3ohco34cotxqs62qvwwp4fda",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #084",
+  "description": "46/60 Limited Queens",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Limited"
+    }
+  ]
+}

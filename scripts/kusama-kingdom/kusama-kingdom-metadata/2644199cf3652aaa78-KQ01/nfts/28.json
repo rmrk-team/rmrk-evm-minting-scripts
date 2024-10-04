@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeig7boliggnhkrihixep7qdui7w7xyhojda2ph26axraobhpzqk5tu",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #028 Robot",
+  "description": "3/10 Legendary Queens [Robot]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeid2qqdazjdnunoceyuyv26vjlkfvniuzblewicucf2352byqrhyvm",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #059 Substranaut",
+  "description": "15/25 Rare Kings [Substranaut]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

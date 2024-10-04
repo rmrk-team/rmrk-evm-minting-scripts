@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeiawcn6ugzijbkifv6xunow4s7nwqzd6j2lpqb4gx27yzeb6tx6nhi",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #079 Lucky",
+  "description": "17/25 Rare Kings [Lucky]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "image": "ipfs://bafybeia4xnglg6hqt2d7z4vq2pqnbubwzzimfji7kwumik4rdztqqs5nwa",
+  "animation_url": "ipfs://bafybeia5hnhekirmkwzdtvudk4bwjp7xtpusgza5vjkdxscjayht5q3e4i",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #100 Diamond",
+  "description": "10/10 Legendary Queens [Diamond]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

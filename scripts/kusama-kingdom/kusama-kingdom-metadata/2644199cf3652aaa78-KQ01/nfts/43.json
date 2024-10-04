@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeiakg7tlvsgr32axcsuhov3ytxmcbzblel5jdubw4xle56jmwdzt7m",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #043 Bunny",
+  "description": "6/15 Ultra Rare Queens [Bunny]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

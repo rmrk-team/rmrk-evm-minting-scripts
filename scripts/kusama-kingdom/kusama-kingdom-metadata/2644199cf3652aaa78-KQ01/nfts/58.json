@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeicohc62buxdrxszeb5zc3d23rzbmxrqystf5f3v7izhlqsi65kl2e",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #058 Lawyer",
+  "description": "13/25 Rare Queens [Lawyer]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeibzyd6mwefvgtau2cdec5h3xrhde74zufmwtwnucmnuhfxtr5utfq",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #086 Boss",
+  "description": "12/15 Ultra Rare Queens [Boss]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeihjvvgd7smixr26wlz35wbxgcpimanectbiwvz4b635vxfxjnd5ba",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #040 Dungeon",
+  "description": "5/15 Ultra Rare Kings [Dungeon]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

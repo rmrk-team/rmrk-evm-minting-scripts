@@ -1,0 +1,14 @@
+{
+  "image": "ipfs://bafybeif3omjjwqfhqvo7xtbrr37cpjcbamhy4fswbdioe6tjnvoh2e3ium",
+  "animation_url": "ipfs://bafybeicpwkyw7nz36gho6iv4i2xt54xqfxe2643sv4p6ygjo7e2tpeyaau",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #071 Solar",
+  "description": "8/10 Legendary Queens [Solar]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

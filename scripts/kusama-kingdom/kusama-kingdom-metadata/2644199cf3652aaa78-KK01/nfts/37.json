@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeibfwpty2kcvpo3jwq6bdrnnj7as2dblvzie4ymhwrshgafhkitnla",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #028 Clown",
+  "description": "8/25 Rare Kings [Clown]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

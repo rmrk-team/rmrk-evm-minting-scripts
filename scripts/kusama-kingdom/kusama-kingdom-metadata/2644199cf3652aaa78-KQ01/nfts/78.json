@@ -1,0 +1,14 @@
+{
+  "image": "ipfs://bafybeigj3eohh73ekbxpfihfymn6hrefzpzrp63yavbvg7m5jxn2aepepy",
+  "animation_url": "ipfs://bafybeice5rgmpqyasunan26two2ryhecogk4hfli224nr5yujris72gnsy",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #078 Lizard",
+  "description": "9/10 Legendary Queens [Lizard]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

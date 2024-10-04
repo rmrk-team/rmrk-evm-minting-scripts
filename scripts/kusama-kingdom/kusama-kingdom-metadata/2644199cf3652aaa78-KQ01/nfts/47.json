@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeigqg226ptwquu53rze4hf2lvd7pe2tqsfhduyh5mwbwhobqxde4fa",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #047",
+  "description": "25/60 Limited Queens",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Limited"
+    }
+  ]
+}

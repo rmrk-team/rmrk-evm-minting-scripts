@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeice44kl3pzwxqzz7b5ndwomcan7xpwnnwsc6lagctqfoy6fw763uu",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #026 Eggplant",
+  "description": "7/25 Rare Queens [Eggplant]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeihftbpi4jnzmlguxbxn5v7lujujkfhngluv7rv3zwdkul2qz3fujm",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #072",
+  "description": "40/60 Limited Kings",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Limited"
+    }
+  ]
+}

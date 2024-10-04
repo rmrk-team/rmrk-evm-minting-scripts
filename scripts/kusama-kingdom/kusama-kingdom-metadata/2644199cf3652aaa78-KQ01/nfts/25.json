@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeidneb2mzeywbe2fshs4hpxbhbdqrg25ofstnxtdrl3azyw57ttynm",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #025",
+  "description": "15/60 Limited Queens",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Limited"
+    }
+  ]
+}

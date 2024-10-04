@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeihy3y6wdxey66yzeo7jxbeqyobxsy7rtvnfi2b7corjzmwfhnlymy",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #021 Candy",
+  "description": "6/25 Rare Queens [Candy]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

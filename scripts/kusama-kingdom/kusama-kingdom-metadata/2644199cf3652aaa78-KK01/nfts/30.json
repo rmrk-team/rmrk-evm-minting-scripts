@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeiddt5b5egvvja7lhei4ghernnz3ekhcwezzpbe33yu355bztg4ljm",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #020",
+  "description": "11/60 Limited Kings [Halloween]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Limited"
+    }
+  ]
+}

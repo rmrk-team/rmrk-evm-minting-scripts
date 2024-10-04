@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeic3zcoytdnh7cye3xkt4fsusvuqgkkokyyzioh5mk2skoiv6ihkni",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #086 Bonobo",
+  "description": "18/25 Rare Kings [Blasé Bonobo Collab]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

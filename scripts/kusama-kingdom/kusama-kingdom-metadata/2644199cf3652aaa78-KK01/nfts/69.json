@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeibj5odftz354f653mvni5gap2ip75pkexgvi6alvhhgkn6imvptna",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #064 Drunk",
+  "description": "15/25 Rare Kings [Drunk]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

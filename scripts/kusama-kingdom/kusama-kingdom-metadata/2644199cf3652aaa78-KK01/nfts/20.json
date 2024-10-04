@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeicchze7l56f3g6lvnkb4ca5zna2lq3e7spf5iumhsqotjqnv6pkay",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #010 Zombie",
+  "description": "1/10 Legendary Kings [Zombie]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

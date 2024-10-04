@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeicsdn3ame7rlifw3u46m7td7sh4oc5ors562ezw4jghgdore3ovle",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #008 Pizza",
+  "description": "1/25 Rare Queens [Pizza]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

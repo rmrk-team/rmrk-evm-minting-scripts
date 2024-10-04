@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeiebykzndfcvafl4pnzrbiq6g5gn6w3jkccn63sy7ac23vvps6coz4",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #099 Frog",
+  "description": "22/25 Rare Kings [Frog]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

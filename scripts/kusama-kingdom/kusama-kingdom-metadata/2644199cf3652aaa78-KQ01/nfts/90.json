@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeid2ucpvf5tkf2rlgwyv73srkvok36clpkvnoklylzwtre25sxlwdq",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #090 Monkey",
+  "description": "20/25 Rare Queens [Monkey]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

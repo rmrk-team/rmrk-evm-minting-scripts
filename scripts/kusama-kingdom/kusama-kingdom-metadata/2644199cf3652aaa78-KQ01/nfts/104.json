@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeihu2ba6unp4qegytm7pagolosvkfldo4vlbjtikp7bjyrj7lyxhgq",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #104 Spy",
+  "description": "23/25 Rare Queens [Spy]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

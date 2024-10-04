@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeibs2546c6ct2lb7djv5mj6mwae4shok2bky2m5wmzqqbxmk6e7r4i",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #007",
+  "description": "7/60 Limited Queens",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Limited"
+    }
+  ]
+}

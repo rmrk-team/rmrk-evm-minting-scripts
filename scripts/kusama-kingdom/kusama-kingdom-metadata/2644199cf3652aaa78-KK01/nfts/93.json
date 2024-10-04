@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeifqhzahglhpm54tvrjtf5zkjtyr2eurg2s6w4lfu62fm7m2r7vwq4",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #093 Farmer",
+  "description": "21/25 Rare Kings [Farmer]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeidn3i5fw6lbloa5fsnjpo3gr3wmsc4lo4ymucw4prcs3no73vzn5y",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #087 Ape",
+  "description": "10/10 Legendary Kings [Ape]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

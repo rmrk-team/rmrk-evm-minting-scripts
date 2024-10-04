@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeihgfklzknfflbqlr7mn2bbv5cfebzwiau44wyrsjdknjcsl4qh54a",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #068 Rainbow",
+  "description": "15/25 Rare Queens [Rainbow]🌈",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

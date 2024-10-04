@@ -1,8 +1,28 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
   "files": {
-    "ignoreUnknown": true,
-    "ignore": ["contracts", "artifacts"]
+    "ignoreUnknown": false,
+    "ignore": [
+      "node_modules/**",
+      "schema.graphql",
+      "skybreach-land-indexer-env.d.ts",
+      "rmrk-evm-indexer-env.d.ts",
+      "wagmi/generated.ts",
+      "contracts",
+      "artifacts"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
   },
   "organizeImports": {
     "enabled": true
@@ -10,20 +30,18 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "complexity": {
+        "noUselessFragments": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "warn"
+      }
     }
-  },
-  "formatter": {
-    "enabled": true,
-    "formatWithErrors": false,
-    "indentStyle": "space",
-    "indentWidth": 2,
-    "lineWidth": 80
   },
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
-      "trailingComma": "all",
       "semicolons": "always"
     }
   }

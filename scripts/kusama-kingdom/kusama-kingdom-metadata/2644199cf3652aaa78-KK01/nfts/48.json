@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeick6qubilciq3cglaeuc277n6hcufzxrpzry7rmjzw55rqz7wzz4e",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #039 Christmas",
+  "description": "10/25 Rare Kings [Christmas]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeiebjzyk5pampz3t2lljwfti6kznz2qd5qlelh45rkw57s6ngw7vwq",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #051 Wine",
+  "description": "12/25 Rare Queens [Wine]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

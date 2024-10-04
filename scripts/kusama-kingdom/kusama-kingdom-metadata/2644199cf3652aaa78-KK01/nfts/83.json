@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeidr6oc7yoltp3pjspmovbqednlzo5q5mh4ifsp56xqtmuk2byvkmi",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #081 Ice",
+  "description": "9/10 Legendary Kings [Ice]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

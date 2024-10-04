@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeihpsvfipxusn25nzvsvis7oczjq4aqzofp2ai7qhnguo6c64g4wyq",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #058 Demon",
+  "description": "6/10 Legendary Kings [Demon]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

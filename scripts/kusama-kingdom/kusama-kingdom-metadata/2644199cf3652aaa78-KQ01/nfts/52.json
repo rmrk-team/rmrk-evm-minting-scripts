@@ -1,0 +1,14 @@
+{
+  "image": "ipfs://bafybeibvzdge23cnwkgxmbocw2shzc7bketfowkwtrxjdefzpg6ht2deuu",
+  "animation_url": "ipfs://bafybeih6bxhdoqzq7vgpr6y5dpocrsbx7vugziyftpxbczlty7eqmmkrxa",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #052 Mutant",
+  "description": "6/10 Legendary Queens [Mutant]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

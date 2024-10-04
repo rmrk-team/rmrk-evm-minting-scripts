@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeihyarsjrisboczdkfv5l3fugk5mjs2u2wrybydx6geqg3npaftxzu",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #029 Kitty",
+  "description": "8/25 Rare Queens [Kitty]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

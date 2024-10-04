@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeiffyroavtlqu7fa6lprha7cb2laknjmjmm75gk56dqxhkcau255pq",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #049 Punk",
+  "description": "12/25 Rare Kings [Punk]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

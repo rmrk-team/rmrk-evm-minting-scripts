@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeiaxezgc6bkakezrijjq3rc4ou7btd7flegu7e76ircv5tybuhjfhu",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #074 Tiger",
+  "description": "16/25 Rare Kings [Tiger]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

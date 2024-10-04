@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafkreicoemlh6lu72flv353q4jmm5ahadawfpnoy5vnnqeaetc3yjapomu",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #101",
+  "description": "56/60 Limited Kings",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Limited"
+    }
+  ]
+}

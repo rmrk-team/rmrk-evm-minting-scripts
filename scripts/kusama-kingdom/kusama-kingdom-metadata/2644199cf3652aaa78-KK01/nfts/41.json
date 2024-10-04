@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeieg3um6ffq2bwzhiqxlmgq6dajozzoyfhn5vjhgwi52cdvcl6nxb4",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #032 Ghost",
+  "description": "3/10 Legendary Kings [Ghost King]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

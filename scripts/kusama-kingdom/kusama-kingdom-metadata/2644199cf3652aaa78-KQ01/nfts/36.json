@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeigjjhxd2r654aoi656itzbnestyud3xa5opw6jddxfoppqknf4vly",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #036 Talisman",
+  "description": "5/15 Ultra Rare Queens [Talisman]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

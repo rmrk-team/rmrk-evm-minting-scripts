@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeibo7sykuxpvzjt7yrd7y43kapozylbvywfgdu4keztmpz65hfqndi",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #108 Burger",
+  "description": "25/25 Rare Kings [Burger]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "image": "ipfs://bafybeiafvjpnswtz7i6yhjnuf6guvbkcygxwduyascbytb2l3l2hzoci4a",
+  "animation_url": "ipfs://bafybeidswcykk32wd2bdkxadh2l6xafcg56fpmpd35j27jyzqhqu26pege",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #044 Angel",
+  "description": "5/10 Legendary Queens [Angel]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

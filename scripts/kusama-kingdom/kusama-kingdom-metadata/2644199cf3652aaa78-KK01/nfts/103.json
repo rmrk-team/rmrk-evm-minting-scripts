@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeicffz3xtfoxh64x6unip3lg5tc2h5h42oveli33chbp6bt5esowju",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #103 Puppet",
+  "description": "23/25 Rare Kings [Puppet]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

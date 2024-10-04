@@ -1,0 +1,14 @@
+{
+  "image": "ipfs://bafybeig7k4faupypeocy5trpqye7xye2a3todmncgapf4l4j6r4kdnzhke",
+  "animation_url": "ipfs://bafybeibzja4dj73vjeau42pt2zi34le45okp4w74h67xn6d5xomku4r2by",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #061 Forest",
+  "description": "7/10 Legendary Queens [Forest]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeifpa2whdt4gkgln2cwqkl2xuhwymyqhiixsa46qe3crktob7ie3ym",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #019 Sea",
+  "description": "2/10 Legendary Kings [Sea King]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

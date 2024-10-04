@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeidxl4c5wr6p7ywxkneju3tnfpwsamnzfgiw2hs55l7vs4hergmf24",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #007 Martini",
+  "description": "2/25 Rare Kings [Martini King]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

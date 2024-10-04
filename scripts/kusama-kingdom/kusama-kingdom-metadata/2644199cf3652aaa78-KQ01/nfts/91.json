@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeiayiwjbmgcm2pesizm5ryw4lhnwv6iekufe7v3ispdyioypk2lakq",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #091 Flower",
+  "description": "13/15 Ultra Rare Queens [Flower]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

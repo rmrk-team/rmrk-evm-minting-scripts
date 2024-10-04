@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeihgsozfxd7cpffyj6nzcdxtj5x7artlv5crar4hhqjckmz5aky6ay",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #075 Dragon",
+  "description": "8/10 Legendary Kings [Dragon]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

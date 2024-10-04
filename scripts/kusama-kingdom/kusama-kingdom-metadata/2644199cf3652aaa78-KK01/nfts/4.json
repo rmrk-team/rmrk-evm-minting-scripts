@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeidhripk7rtrgdiw2l3uz6k2bipm6hdnkjdtrdz5xjdrm7yvsijqsm",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #051 Alien",
+  "description": "5/10 Legendary Kings [Alien]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

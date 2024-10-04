@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeifaddkdk3yjyv7e7k4qsjsfvwo46xxp4u6naqgkoc2fhvhz5zzwoy",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #077 Mushroom",
+  "description": "10/15 Ultra Rare Queens [Mushroom]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

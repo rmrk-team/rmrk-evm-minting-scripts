@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeicba7hdtljtorswwpca6yqs5golr3ugjlpi5fvivrqe7ih632pqre",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #018 Polkadot",
+  "description": "2/15 Ultra Rare Kings [Polkadot King]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

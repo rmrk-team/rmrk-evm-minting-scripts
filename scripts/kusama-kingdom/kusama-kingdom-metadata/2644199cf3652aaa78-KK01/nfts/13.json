@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeib2spsiokp2di6frvt4p3pzhkrzhoecfzynsyupdhfyjpphlko4ii",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #003",
+  "description": "3/60 Limited Kings",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Limited"
+    }
+  ]
+}

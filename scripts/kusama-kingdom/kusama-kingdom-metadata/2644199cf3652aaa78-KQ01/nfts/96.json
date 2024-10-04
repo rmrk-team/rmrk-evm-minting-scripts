@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeigb6hdu3hm2mbfpfh6nujmbvik44pf6lcuphdf5ggzzcz23yqu4zm",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #096 Dessert",
+  "description": "21/25 Rare Queens [Dessert]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

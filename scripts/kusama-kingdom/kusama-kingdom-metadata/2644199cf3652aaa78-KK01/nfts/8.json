@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeigmeqqvkczmwvsb4sjgizm2tt62hxm6xqz3irkqlqkxj3xgxomjoy",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #080 Rome",
+  "description": "10/15 Ultra Rare Kings [Rome]\n\nHolder of this king can claim 1 rebase per day on 5 staked [RomeDao](https://romedao.finance) tokens for 1 year [12/12/2021 - 12/12/2022]. This can either be paid out monthly or re-staked to compound. \n\nContact [Kusama Kings](https://twitter.com/kusamakings) to claim on the 12th of each month.",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

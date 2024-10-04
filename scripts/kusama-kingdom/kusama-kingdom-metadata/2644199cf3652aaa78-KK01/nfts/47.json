@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeidzftix2ezjh3x2luw673ywcexmj6ac77o7ywclq6rz7w32tur5he",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #038 Skull",
+  "description": "4/10 Legendary Kings [Skull]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

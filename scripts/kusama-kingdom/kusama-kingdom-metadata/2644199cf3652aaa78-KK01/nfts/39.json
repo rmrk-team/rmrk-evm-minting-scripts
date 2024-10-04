@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafkreifwmpib6o34tjp2n4sycjbkpjs5cqwxz2p2x5amo5rzjkwjkbbc2y",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #30 Reaper",
+  "description": "3/15 Ultra Rare Kings [Reaper King]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

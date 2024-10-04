@@ -1,0 +1,14 @@
+{
+  "image": "ipfs://bafybeig7oc3ilpjcu3ynrl2lx4h2sipbyokj2ydiwpihfhfdcxxxsalrjm",
+  "animation_url": "ipfs://bafybeib3bwae43ofzcdfafkp6mll6jwmyg2hxdrxkd6ziblml6m6yhq7ui",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #037 Witch",
+  "description": "4/10 Legendary Queens [Witch]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

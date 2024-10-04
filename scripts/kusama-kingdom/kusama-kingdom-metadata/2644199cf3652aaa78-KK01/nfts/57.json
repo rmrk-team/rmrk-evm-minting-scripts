@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeibz5vwum2jult65unasspwdp7dnlnyobj5lw7e4y23724sl6hvbcy",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #050 Degen",
+  "description": "13/25 Rare Kings [Degen]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

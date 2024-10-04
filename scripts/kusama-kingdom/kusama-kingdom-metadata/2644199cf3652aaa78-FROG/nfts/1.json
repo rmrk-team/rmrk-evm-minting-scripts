@@ -1,0 +1,14 @@
+{
+  "image": "ipfs://bafkreibgxqpusrkl2cmruoig4b5dhzbwyxbcg74qmmwk6dy4k3tcuem26u",
+  "animation_url": "ipfs://bafkreib23myz54etdmmekovcjkhez4cud432mhdiu3p3saoolombpx4uve",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Frog Space Frog",
+  "description": "The Son of the Legendary Space Queen #11 was cursed by the evil witch on a planet far from ours. He has drifted through time and space for years and is now said to be in the Kusama Kingdom where the Space Queen has come to be reunited.",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

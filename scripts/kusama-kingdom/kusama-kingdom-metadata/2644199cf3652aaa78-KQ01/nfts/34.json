@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeiddgektxuqtvhgpnzadpbnfzfroovgdv7dkswmedf5wnnox2szqdi",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #034 Popstar",
+  "description": "9/25 Rare Queens [Popstar]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

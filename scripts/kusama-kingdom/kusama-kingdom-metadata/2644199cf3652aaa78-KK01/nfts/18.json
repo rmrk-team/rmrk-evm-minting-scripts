@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeiaqky2vt7icnx36le7olr4aekskq2odw7ylied6dzwop32dw3ywtm",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #008 Poo",
+  "description": "3/25 Rare Kings [Poo King]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

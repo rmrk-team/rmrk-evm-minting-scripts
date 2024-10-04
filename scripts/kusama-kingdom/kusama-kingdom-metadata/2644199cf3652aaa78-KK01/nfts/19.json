@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeialo2uzrdkrqqvbmrmqmfvwsjrp7sdx6gvzjidhe7yfpfwibxec3q",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #009 Hippie",
+  "description": "1/15 Ultra Rare Kings [Hippie King]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Rare"
+    }
+  ]
+}

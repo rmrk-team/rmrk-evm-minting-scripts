@@ -1,0 +1,14 @@
+{
+  "image": "ipfs://bafybeicqolg7wgpza7dgfbqo5pi6jes7ofduiyhdaytzc3nu5maslflafm",
+  "animation_url": "ipfs://bafybeigt5ynbvf7f7qx3qevqhw775cfe4zgfbqmsgtkhy6zo5qkxipvy3e",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "Queen #020 Medusa",
+  "description": "2/10 Legendary Queens [Medusa]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

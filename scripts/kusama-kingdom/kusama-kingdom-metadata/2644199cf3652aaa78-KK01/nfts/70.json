@@ -1,0 +1,13 @@
+{
+  "image": "ipfs://bafybeifzpqaxtx6begmazcwd2zwbip7cdwjt5satyazcqz74ssk4jdwrc4",
+  "external_url": "https://discord.gg/cyQaS3vsKf",
+  "name": "King #065 Pirate",
+  "description": "7/10 Legendary Kings [Pirate]",
+  "attributes": [
+    {
+      "display_type": "string",
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}
